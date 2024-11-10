@@ -16,5 +16,20 @@ namespace talYBProj
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void רשימתמוצריםToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void עדכוןמוצרToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
