@@ -25,5 +25,8 @@ namespace talYBProj
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<costomerTBL> costomerTBL { get; set; }
+        public virtual DbSet<orderTBL> orderTBL { get; set; }
+        public virtual DbSet<packTBL> packTBL { get; set; }
     }
 }

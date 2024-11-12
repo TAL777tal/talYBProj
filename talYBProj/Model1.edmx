@@ -4,20 +4,166 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityContainer Name="dbModelStoreContainer" />
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="costomerTBL">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="firstName" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="companyName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="address" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="cellPhone" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="phone1" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="officePhone" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="email" Type="nchar" MaxLength="15" Nullable="false" />
+          <Property Name="price" Type="int" Nullable="false" />
+          <Property Name="notes" Type="nvarchar" MaxLength="50" />
+          <Property Name="fullName" Type="nvarchar" MaxLength="32" StoreGeneratedPattern="Computed" Nullable="false" />
+        </EntityType>
+        <EntityType Name="orderTBL">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="orderDate" Type="nvarchar" MaxLength="10" />
+          <Property Name="zanID" Type="int" />
+          <Property Name="numOfDolevim" Type="int" />
+          <Property Name="isDone" Type="bit" />
+          <Property Name="isPayd" Type="bit" />
+          <Property Name="userID" Type="int" />
+          <Property Name="notes" Type="nvarchar" MaxLength="50" />
+          <Property Name="totalPayment" Type="int" />
+          <Property Name="totalOlive" Type="int" />
+          <Property Name="totalOil" Type="int" />
+          <Property Name="numOfOiPacks" Type="int" />
+          <Property Name="orderPrice" Type="int" />
+        </EntityType>
+        <EntityType Name="packTBL">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="volune" Type="int" Nullable="false" />
+          <Property Name="weight" Type="int" Nullable="false" />
+          <Property Name="price" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="dbModelStoreContainer">
+          <EntitySet Name="costomerTBL" EntityType="Self.costomerTBL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="orderTBL" EntityType="Self.orderTBL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="packTBL" EntityType="Self.packTBL" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="dbEntities" annotation:LazyLoadingEnabled="true" />
+        <EntityContainer Name="dbEntities" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="costomerTBL" EntityType="dbModel.costomerTBL" />
+          <EntitySet Name="orderTBL" EntityType="dbModel.orderTBL" />
+          <EntitySet Name="packTBL" EntityType="dbModel.packTBL" />
+        </EntityContainer>
+        <EntityType Name="costomerTBL">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="firstName" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="lastName" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="companyName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="cellPhone" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="phone1" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="officePhone" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="price" Type="Int32" Nullable="false" />
+          <Property Name="notes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fullName" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="orderTBL">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="orderDate" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="zanID" Type="Int32" />
+          <Property Name="numOfDolevim" Type="Int32" />
+          <Property Name="isDone" Type="Boolean" />
+          <Property Name="isPayd" Type="Boolean" />
+          <Property Name="userID" Type="Int32" />
+          <Property Name="notes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="totalPayment" Type="Int32" />
+          <Property Name="totalOlive" Type="Int32" />
+          <Property Name="totalOil" Type="Int32" />
+          <Property Name="numOfOiPacks" Type="Int32" />
+          <Property Name="orderPrice" Type="Int32" />
+        </EntityType>
+        <EntityType Name="packTBL">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="volune" Type="Int32" Nullable="false" />
+          <Property Name="weight" Type="Int32" Nullable="false" />
+          <Property Name="price" Type="Int32" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="dbModelStoreContainer" CdmEntityContainer="dbEntities" />
+        <EntityContainerMapping StorageEntityContainer="dbModelStoreContainer" CdmEntityContainer="dbEntities" >
+          <EntitySetMapping Name="costomerTBL">
+            <EntityTypeMapping TypeName="dbModel.costomerTBL">
+              <MappingFragment StoreEntitySet="costomerTBL">
+                <ScalarProperty Name="fullName" ColumnName="fullName" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="officePhone" ColumnName="officePhone" />
+                <ScalarProperty Name="phone1" ColumnName="phone1" />
+                <ScalarProperty Name="cellPhone" ColumnName="cellPhone" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="companyName" ColumnName="companyName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="orderTBL">
+            <EntityTypeMapping TypeName="dbModel.orderTBL">
+              <MappingFragment StoreEntitySet="orderTBL">
+                <ScalarProperty Name="orderPrice" ColumnName="orderPrice" />
+                <ScalarProperty Name="numOfOiPacks" ColumnName="numOfOiPacks" />
+                <ScalarProperty Name="totalOil" ColumnName="totalOil" />
+                <ScalarProperty Name="totalOlive" ColumnName="totalOlive" />
+                <ScalarProperty Name="totalPayment" ColumnName="totalPayment" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="isPayd" ColumnName="isPayd" />
+                <ScalarProperty Name="isDone" ColumnName="isDone" />
+                <ScalarProperty Name="numOfDolevim" ColumnName="numOfDolevim" />
+                <ScalarProperty Name="zanID" ColumnName="zanID" />
+                <ScalarProperty Name="orderDate" ColumnName="orderDate" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="packTBL">
+            <EntityTypeMapping TypeName="dbModel.packTBL">
+              <MappingFragment StoreEntitySet="packTBL">
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="volune" ColumnName="volune" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>
