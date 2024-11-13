@@ -68,7 +68,7 @@ namespace talYBProj.IFS
                 return c1;
             }
             catch (Exception e)
-            {              
+            {
                 return null;
             }
         }
@@ -116,6 +116,48 @@ namespace talYBProj.IFS
             }
         }
         #endregion
-      
+        public static bool updateCostomer(costomerTBL c1)
+        {
+            try
+            {
+                costomerTBL toUpdate = (from s in db.costomerTBL where s.Id == c1.Id select s).FirstOrDefault();
+                if (toUpdate != null)
+                    return false;
+                toUpdate.firstName = c1.firstName;
+                toUpdate.lastName = c1.lastName;
+                toUpdate.companyName = c1.companyName;
+                toUpdate.address = c1.address;
+                toUpdate.cellPhone = c1.cellPhone;
+                toUpdate.phone1 = c1.phone1;
+                toUpdate.officePhone = c1.officePhone;
+                toUpdate.email = c1.email;
+                toUpdate.price = c1.price;
+                toUpdate.notes = c1.notes;
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public static bool updatePack(packTBL p1)
+        {
+            try
+            {
+                packTBL toUpdate = (from s in db.packTBL where s.Id == p1.Id select s).FirstOrDefault();
+                if (toUpdate != null)
+                    return false;
+                toUpdate.name = p1.name;
+                toUpdate.volume = p1.volume;
+                toUpdate.weight = p1.weight;
+                toUpdate.price = p1.price;
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            
+        }
     }
 }
