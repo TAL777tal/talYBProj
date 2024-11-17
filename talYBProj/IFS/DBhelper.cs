@@ -115,7 +115,6 @@ namespace talYBProj.IFS
                 return false;
             }
         }
-        #endregion
         public static bool updateCostomer(costomerTBL c1)
         {
             try
@@ -159,5 +158,6 @@ namespace talYBProj.IFS
             }
             
         }
+        #endregion
     }
 }
