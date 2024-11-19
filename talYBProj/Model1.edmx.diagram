@@ -5,13 +5,21 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="719ecc3152e043cd93a0f3bf2bfb8151" Name="Diagram1" >
-        <EntityTypeShape EntityType="dbModel.costomerTBL" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="dbModel.orderTBL" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="dbModel.packTBL" Width="1.5" PointX="4.75" PointY="0.75" />
-        <EntityTypeShape EntityType="dbModel.oilTBL" Width="1.5" PointX="0.75" PointY="5.75" />
-        <EntityTypeShape EntityType="dbModel.oliveTBL" Width="1.5" PointX="2.75" PointY="5.75" />
-        <EntityTypeShape EntityType="dbModel.userTBL" Width="1.5" PointX="5.75" PointY="3.75" />
-        <EntityTypeShape EntityType="dbModel.zanTBL" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="dbModel.costomerTBL" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="dbModel.orderTBL" Width="1.5" PointX="4.25" PointY="0.5" />
+        <EntityTypeShape EntityType="dbModel.packTBL" Width="1.5" PointX="2.375" PointY="0.5" />
+        <EntityTypeShape EntityType="dbModel.oilTBL" Width="1.5" PointX="2.5" PointY="3.125" />
+        <EntityTypeShape EntityType="dbModel.oliveTBL" Width="1.5" PointX="0.5" PointY="4.5" />
+        <EntityTypeShape EntityType="dbModel.userTBL" Width="1.5" PointX="6.125" PointY="2.875" />
+        <EntityTypeShape EntityType="dbModel.zanTBL" Width="1.5" PointX="6" PointY="0.5" />
+        <AssociationConnector Association="dbModel.FK_oilTBL_ToOrderTBL" />
+        <AssociationConnector Association="dbModel.FK_oilTBL_ToPackTBL" />
+        <AssociationConnector Association="dbModel.FK_oilTBL_ToUserTBL" />
+        <AssociationConnector Association="dbModel.FK_oliveTBL_orderTBL" />
+        <AssociationConnector Association="dbModel.FK_oliveTBL_userTBL" />
+        <AssociationConnector Association="dbModel.FK_orderTBL_ToUserTBL" />
+        <AssociationConnector Association="dbModel.FK_orderTBL_ToZanTBL" />
+        <AssociationConnector Association="dbModel.FK_zanTBL_ToOrderTBL" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -108,6 +108,63 @@ namespace talYBProj.IFS
                 return null;
             }
         }
+
+        public static userTBL addUser(userTBL u1)
+        {
+            try
+            {
+                db.userTBL.Add(u1);
+                db.SaveChanges();
+                loadUserList();
+                return u1;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+        public static zanTBL addZan(zanTBL z1)
+        {
+            try
+            {
+                db.zanTBL.Add(z1);
+                db.SaveChanges();
+                loadZanList();
+                return z1;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+        public static oilTBL addOil(oilTBL o1)
+        {
+            try
+            {
+                db.oilTBL.Add(o1);
+                db.SaveChanges();
+                loadOilList();
+                return o1;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+        public static oliveTBL addOlive(oliveTBL o1)
+        {
+            try
+            {
+                db.oliveTBL.Add(o1);
+                db.SaveChanges();
+                loadOliveList();
+                return o1;
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
         #endregion
         #region update function
 
@@ -179,6 +236,90 @@ namespace talYBProj.IFS
                 return false;
             }
             
+        }
+        public static bool updateUser(userTBL u1)
+        {
+            try
+            {
+                userTBL toUpdate = (from s in db.userTBL where s.Id == u1.Id select s).FirstOrDefault();
+                if (toUpdate != null)
+                    return false;
+                toUpdate.firstName = u1.firstName;
+                toUpdate.lastName = u1.lastName;
+                toUpdate.email = u1.email;
+                toUpdate.cellPhone = u1.cellPhone;
+                toUpdate.lastLogIn = u1.lastLogIn;
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+        public static bool updateZan(zanTBL z1)
+        {
+            try
+            {
+                zanTBL toUpdate = (from s in db.zanTBL where s.Id == z1.Id select s).FirstOrDefault();
+                if (toUpdate != null)
+                    return false;
+                toUpdate.name = z1.name;
+                toUpdate.orderID = z1.orderID;              
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+        public static bool updateOil(oilTBL o1)
+        {
+            try
+            {
+                oilTBL toUpdate = (from s in db.oilTBL where s.Id == o1.Id select s).FirstOrDefault();
+                if (toUpdate != null)
+                    return false;
+                toUpdate.orderID = o1.orderID;
+                toUpdate.PackID = o1.PackID;
+                toUpdate.quantity = o1.quantity;
+                toUpdate.weight = o1.weight;
+                toUpdate.currDate = o1.currDate;
+                toUpdate.packCharged = o1.packCharged;
+                toUpdate.notes = o1.notes;
+                toUpdate.userID = o1.userID;
+                toUpdate.orderDate = o1.orderDate;
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+        public static bool updateOlive(oliveTBL o1)
+        {
+            try
+            {
+                oliveTBL toUpdate = (from s in db.oliveTBL where s.Id == o1.Id select s).FirstOrDefault();
+                if (toUpdate != null)
+                    return false;
+                toUpdate.orderID = o1.orderID;
+                toUpdate.dolevNum = o1.dolevNum;
+                toUpdate.currDate = o1.currDate;
+                toUpdate.weightBruto = o1.weightBruto;
+                toUpdate.weightNeto = o1.weightNeto;
+                toUpdate.notes = o1.notes;
+                toUpdate.userID = o1.userID;
+                toUpdate.orderDate = o1.orderDate;
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
         }
         #endregion
     }

@@ -34,7 +34,7 @@
           <Property Name="currDate" Type="date" Nullable="false" />
           <Property Name="packCharged" Type="int" Nullable="false" />
           <Property Name="notes" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="userID" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="userID" Type="int" Nullable="false" />
           <Property Name="orderDate" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="oliveTBL">
@@ -88,7 +88,6 @@
           <Property Name="lastName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="cellPhone" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="rollID" Type="int" Nullable="false" />
           <Property Name="lastLogIn" Type="date" Nullable="false" />
           <Property Name="fullName" Type="nvarchar" MaxLength="102" StoreGeneratedPattern="Computed" Nullable="false" />
         </EntityType>
@@ -100,6 +99,102 @@
           <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="orderID" Type="int" Nullable="false" />
         </EntityType>
+        <Association Name="FK_oilTBL_ToOrderTBL">
+          <End Role="orderTBL" Type="Self.orderTBL" Multiplicity="1" />
+          <End Role="oilTBL" Type="Self.oilTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orderTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="oilTBL">
+              <PropertyRef Name="orderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_oilTBL_ToPackTBL">
+          <End Role="packTBL" Type="Self.packTBL" Multiplicity="1" />
+          <End Role="oilTBL" Type="Self.oilTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="packTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="oilTBL">
+              <PropertyRef Name="PackID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_oilTBL_ToUserTBL">
+          <End Role="userTBL" Type="Self.userTBL" Multiplicity="1" />
+          <End Role="oilTBL" Type="Self.oilTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="userTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="oilTBL">
+              <PropertyRef Name="userID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_oliveTBL_orderTBL">
+          <End Role="orderTBL" Type="Self.orderTBL" Multiplicity="1" />
+          <End Role="oliveTBL" Type="Self.oliveTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orderTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="oliveTBL">
+              <PropertyRef Name="orderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_oliveTBL_userTBL">
+          <End Role="userTBL" Type="Self.userTBL" Multiplicity="1" />
+          <End Role="oliveTBL" Type="Self.oliveTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="userTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="oliveTBL">
+              <PropertyRef Name="userID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_orderTBL_ToUserTBL">
+          <End Role="userTBL" Type="Self.userTBL" Multiplicity="1" />
+          <End Role="orderTBL" Type="Self.orderTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="userTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="orderTBL">
+              <PropertyRef Name="userID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_orderTBL_ToZanTBL">
+          <End Role="zanTBL" Type="Self.zanTBL" Multiplicity="1" />
+          <End Role="orderTBL" Type="Self.orderTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zanTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="orderTBL">
+              <PropertyRef Name="zanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_zanTBL_ToOrderTBL">
+          <End Role="orderTBL" Type="Self.orderTBL" Multiplicity="1" />
+          <End Role="zanTBL" Type="Self.zanTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orderTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="zanTBL">
+              <PropertyRef Name="orderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="dbModelStoreContainer">
           <EntitySet Name="costomerTBL" EntityType="Self.costomerTBL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="oilTBL" EntityType="Self.oilTBL" Schema="dbo" store:Type="Tables" />
@@ -108,6 +203,38 @@
           <EntitySet Name="packTBL" EntityType="Self.packTBL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="userTBL" EntityType="Self.userTBL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="zanTBL" EntityType="Self.zanTBL" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_oilTBL_ToOrderTBL" Association="Self.FK_oilTBL_ToOrderTBL">
+            <End Role="orderTBL" EntitySet="orderTBL" />
+            <End Role="oilTBL" EntitySet="oilTBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_oilTBL_ToPackTBL" Association="Self.FK_oilTBL_ToPackTBL">
+            <End Role="packTBL" EntitySet="packTBL" />
+            <End Role="oilTBL" EntitySet="oilTBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_oilTBL_ToUserTBL" Association="Self.FK_oilTBL_ToUserTBL">
+            <End Role="userTBL" EntitySet="userTBL" />
+            <End Role="oilTBL" EntitySet="oilTBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_oliveTBL_orderTBL" Association="Self.FK_oliveTBL_orderTBL">
+            <End Role="orderTBL" EntitySet="orderTBL" />
+            <End Role="oliveTBL" EntitySet="oliveTBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_oliveTBL_userTBL" Association="Self.FK_oliveTBL_userTBL">
+            <End Role="userTBL" EntitySet="userTBL" />
+            <End Role="oliveTBL" EntitySet="oliveTBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_orderTBL_ToUserTBL" Association="Self.FK_orderTBL_ToUserTBL">
+            <End Role="userTBL" EntitySet="userTBL" />
+            <End Role="orderTBL" EntitySet="orderTBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_orderTBL_ToZanTBL" Association="Self.FK_orderTBL_ToZanTBL">
+            <End Role="zanTBL" EntitySet="zanTBL" />
+            <End Role="orderTBL" EntitySet="orderTBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_zanTBL_ToOrderTBL" Association="Self.FK_zanTBL_ToOrderTBL">
+            <End Role="orderTBL" EntitySet="orderTBL" />
+            <End Role="zanTBL" EntitySet="zanTBL" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -121,6 +248,38 @@
           <EntitySet Name="oliveTBL" EntityType="dbModel.oliveTBL" />
           <EntitySet Name="userTBL" EntityType="dbModel.userTBL" />
           <EntitySet Name="zanTBL" EntityType="dbModel.zanTBL" />
+          <AssociationSet Name="FK_oilTBL_ToOrderTBL" Association="dbModel.FK_oilTBL_ToOrderTBL">
+            <End Role="orderTBL" EntitySet="orderTBL" />
+            <End Role="oilTBL" EntitySet="oilTBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_oilTBL_ToPackTBL" Association="dbModel.FK_oilTBL_ToPackTBL">
+            <End Role="packTBL" EntitySet="packTBL" />
+            <End Role="oilTBL" EntitySet="oilTBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_oilTBL_ToUserTBL" Association="dbModel.FK_oilTBL_ToUserTBL">
+            <End Role="userTBL" EntitySet="userTBL" />
+            <End Role="oilTBL" EntitySet="oilTBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_oliveTBL_orderTBL" Association="dbModel.FK_oliveTBL_orderTBL">
+            <End Role="orderTBL" EntitySet="orderTBL" />
+            <End Role="oliveTBL" EntitySet="oliveTBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_oliveTBL_userTBL" Association="dbModel.FK_oliveTBL_userTBL">
+            <End Role="userTBL" EntitySet="userTBL" />
+            <End Role="oliveTBL" EntitySet="oliveTBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_orderTBL_ToUserTBL" Association="dbModel.FK_orderTBL_ToUserTBL">
+            <End Role="userTBL" EntitySet="userTBL" />
+            <End Role="orderTBL" EntitySet="orderTBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_orderTBL_ToZanTBL" Association="dbModel.FK_orderTBL_ToZanTBL">
+            <End Role="zanTBL" EntitySet="zanTBL" />
+            <End Role="orderTBL" EntitySet="orderTBL" />
+          </AssociationSet>
+          <AssociationSet Name="FK_zanTBL_ToOrderTBL" Association="dbModel.FK_zanTBL_ToOrderTBL">
+            <End Role="orderTBL" EntitySet="orderTBL" />
+            <End Role="zanTBL" EntitySet="zanTBL" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="costomerTBL">
           <Key>
@@ -156,6 +315,11 @@
           <Property Name="totalOil" Type="Int32" Nullable="false" />
           <Property Name="numOfOiPacks" Type="Int32" Nullable="false" />
           <Property Name="orderPrice" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="oilTBL" Relationship="dbModel.FK_oilTBL_ToOrderTBL" FromRole="orderTBL" ToRole="oilTBL" />
+          <NavigationProperty Name="oliveTBL" Relationship="dbModel.FK_oliveTBL_orderTBL" FromRole="orderTBL" ToRole="oliveTBL" />
+          <NavigationProperty Name="userTBL" Relationship="dbModel.FK_orderTBL_ToUserTBL" FromRole="orderTBL" ToRole="userTBL" />
+          <NavigationProperty Name="zanTBL" Relationship="dbModel.FK_orderTBL_ToZanTBL" FromRole="orderTBL" ToRole="zanTBL" />
+          <NavigationProperty Name="zanTBL1" Relationship="dbModel.FK_zanTBL_ToOrderTBL" FromRole="orderTBL" ToRole="zanTBL" />
         </EntityType>
         <EntityType Name="packTBL">
           <Key>
@@ -166,6 +330,7 @@
           <Property Name="volume" Type="Int32" Nullable="false" />
           <Property Name="weight" Type="Int32" Nullable="false" />
           <Property Name="price" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="oilTBL" Relationship="dbModel.FK_oilTBL_ToPackTBL" FromRole="packTBL" ToRole="oilTBL" />
         </EntityType>
         <EntityType Name="oilTBL">
           <Key>
@@ -179,8 +344,11 @@
           <Property Name="currDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="packCharged" Type="Int32" Nullable="false" />
           <Property Name="notes" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="userID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="userID" Type="String" Nullable="false" />
           <Property Name="orderDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="orderTBL" Relationship="dbModel.FK_oilTBL_ToOrderTBL" FromRole="oilTBL" ToRole="orderTBL" />
+          <NavigationProperty Name="packTBL" Relationship="dbModel.FK_oilTBL_ToPackTBL" FromRole="oilTBL" ToRole="packTBL" />
+          <NavigationProperty Name="userTBL" Relationship="dbModel.FK_oilTBL_ToUserTBL" FromRole="oilTBL" ToRole="userTBL" />
         </EntityType>
         <EntityType Name="oliveTBL">
           <Key>
@@ -195,6 +363,8 @@
           <Property Name="notes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="userID" Type="Int32" Nullable="false" />
           <Property Name="orderDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="orderTBL" Relationship="dbModel.FK_oliveTBL_orderTBL" FromRole="oliveTBL" ToRole="orderTBL" />
+          <NavigationProperty Name="userTBL" Relationship="dbModel.FK_oliveTBL_userTBL" FromRole="oliveTBL" ToRole="userTBL" />
         </EntityType>
         <EntityType Name="userTBL">
           <Key>
@@ -208,6 +378,9 @@
           <Property Name="rollID" Type="Int32" Nullable="false" />
           <Property Name="lastLogIn" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="fullName" Type="String" Nullable="false" MaxLength="102" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
+          <NavigationProperty Name="oilTBL" Relationship="dbModel.FK_oilTBL_ToUserTBL" FromRole="userTBL" ToRole="oilTBL" />
+          <NavigationProperty Name="oliveTBL" Relationship="dbModel.FK_oliveTBL_userTBL" FromRole="userTBL" ToRole="oliveTBL" />
+          <NavigationProperty Name="orderTBL" Relationship="dbModel.FK_orderTBL_ToUserTBL" FromRole="userTBL" ToRole="orderTBL" />
         </EntityType>
         <EntityType Name="zanTBL">
           <Key>
@@ -216,7 +389,105 @@
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="orderID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="orderTBL" Relationship="dbModel.FK_orderTBL_ToZanTBL" FromRole="zanTBL" ToRole="orderTBL" />
+          <NavigationProperty Name="orderTBL1" Relationship="dbModel.FK_zanTBL_ToOrderTBL" FromRole="zanTBL" ToRole="orderTBL" />
         </EntityType>
+        <Association Name="FK_oilTBL_ToOrderTBL">
+          <End Type="dbModel.orderTBL" Role="orderTBL" Multiplicity="1" />
+          <End Type="dbModel.oilTBL" Role="oilTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orderTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="oilTBL">
+              <PropertyRef Name="orderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_oilTBL_ToPackTBL">
+          <End Type="dbModel.packTBL" Role="packTBL" Multiplicity="1" />
+          <End Type="dbModel.oilTBL" Role="oilTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="packTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="oilTBL">
+              <PropertyRef Name="PackID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_oilTBL_ToUserTBL">
+          <End Type="dbModel.userTBL" Role="userTBL" Multiplicity="1" />
+          <End Type="dbModel.oilTBL" Role="oilTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="userTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="oilTBL">
+              <PropertyRef Name="userID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_oliveTBL_orderTBL">
+          <End Type="dbModel.orderTBL" Role="orderTBL" Multiplicity="1" />
+          <End Type="dbModel.oliveTBL" Role="oliveTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orderTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="oliveTBL">
+              <PropertyRef Name="orderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_oliveTBL_userTBL">
+          <End Type="dbModel.userTBL" Role="userTBL" Multiplicity="1" />
+          <End Type="dbModel.oliveTBL" Role="oliveTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="userTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="oliveTBL">
+              <PropertyRef Name="userID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_orderTBL_ToUserTBL">
+          <End Type="dbModel.userTBL" Role="userTBL" Multiplicity="1" />
+          <End Type="dbModel.orderTBL" Role="orderTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="userTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="orderTBL">
+              <PropertyRef Name="userID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_orderTBL_ToZanTBL">
+          <End Type="dbModel.zanTBL" Role="zanTBL" Multiplicity="1" />
+          <End Type="dbModel.orderTBL" Role="orderTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zanTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="orderTBL">
+              <PropertyRef Name="zanID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_zanTBL_ToOrderTBL">
+          <End Type="dbModel.orderTBL" Role="orderTBL" Multiplicity="1" />
+          <End Type="dbModel.zanTBL" Role="zanTBL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="orderTBL">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="zanTBL">
+              <PropertyRef Name="orderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -307,7 +578,6 @@
               <MappingFragment StoreEntitySet="userTBL">
                 <ScalarProperty Name="fullName" ColumnName="fullName" />
                 <ScalarProperty Name="lastLogIn" ColumnName="lastLogIn" />
-                <ScalarProperty Name="rollID" ColumnName="rollID" />
                 <ScalarProperty Name="cellPhone" ColumnName="cellPhone" />
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="lastName" ColumnName="lastName" />
