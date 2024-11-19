@@ -13,6 +13,10 @@ namespace talYBProj.IFS
         public static List<orderTBL> orderList;
         public static List<costomerTBL> costomerList;
         public static List<packTBL> packList;
+        public static List<userTBL> userList;
+        public static List<zanTBL> zanList;
+        public static List<oilTBL> oilList;
+        public static List<oliveTBL> oliveList;
         #endregion
         public static void init()
         {
@@ -35,10 +39,28 @@ namespace talYBProj.IFS
             costomerList = (from s in db.costomerTBL orderby s.fullName select s).ToList();
         }
 
-        public static void LoadPackList()
+        public static void loadPackList()
         {
             packList = (from s in db.packTBL orderby s.price select s).ToList();
         }
+        public static void loadUserList()
+        {
+            userList = (from s in db.userTBL orderby s.fullName select s).ToList();
+        }
+        public static void loadZanList()
+        {
+            zanList = (from s in db.zanTBL orderby s.name select s).ToList();
+        }
+        public static void loadOilList()
+        {
+            oilList = (from s in db.oilTBL orderby s.quantity select s).ToList();
+        }
+        public static void loadOliveList()
+        {
+            oliveList = (from s in db.oliveTBL orderby s.orderID select s).ToList();
+        }
+
+
 
         #endregion
         #region add function

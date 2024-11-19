@@ -12,20 +12,17 @@ namespace talYBProj
     using System;
     using System.Collections.Generic;
     
-    public partial class orderTBL
+    public partial class oilTBL
     {
         public int Id { get; set; }
-        public string orderDate { get; set; }
-        public int zanID { get; set; }
-        public int numOfDolevim { get; set; }
-        public bool isDone { get; set; }
-        public bool isPayd { get; set; }
-        public int userID { get; set; }
+        public int orderID { get; set; }
+        public int PackID { get; set; }
+        public int quantity { get; set; }
+        public int weight { get; set; }
+        public System.DateTime currDate { get; set; }
+        public int packCharged { get; set; }
         public string notes { get; set; }
-        public int totalPayment { get; set; }
-        public int totalOlive { get; set; }
-        public int totalOil { get; set; }
-        public int numOfOiPacks { get; set; }
-        public int orderPrice { get; set; }
+        public string userID { get; set; }
+        public System.DateTime orderDate { get; set; }
     }
 }

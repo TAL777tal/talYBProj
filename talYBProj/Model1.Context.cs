@@ -28,5 +28,9 @@ namespace talYBProj
         public virtual DbSet<costomerTBL> costomerTBL { get; set; }
         public virtual DbSet<orderTBL> orderTBL { get; set; }
         public virtual DbSet<packTBL> packTBL { get; set; }
+        public virtual DbSet<oilTBL> oilTBL { get; set; }
+        public virtual DbSet<oliveTBL> oliveTBL { get; set; }
+        public virtual DbSet<userTBL> userTBL { get; set; }
+        public virtual DbSet<zanTBL> zanTBL { get; set; }
     }
 }
