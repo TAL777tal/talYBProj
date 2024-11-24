@@ -33,7 +33,7 @@
           <Property Name="weight" Type="int" Nullable="false" />
           <Property Name="currDate" Type="date" Nullable="false" />
           <Property Name="packCharged" Type="int" Nullable="false" />
-          <Property Name="notes" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="notes" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="userID" Type="int" Nullable="false" />
           <Property Name="orderDate" Type="date" Nullable="false" />
         </EntityType>
@@ -242,10 +242,10 @@
       <Schema Namespace="dbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="dbEntities" annotation:LazyLoadingEnabled="true" >
           <EntitySet Name="costomerTBL" EntityType="dbModel.costomerTBL" />
-          <EntitySet Name="orderTBL" EntityType="dbModel.orderTBL" />
-          <EntitySet Name="packTBL" EntityType="dbModel.packTBL" />
           <EntitySet Name="oilTBL" EntityType="dbModel.oilTBL" />
           <EntitySet Name="oliveTBL" EntityType="dbModel.oliveTBL" />
+          <EntitySet Name="orderTBL" EntityType="dbModel.orderTBL" />
+          <EntitySet Name="packTBL" EntityType="dbModel.packTBL" />
           <EntitySet Name="userTBL" EntityType="dbModel.userTBL" />
           <EntitySet Name="zanTBL" EntityType="dbModel.zanTBL" />
           <AssociationSet Name="FK_oilTBL_ToOrderTBL" Association="dbModel.FK_oilTBL_ToOrderTBL">
@@ -298,12 +298,46 @@
           <Property Name="notes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="fullName" Type="String" Nullable="false" MaxLength="102" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
         </EntityType>
+        <EntityType Name="oilTBL">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="orderID" Type="Int32" Nullable="false" />
+          <Property Name="PackID" Type="Int32" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
+          <Property Name="weight" Type="Int32" Nullable="false" />
+          <Property Name="currDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="packCharged" Type="Int32" Nullable="false" />
+          <Property Name="notes" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="userID" Type="Int32" Nullable="false" />
+          <Property Name="orderDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="orderTBL" Relationship="dbModel.FK_oilTBL_ToOrderTBL" FromRole="oilTBL" ToRole="orderTBL" />
+          <NavigationProperty Name="packTBL" Relationship="dbModel.FK_oilTBL_ToPackTBL" FromRole="oilTBL" ToRole="packTBL" />
+          <NavigationProperty Name="userTBL" Relationship="dbModel.FK_oilTBL_ToUserTBL" FromRole="oilTBL" ToRole="userTBL" />
+        </EntityType>
+        <EntityType Name="oliveTBL">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="orderID" Type="Int32" Nullable="false" />
+          <Property Name="dolevNum" Type="Int32" Nullable="false" />
+          <Property Name="currDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="weightBruto" Type="Int32" Nullable="false" />
+          <Property Name="weightNeto" Type="Int32" Nullable="false" />
+          <Property Name="notes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="userID" Type="Int32" Nullable="false" />
+          <Property Name="orderDate" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="orderTBL" Relationship="dbModel.FK_oliveTBL_orderTBL" FromRole="oliveTBL" ToRole="orderTBL" />
+          <NavigationProperty Name="userTBL" Relationship="dbModel.FK_oliveTBL_userTBL" FromRole="oliveTBL" ToRole="userTBL" />
+        </EntityType>
         <EntityType Name="orderTBL">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="orderDate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="orderDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="zanID" Type="Int32" Nullable="false" />
           <Property Name="numOfDolevim" Type="Int32" Nullable="false" />
           <Property Name="isDone" Type="Boolean" Nullable="false" />
@@ -332,40 +366,6 @@
           <Property Name="price" Type="Int32" Nullable="false" />
           <NavigationProperty Name="oilTBL" Relationship="dbModel.FK_oilTBL_ToPackTBL" FromRole="packTBL" ToRole="oilTBL" />
         </EntityType>
-        <EntityType Name="oilTBL">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="orderID" Type="Int32" Nullable="false" />
-          <Property Name="PackID" Type="Int32" Nullable="false" />
-          <Property Name="quantity" Type="Int32" Nullable="false" />
-          <Property Name="weight" Type="Int32" Nullable="false" />
-          <Property Name="currDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="packCharged" Type="Int32" Nullable="false" />
-          <Property Name="notes" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="userID" Type="String" Nullable="false" />
-          <Property Name="orderDate" Type="DateTime" Nullable="false" Precision="0" />
-          <NavigationProperty Name="orderTBL" Relationship="dbModel.FK_oilTBL_ToOrderTBL" FromRole="oilTBL" ToRole="orderTBL" />
-          <NavigationProperty Name="packTBL" Relationship="dbModel.FK_oilTBL_ToPackTBL" FromRole="oilTBL" ToRole="packTBL" />
-          <NavigationProperty Name="userTBL" Relationship="dbModel.FK_oilTBL_ToUserTBL" FromRole="oilTBL" ToRole="userTBL" />
-        </EntityType>
-        <EntityType Name="oliveTBL">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
-          <Property Name="orderID" Type="Int32" Nullable="false" />
-          <Property Name="dolevNum" Type="Int32" Nullable="false" />
-          <Property Name="currDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="weightBruto" Type="Int32" Nullable="false" />
-          <Property Name="weightNeto" Type="Int32" Nullable="false" />
-          <Property Name="notes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="userID" Type="Int32" Nullable="false" />
-          <Property Name="orderDate" Type="DateTime" Nullable="false" Precision="0" />
-          <NavigationProperty Name="orderTBL" Relationship="dbModel.FK_oliveTBL_orderTBL" FromRole="oliveTBL" ToRole="orderTBL" />
-          <NavigationProperty Name="userTBL" Relationship="dbModel.FK_oliveTBL_userTBL" FromRole="oliveTBL" ToRole="userTBL" />
-        </EntityType>
         <EntityType Name="userTBL">
           <Key>
             <PropertyRef Name="Id" />
@@ -375,7 +375,6 @@
           <Property Name="lastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="cellPhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="rollID" Type="Int32" Nullable="false" />
           <Property Name="lastLogIn" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="fullName" Type="String" Nullable="false" MaxLength="102" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
           <NavigationProperty Name="oilTBL" Relationship="dbModel.FK_oilTBL_ToUserTBL" FromRole="userTBL" ToRole="oilTBL" />
@@ -488,7 +487,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -508,36 +507,6 @@
                 <ScalarProperty Name="companyName" ColumnName="companyName" />
                 <ScalarProperty Name="lastName" ColumnName="lastName" />
                 <ScalarProperty Name="firstName" ColumnName="firstName" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="orderTBL">
-            <EntityTypeMapping TypeName="dbModel.orderTBL">
-              <MappingFragment StoreEntitySet="orderTBL">
-                <ScalarProperty Name="orderPrice" ColumnName="orderPrice" />
-                <ScalarProperty Name="numOfOiPacks" ColumnName="numOfOiPacks" />
-                <ScalarProperty Name="totalOil" ColumnName="totalOil" />
-                <ScalarProperty Name="totalOlive" ColumnName="totalOlive" />
-                <ScalarProperty Name="totalPayment" ColumnName="totalPayment" />
-                <ScalarProperty Name="notes" ColumnName="notes" />
-                <ScalarProperty Name="userID" ColumnName="userID" />
-                <ScalarProperty Name="isPayd" ColumnName="isPayd" />
-                <ScalarProperty Name="isDone" ColumnName="isDone" />
-                <ScalarProperty Name="numOfDolevim" ColumnName="numOfDolevim" />
-                <ScalarProperty Name="zanID" ColumnName="zanID" />
-                <ScalarProperty Name="orderDate" ColumnName="orderDate" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="packTBL">
-            <EntityTypeMapping TypeName="dbModel.packTBL">
-              <MappingFragment StoreEntitySet="packTBL">
-                <ScalarProperty Name="price" ColumnName="price" />
-                <ScalarProperty Name="weight" ColumnName="weight" />
-                <ScalarProperty Name="volume" ColumnName="volume" />
-                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -569,6 +538,36 @@
                 <ScalarProperty Name="currDate" ColumnName="currDate" />
                 <ScalarProperty Name="dolevNum" ColumnName="dolevNum" />
                 <ScalarProperty Name="orderID" ColumnName="orderID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="orderTBL">
+            <EntityTypeMapping TypeName="dbModel.orderTBL">
+              <MappingFragment StoreEntitySet="orderTBL">
+                <ScalarProperty Name="orderPrice" ColumnName="orderPrice" />
+                <ScalarProperty Name="numOfOiPacks" ColumnName="numOfOiPacks" />
+                <ScalarProperty Name="totalOil" ColumnName="totalOil" />
+                <ScalarProperty Name="totalOlive" ColumnName="totalOlive" />
+                <ScalarProperty Name="totalPayment" ColumnName="totalPayment" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="isPayd" ColumnName="isPayd" />
+                <ScalarProperty Name="isDone" ColumnName="isDone" />
+                <ScalarProperty Name="numOfDolevim" ColumnName="numOfDolevim" />
+                <ScalarProperty Name="zanID" ColumnName="zanID" />
+                <ScalarProperty Name="orderDate" ColumnName="orderDate" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="packTBL">
+            <EntityTypeMapping TypeName="dbModel.packTBL">
+              <MappingFragment StoreEntitySet="packTBL">
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="weight" ColumnName="weight" />
+                <ScalarProperty Name="volume" ColumnName="volume" />
+                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

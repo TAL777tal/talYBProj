@@ -31,5 +31,15 @@ namespace talYBProj
         {
 
         }
+
+        private void הוספתמוצרToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kryptonLabel6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

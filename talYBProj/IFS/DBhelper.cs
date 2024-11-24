@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace talYBProj.IFS
 {
-    internal class DBhelper
+    public static class DBhelper
     {
         #region definitons
         private static dbEntities db;
@@ -28,7 +28,11 @@ namespace talYBProj.IFS
         {
             loadOrderList();
             loadCostomerList();
-            LoadPackList();
+            loadPackList();
+            loadUserList();
+            loadZanList();
+            loadOilList();
+            loadOliveList();
         }
         public static void loadOrderList()
         {
