@@ -23,7 +23,7 @@ namespace talYBProj
         public string phone1 { get; set; }
         public string officePhone { get; set; }
         public string email { get; set; }
-        public int price { get; set; }
+        public double price { get; set; }
         public string notes { get; set; }
         public string fullName { get; set; }
     }

@@ -17,8 +17,8 @@
           <Property Name="cellPhone" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="phone1" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="officePhone" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="email" Type="nchar" MaxLength="50" Nullable="false" />
-          <Property Name="price" Type="int" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="price" Type="float" Nullable="false" />
           <Property Name="notes" Type="nvarchar" MaxLength="50" />
           <Property Name="fullName" Type="nvarchar" MaxLength="102" StoreGeneratedPattern="Computed" Nullable="false" />
         </EntityType>
@@ -293,8 +293,8 @@
           <Property Name="cellPhone" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="phone1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="officePhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
-          <Property Name="price" Type="Int32" Nullable="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Double" Nullable="false" />
           <Property Name="notes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="fullName" Type="String" Nullable="false" MaxLength="102" FixedLength="false" Unicode="true" annotation:StoreGeneratedPattern="Computed" />
         </EntityType>
