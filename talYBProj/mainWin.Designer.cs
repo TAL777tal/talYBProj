@@ -30,12 +30,12 @@
         {
             this.kryptonRibbon1 = new Krypton.Ribbon.KryptonRibbon();
             this.customerTab = new Krypton.Ribbon.KryptonRibbonTab();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.kryptonRibbonGroup1 = new Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple1 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnOpenCustWin = new Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.kryptonRibbonGroupButton2 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.krRGBopenUpdateWin = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupButton3 = new Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.mainPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +56,14 @@
             this.kryptonRibbonGroup1});
             this.customerTab.Text = "ניהול לקוחות";
             // 
+            // mainPanel
+            // 
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 171);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(800, 279);
+            this.mainPanel.TabIndex = 1;
+            // 
             // kryptonRibbonGroup1
             // 
             this.kryptonRibbonGroup1.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupContainer[] {
@@ -66,7 +74,7 @@
             // 
             this.kryptonRibbonGroupTriple1.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
             this.btnOpenCustWin,
-            this.kryptonRibbonGroupButton2,
+            this.krRGBopenUpdateWin,
             this.kryptonRibbonGroupButton3});
             // 
             // btnOpenCustWin
@@ -74,13 +82,10 @@
             this.btnOpenCustWin.TextLine1 = "הוסף לקוח";
             this.btnOpenCustWin.Click += new System.EventHandler(this.btnOpenCustWin_Click);
             // 
-            // mainPanel
+            // krRGBopenUpdateWin
             // 
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 171);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(800, 279);
-            this.mainPanel.TabIndex = 1;
+            this.krRGBopenUpdateWin.TextLine1 = "עדכן לקוח";
+            this.krRGBopenUpdateWin.Click += new System.EventHandler(this.kryptonRibbonGroupButton2_Click);
             // 
             // mainWin
             // 
@@ -105,7 +110,7 @@
         private Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup1;
         private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple1;
         private Krypton.Ribbon.KryptonRibbonGroupButton btnOpenCustWin;
-        private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton2;
+        private Krypton.Ribbon.KryptonRibbonGroupButton krRGBopenUpdateWin;
         private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton3;
         private System.Windows.Forms.Panel mainPanel;
     }

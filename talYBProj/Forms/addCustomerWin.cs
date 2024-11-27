@@ -11,9 +11,11 @@ using talYBProj.IFS;
 
 namespace talYBProj.Forms
 {
-    public partial class customerWin : Form
+    public partial class addCustomerWin : Form
     {
-        public customerWin()
+        dbEntities db = new dbEntities();
+        List<costomerTBL> lst;
+        public addCustomerWin()
         {
             InitializeComponent();
         }
@@ -34,5 +36,6 @@ namespace talYBProj.Forms
             c1 = DBhelper.addCostomer(c1);
 
         }
+       
     }
 }

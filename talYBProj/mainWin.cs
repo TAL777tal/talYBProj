@@ -32,13 +32,31 @@ namespace talYBProj
         {
             if (current != null)
             {
-                if (current is customerWin)
+                if (current is addCustomerWin)
                 {
                     return;
                 }
                 current.Close();
             }
-            current = new customerWin();
+            current = new addCustomerWin();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
+
+        private void kryptonRibbonGroupButton2_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is updateCostomerWin)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new updateCostomerWin();
             current.Dock = DockStyle.Fill;
             current.TopLevel = false;
             current.TopMost = true;

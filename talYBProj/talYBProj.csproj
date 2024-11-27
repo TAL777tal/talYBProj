@@ -89,11 +89,17 @@
     <Compile Include="costomerTBL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Forms\customerWin.cs">
+    <Compile Include="Forms\addCustomerWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\customerWin.Designer.cs">
-      <DependentUpon>customerWin.cs</DependentUpon>
+    <Compile Include="Forms\addCustomerWin.Designer.cs">
+      <DependentUpon>addCustomerWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\updateCostomerWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\updateCostomerWin.Designer.cs">
+      <DependentUpon>updateCostomerWin.cs</DependentUpon>
     </Compile>
     <Compile Include="mainWin.cs">
       <SubType>Form</SubType>
@@ -137,8 +143,11 @@
     <Compile Include="zanTBL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\customerWin.resx">
-      <DependentUpon>customerWin.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\addCustomerWin.resx">
+      <DependentUpon>addCustomerWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\updateCostomerWin.resx">
+      <DependentUpon>updateCostomerWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainWin.resx">
       <DependentUpon>mainWin.cs</DependentUpon>
