@@ -14,6 +14,12 @@ namespace talYBProj
     
     public partial class costomerTBL
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public costomerTBL()
+        {
+            this.orderTBL = new HashSet<orderTBL>();
+        }
+    
         public int Id { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
@@ -26,5 +32,8 @@ namespace talYBProj
         public double price { get; set; }
         public string notes { get; set; }
         public string fullName { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<orderTBL> orderTBL { get; set; }
     }
 }

@@ -35,7 +35,9 @@ namespace talYBProj
         public int totalOil { get; set; }
         public int numOfOiPacks { get; set; }
         public int orderPrice { get; set; }
+        public int costomerID { get; set; }
     
+        public virtual costomerTBL costomerTBL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<oilTBL> oilTBL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

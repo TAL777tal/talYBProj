@@ -86,8 +86,9 @@
             this.addCostumer.Location = new System.Drawing.Point(377, 333);
             this.addCostumer.Name = "addCostumer";
             this.addCostumer.Size = new System.Drawing.Size(90, 25);
-            this.addCostumer.TabIndex = 45;
+            this.addCostumer.TabIndex = 11;
             this.addCostumer.Values.Text = "הוספה";
+            this.addCostumer.Click += new System.EventHandler(this.addCostumer_Click);
             // 
             // kTBXPrice
             // 
@@ -95,7 +96,7 @@
             this.kTBXPrice.Mask = "00000.00";
             this.kTBXPrice.Name = "kTBXPrice";
             this.kTBXPrice.Size = new System.Drawing.Size(100, 22);
-            this.kTBXPrice.TabIndex = 44;
+            this.kTBXPrice.TabIndex = 9;
             this.kTBXPrice.ValidatingType = typeof(int);
             // 
             // MTBXPOffice
@@ -104,7 +105,7 @@
             this.MTBXPOffice.Mask = "(999) 000-0000";
             this.MTBXPOffice.Name = "MTBXPOffice";
             this.MTBXPOffice.Size = new System.Drawing.Size(100, 22);
-            this.MTBXPOffice.TabIndex = 43;
+            this.MTBXPOffice.TabIndex = 7;
             // 
             // MTBXPSecend
             // 
@@ -112,7 +113,7 @@
             this.MTBXPSecend.Mask = "(999) 000-0000";
             this.MTBXPSecend.Name = "MTBXPSecend";
             this.MTBXPSecend.Size = new System.Drawing.Size(100, 22);
-            this.MTBXPSecend.TabIndex = 42;
+            this.MTBXPSecend.TabIndex = 6;
             // 
             // MTBXPFirst
             // 
@@ -120,14 +121,14 @@
             this.MTBXPFirst.Mask = "(999) 000-0000";
             this.MTBXPFirst.Name = "MTBXPFirst";
             this.MTBXPFirst.Size = new System.Drawing.Size(100, 22);
-            this.MTBXPFirst.TabIndex = 41;
+            this.MTBXPFirst.TabIndex = 5;
             // 
             // kRTBXN
             // 
             this.kRTBXN.Location = new System.Drawing.Point(42, 180);
             this.kRTBXN.Name = "kRTBXN";
             this.kRTBXN.Size = new System.Drawing.Size(206, 165);
-            this.kRTBXN.TabIndex = 40;
+            this.kRTBXN.TabIndex = 10;
             this.kRTBXN.Text = "";
             // 
             // kTBXEmail
@@ -135,35 +136,35 @@
             this.kTBXEmail.Location = new System.Drawing.Point(148, 114);
             this.kTBXEmail.Name = "kTBXEmail";
             this.kTBXEmail.Size = new System.Drawing.Size(100, 27);
-            this.kTBXEmail.TabIndex = 39;
+            this.kTBXEmail.TabIndex = 8;
             // 
             // kTBXADD
             // 
             this.kTBXADD.Location = new System.Drawing.Point(529, 180);
             this.kTBXADD.Name = "kTBXADD";
             this.kTBXADD.Size = new System.Drawing.Size(100, 27);
-            this.kTBXADD.TabIndex = 38;
+            this.kTBXADD.TabIndex = 4;
             // 
             // kTBXCN
             // 
             this.kTBXCN.Location = new System.Drawing.Point(529, 147);
             this.kTBXCN.Name = "kTBXCN";
             this.kTBXCN.Size = new System.Drawing.Size(100, 27);
-            this.kTBXCN.TabIndex = 37;
+            this.kTBXCN.TabIndex = 3;
             // 
             // kTBXLN
             // 
             this.kTBXLN.Location = new System.Drawing.Point(529, 114);
             this.kTBXLN.Name = "kTBXLN";
             this.kTBXLN.Size = new System.Drawing.Size(100, 27);
-            this.kTBXLN.TabIndex = 36;
+            this.kTBXLN.TabIndex = 2;
             // 
             // kTBXFN
             // 
             this.kTBXFN.Location = new System.Drawing.Point(529, 81);
             this.kTBXFN.Name = "kTBXFN";
             this.kTBXFN.Size = new System.Drawing.Size(100, 27);
-            this.kTBXFN.TabIndex = 35;
+            this.kTBXFN.TabIndex = 1;
             // 
             // kryptonLabel10
             // 
@@ -249,8 +250,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(969, 545);
             this.Controls.Add(this.addPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "addCustomerWin";
             this.Text = "customerWin";
             this.addPanel.ResumeLayout(false);

@@ -63,5 +63,23 @@ namespace talYBProj
             mainPanel.Controls.Add(current);
             current.Show();
         }
+
+        private void BtnOpenCostomerListWin_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is costomerList)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new costomerList();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
     }
 }

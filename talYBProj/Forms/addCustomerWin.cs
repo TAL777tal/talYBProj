@@ -30,12 +30,29 @@ namespace talYBProj.Forms
             c1.cellPhone = MTBXPFirst.Text.Trim();
             c1.phone1 = MTBXPSecend.Text.Trim();
             c1.officePhone = MTBXPOffice.Text.Trim();
-            c1.address = kTBXEmail.Text.Trim();
+            c1.email = kTBXEmail.Text.Trim();
             c1.price = Convert.ToDouble(kTBXPrice.Text.Trim());
             c1.notes = kRTBXN.Text.Trim();
             c1 = DBhelper.addCostomer(c1);
+            if (c1 == null)
+            {
+                MessageBox.Show("error");
+            }
+            else
+            {
+                MessageBox.Show("OK");
+                kTBXFN.Text = "";
+                kTBXLN.Text = "";
+                kTBXCN.Text = "";
+                kTBXADD.Text = "";
+                MTBXPFirst.Text = "";
+                MTBXPSecend.Text = "";
+                MTBXPOffice.Text = "";
+                kTBXEmail.Text = "";
+                kTBXPrice.Text = "";
+                kRTBXN.Text = "";
+            }
 
         }
-       
     }
 }
