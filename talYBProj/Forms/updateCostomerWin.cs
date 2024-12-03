@@ -51,6 +51,10 @@ namespace talYBProj.Forms
         private void kCBXchose_SelectedIndexChanged(object sender, EventArgs e)
         {
             costomerTBL selected = (costomerTBL)kCBXchose.SelectedItem;
+            if(selected == null) 
+            {
+                return;
+            }
             kTBXFirstName.Text = selected.firstName;
             kTBXLastName.Text = selected.lastName;
             kTBXCompanyName.Text = selected.companyName;
@@ -62,6 +66,7 @@ namespace talYBProj.Forms
             MTBXprice.Text = Convert.ToString(selected.price);
             if (selected.notes != null)
                 kRTBXNotes.Text = selected.notes;
+
         }
 
         private void kLabelChose_Click(object sender, EventArgs e)

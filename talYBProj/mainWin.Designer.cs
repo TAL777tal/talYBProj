@@ -36,6 +36,7 @@
             this.krRGBopenUpdateWin = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.BtnOpenCostomerListWin = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.kryptonRibbonTab1 = new Krypton.Ribbon.KryptonRibbonTab();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,11 +49,11 @@
             this.kryptonRibbon1.RibbonAppButton.AppButtonText = "jadek";
             this.kryptonRibbon1.RibbonAppButton.AppButtonVisible = false;
             this.kryptonRibbon1.RibbonTabs.AddRange(new Krypton.Ribbon.KryptonRibbonTab[] {
-            this.customerTab});
-            this.kryptonRibbon1.SelectedContext = null;
+            this.customerTab,
+            this.kryptonRibbonTab1});
             this.kryptonRibbon1.SelectedTab = this.customerTab;
             this.kryptonRibbon1.ShowMinimizeButton = false;
-            this.kryptonRibbon1.Size = new System.Drawing.Size(800, 136);
+            this.kryptonRibbon1.Size = new System.Drawing.Size(800, 171);
             this.kryptonRibbon1.TabIndex = 0;
             // 
             // customerTab
@@ -92,9 +93,9 @@
             // mainPanel
             // 
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 136);
+            this.mainPanel.Location = new System.Drawing.Point(0, 171);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(800, 314);
+            this.mainPanel.Size = new System.Drawing.Size(800, 279);
             this.mainPanel.TabIndex = 1;
             // 
             // mainWin
@@ -124,6 +125,7 @@
         private Krypton.Ribbon.KryptonRibbonGroupButton krRGBopenUpdateWin;
         private Krypton.Ribbon.KryptonRibbonGroupButton BtnOpenCostomerListWin;
         private System.Windows.Forms.Panel mainPanel;
+        private Krypton.Ribbon.KryptonRibbonTab kryptonRibbonTab1;
     }
 }
 

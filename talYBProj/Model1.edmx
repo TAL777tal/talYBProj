@@ -9,12 +9,12 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="firstName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="lastName" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="companyName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="companyName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="address" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="cellPhone" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="cellPhone" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="phone1" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="officePhone" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -26,7 +26,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="orderID" Type="int" Nullable="false" />
           <Property Name="PackID" Type="int" Nullable="false" />
           <Property Name="quantity" Type="int" Nullable="false" />
@@ -41,7 +41,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="orderID" Type="int" Nullable="false" />
           <Property Name="dolevNum" Type="int" Nullable="false" />
           <Property Name="currDate" Type="date" Nullable="false" />
@@ -55,7 +55,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="orderDate" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="zanID" Type="int" Nullable="false" />
           <Property Name="numOfDolevim" Type="int" Nullable="false" />
@@ -84,7 +84,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="firstName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="lastName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -96,7 +96,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="orderID" Type="int" Nullable="false" />
         </EntityType>
@@ -306,12 +306,12 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="firstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="lastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="companyName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="companyName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="cellPhone" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="cellPhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="phone1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="officePhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -324,7 +324,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="orderID" Type="Int32" Nullable="false" />
           <Property Name="PackID" Type="Int32" Nullable="false" />
           <Property Name="quantity" Type="Int32" Nullable="false" />
@@ -342,7 +342,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="orderID" Type="Int32" Nullable="false" />
           <Property Name="dolevNum" Type="Int32" Nullable="false" />
           <Property Name="currDate" Type="DateTime" Nullable="false" Precision="0" />
@@ -358,7 +358,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="orderDate" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="zanID" Type="Int32" Nullable="false" />
           <Property Name="numOfDolevim" Type="Int32" Nullable="false" />
@@ -394,7 +394,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="firstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="lastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -409,7 +409,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="orderID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="orderTBL" Relationship="dbModel.FK_orderTBL_ToZanTBL" FromRole="zanTBL" ToRole="orderTBL" />

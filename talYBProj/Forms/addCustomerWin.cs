@@ -33,6 +33,7 @@ namespace talYBProj.Forms
             c1.email = kTBXEmail.Text.Trim();
             c1.price = Convert.ToDouble(kTBXPrice.Text.Trim());
             c1.notes = kRTBXN.Text.Trim();
+            
             c1 = DBhelper.addCostomer(c1);
             if (c1 == null)
             {
@@ -52,6 +53,11 @@ namespace talYBProj.Forms
                 kTBXPrice.Text = "";
                 kRTBXN.Text = "";
             }
+
+        }
+
+        private void kTBXFN_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

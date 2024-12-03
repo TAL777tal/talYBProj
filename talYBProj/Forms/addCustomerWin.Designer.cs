@@ -165,6 +165,7 @@
             this.kTBXFN.Name = "kTBXFN";
             this.kTBXFN.Size = new System.Drawing.Size(100, 27);
             this.kTBXFN.TabIndex = 1;
+            this.kTBXFN.TextChanged += new System.EventHandler(this.kTBXFN_TextChanged);
             // 
             // kryptonLabel10
             // 

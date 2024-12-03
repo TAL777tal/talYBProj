@@ -104,7 +104,7 @@ namespace talYBProj.IFS
             {
                 db.packTBL.Add(p1);
                 db.SaveChanges();
-                loadCostomerList();
+                loadPackList();
                 return p1;
             }
             catch (Exception e)
