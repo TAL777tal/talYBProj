@@ -35,8 +35,13 @@
             this.btnOpenCustWin = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.krRGBopenUpdateWin = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.BtnOpenCostomerListWin = new Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.mainPanel = new System.Windows.Forms.Panel();
             this.kryptonRibbonTab1 = new Krypton.Ribbon.KryptonRibbonTab();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.kryptonRibbonGroup2 = new Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple2 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.btnOpenAddOrderWin = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton2 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton3 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +56,8 @@
             this.kryptonRibbon1.RibbonTabs.AddRange(new Krypton.Ribbon.KryptonRibbonTab[] {
             this.customerTab,
             this.kryptonRibbonTab1});
-            this.kryptonRibbon1.SelectedTab = this.customerTab;
+            this.kryptonRibbon1.SelectedContext = null;
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
             this.kryptonRibbon1.ShowMinimizeButton = false;
             this.kryptonRibbon1.Size = new System.Drawing.Size(800, 171);
             this.kryptonRibbon1.TabIndex = 0;
@@ -90,6 +96,12 @@
             this.BtnOpenCostomerListWin.TextLine1 = "רשימת לקוחות";
             this.BtnOpenCostomerListWin.Click += new System.EventHandler(this.BtnOpenCostomerListWin_Click);
             // 
+            // kryptonRibbonTab1
+            // 
+            this.kryptonRibbonTab1.Groups.AddRange(new Krypton.Ribbon.KryptonRibbonGroup[] {
+            this.kryptonRibbonGroup2});
+            this.kryptonRibbonTab1.Text = "ניהול הזמנות";
+            // 
             // mainPanel
             // 
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -97,6 +109,32 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(800, 279);
             this.mainPanel.TabIndex = 1;
+            // 
+            // kryptonRibbonGroup2
+            // 
+            this.kryptonRibbonGroup2.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple2});
+            this.kryptonRibbonGroup2.TextLine1 = "ניהול הזמנות";
+            // 
+            // kryptonRibbonGroupTriple2
+            // 
+            this.kryptonRibbonGroupTriple2.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.btnOpenAddOrderWin,
+            this.kryptonRibbonGroupButton2,
+            this.kryptonRibbonGroupButton3});
+            // 
+            // btnOpenAddOrderWin
+            // 
+            this.btnOpenAddOrderWin.TextLine1 = "הוספת הזמנה";
+            this.btnOpenAddOrderWin.Click += new System.EventHandler(this.btnOpenAddOrderWin_Click);
+            // 
+            // kryptonRibbonGroupButton2
+            // 
+            this.kryptonRibbonGroupButton2.TextLine1 = "עדכן הזמנה";
+            // 
+            // kryptonRibbonGroupButton3
+            // 
+            this.kryptonRibbonGroupButton3.TextLine1 = "רשימת הזמנות";
             // 
             // mainWin
             // 
@@ -126,6 +164,11 @@
         private Krypton.Ribbon.KryptonRibbonGroupButton BtnOpenCostomerListWin;
         private System.Windows.Forms.Panel mainPanel;
         private Krypton.Ribbon.KryptonRibbonTab kryptonRibbonTab1;
+        private Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup2;
+        private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple2;
+        private Krypton.Ribbon.KryptonRibbonGroupButton btnOpenAddOrderWin;
+        private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton2;
+        private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton3;
     }
 }
 

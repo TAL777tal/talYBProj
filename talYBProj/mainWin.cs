@@ -68,13 +68,31 @@ namespace talYBProj
         {
             if (current != null)
             {
-                if (current is costomerList)
+                if (current is costomerListWin)
                 {
                     return;
                 }
                 current.Close();
             }
-            current = new costomerList();
+            current = new costomerListWin();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
+
+        private void btnOpenAddOrderWin_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is addOrderWin)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new addOrderWin();
             current.Dock = DockStyle.Fill;
             current.TopLevel = false;
             current.TopMost = true;

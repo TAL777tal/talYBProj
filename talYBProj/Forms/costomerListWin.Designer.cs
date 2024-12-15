@@ -1,6 +1,6 @@
 ﻿namespace talYBProj.Forms
 {
-    partial class costomerList
+    partial class costomerListWin
     {
         /// <summary>
         /// Required designer variable.

@@ -256,6 +256,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "addCustomerWin";
             this.Text = "customerWin";
+            this.Load += new System.EventHandler(this.addCustomerWin_Load);
             this.addPanel.ResumeLayout(false);
             this.addPanel.PerformLayout();
             this.ResumeLayout(false);

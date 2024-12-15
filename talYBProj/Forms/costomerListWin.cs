@@ -11,10 +11,10 @@ using talYBProj.IFS;
 
 namespace talYBProj.Forms
 {
-    public partial class costomerList : Form
+    public partial class costomerListWin : Form
     {
         List<costomerTBL> list;
-        public costomerList()
+        public costomerListWin()
         {
             InitializeComponent();
         }

@@ -13,7 +13,7 @@ namespace talYBProj.Forms
 {
     public partial class updateCostomerWin : Form
     {
-        dbEntities db = new dbEntities();
+      
         List<costomerTBL> lst;
         public updateCostomerWin()
         {
@@ -27,8 +27,8 @@ namespace talYBProj.Forms
 
         private void kBtnUpdate_Click(object sender, EventArgs e)
         {
-            costomerTBL old = (costomerTBL)kCBXchose.SelectedItem;
-            costomerTBL toUpdate = (from s in db.costomerTBL where s.Id == old.Id select s).FirstOrDefault();
+            costomerTBL toUpdate = (costomerTBL)kCBXchose.SelectedItem;
+           
             if (toUpdate == null)
             {
                 return;
@@ -44,7 +44,16 @@ namespace talYBProj.Forms
             toUpdate.address = kTBXEmail.Text.Trim();
             toUpdate.price = Convert.ToDouble(MTBXprice.Text.Trim());
             toUpdate.notes = kRTBXNotes.Text.Trim();
-            toUpdate = DBhelper.addCostomer(toUpdate);
+           if (DBhelper.updateCostomer(toUpdate))
+            {
+                MessageBox.Show("add succefuly");
+                updateCBX();
+            }
+            else //error
+            {
+                MessageBox.Show("error");
+
+            }
 
         }
 
@@ -72,6 +81,18 @@ namespace talYBProj.Forms
         private void kLabelChose_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void updateCostomerWin_Load(object sender, EventArgs e)
+        {
+            updateCBX();
+
+        }
+
+        private void updateCBX()
+        {
+            lst = DBhelper.costomerList;
+            kCBXchose.DataSource = lst;
         }
     }
 }

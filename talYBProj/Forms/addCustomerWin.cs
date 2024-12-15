@@ -60,5 +60,10 @@ namespace talYBProj.Forms
         {
 
         }
+
+        private void addCustomerWin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

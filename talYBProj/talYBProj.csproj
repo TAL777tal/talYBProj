@@ -95,17 +95,35 @@
     <Compile Include="Forms\addCustomerWin.Designer.cs">
       <DependentUpon>addCustomerWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\costomerList.cs">
+    <Compile Include="Forms\addOrderWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\costomerList.Designer.cs">
-      <DependentUpon>costomerList.cs</DependentUpon>
+    <Compile Include="Forms\addOrderWin.Designer.cs">
+      <DependentUpon>addOrderWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\costomerListWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\costomerListWin.Designer.cs">
+      <DependentUpon>costomerListWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\orderListWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\orderListWin.Designer.cs">
+      <DependentUpon>orderListWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\updateCostomerWin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\updateCostomerWin.Designer.cs">
       <DependentUpon>updateCostomerWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\updateOrderWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\updateOrderWin.Designer.cs">
+      <DependentUpon>updateOrderWin.cs</DependentUpon>
     </Compile>
     <Compile Include="mainWin.cs">
       <SubType>Form</SubType>
@@ -152,8 +170,11 @@
     <EmbeddedResource Include="Forms\addCustomerWin.resx">
       <DependentUpon>addCustomerWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\costomerList.resx">
-      <DependentUpon>costomerList.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\addOrderWin.resx">
+      <DependentUpon>addOrderWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\costomerListWin.resx">
+      <DependentUpon>costomerListWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\updateCostomerWin.resx">
       <DependentUpon>updateCostomerWin.cs</DependentUpon>
