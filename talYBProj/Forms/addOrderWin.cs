@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using talYBProj.IFS;
 
 namespace talYBProj.Forms
 {
     public partial class addOrderWin : Form
     {
+        List<costomerTBL> custList = DBhelper.costomerList;
+        List<zanTBL> zanList = DBhelper.zanList;
         public addOrderWin()
         {
             InitializeComponent();
@@ -24,10 +27,39 @@ namespace talYBProj.Forms
 
         private void addOrderWin_Load(object sender, EventArgs e)
         {
-
+            cbxCust.DataSource = custList;
+            cbxZan.DataSource = zanList;
         }
 
         private void isDoneLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddOrder_Click(object sender, EventArgs e)
+        {
+            orderTBL o1 = new orderTBL();
+            //o1.orderDate = ;
+            cbxCust.DataSource = custList;
+            cbxCust.DisplayMember = "full name";
+            cbxZan.ValueMember = "ID";
+            cbxZan.DisplayMember = "name";
+            o1.numOfDolevim = ((int)nUDnumOfDolevim.Value);
+            o1.notes = TBXnotes.Text.Trim();
+            o1 = DBhelper.addOrder(o1);
+            if (o1 == null)
+            {
+                MessageBox.Show("error");
+            }
+            else
+            {
+                MessageBox.Show("OK");
+                o1.notes = "";
+
+            }
+        }
+
+        private void cbxCust_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
