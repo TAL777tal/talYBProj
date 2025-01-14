@@ -35,6 +35,8 @@
             this.AddButton = new Krypton.Toolkit.KryptonButton();
             this.labelNumOfDolevim = new System.Windows.Forms.Label();
             this.NumericUDOolevim = new Krypton.Toolkit.KryptonNumericUpDown();
+            this.labelIDorder = new System.Windows.Forms.Label();
+            this.cbxOrderNum = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // Labelweight
@@ -132,11 +134,30 @@
             0,
             0});
             // 
+            // labelIDorder
+            // 
+            this.labelIDorder.AutoSize = true;
+            this.labelIDorder.Location = new System.Drawing.Point(584, 62);
+            this.labelIDorder.Name = "labelIDorder";
+            this.labelIDorder.Size = new System.Drawing.Size(74, 16);
+            this.labelIDorder.TabIndex = 15;
+            this.labelIDorder.Text = "מספר הזמנה";
+            // 
+            // cbxOrderNum
+            // 
+            this.cbxOrderNum.FormattingEnabled = true;
+            this.cbxOrderNum.Location = new System.Drawing.Point(436, 62);
+            this.cbxOrderNum.Name = "cbxOrderNum";
+            this.cbxOrderNum.Size = new System.Drawing.Size(121, 24);
+            this.cbxOrderNum.TabIndex = 16;
+            // 
             // addOilWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbxOrderNum);
+            this.Controls.Add(this.labelIDorder);
             this.Controls.Add(this.NumericUDOolevim);
             this.Controls.Add(this.labelNumOfDolevim);
             this.Controls.Add(this.AddButton);
@@ -159,5 +180,7 @@
         private Krypton.Toolkit.KryptonButton AddButton;
         private System.Windows.Forms.Label labelNumOfDolevim;
         private Krypton.Toolkit.KryptonNumericUpDown NumericUDOolevim;
+        private System.Windows.Forms.Label labelIDorder;
+        private System.Windows.Forms.ComboBox cbxOrderNum;
     }
 }
