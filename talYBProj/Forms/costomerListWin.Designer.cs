@@ -79,7 +79,7 @@
             this.notesDataGridViewTextBoxColumn,
             this.fullNameDataGridViewTextBoxColumn});
             this.dgvCust.DataSource = this.costomerTBLBindingSource;
-            this.dgvCust.Location = new System.Drawing.Point(12, 36);
+            this.dgvCust.Location = new System.Drawing.Point(1, 36);
             this.dgvCust.Name = "dgvCust";
             this.dgvCust.ReadOnly = true;
             this.dgvCust.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -94,7 +94,7 @@
             this.dgvCust.RowHeadersVisible = false;
             this.dgvCust.RowHeadersWidth = 51;
             this.dgvCust.RowTemplate.Height = 24;
-            this.dgvCust.Size = new System.Drawing.Size(888, 365);
+            this.dgvCust.Size = new System.Drawing.Size(911, 365);
             this.dgvCust.TabIndex = 0;
             this.dgvCust.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -190,14 +190,14 @@
             // 
             this.costomerTBLBindingSource.DataSource = typeof(talYBProj.costomerTBL);
             // 
-            // costomerList
+            // costomerListWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 426);
             this.Controls.Add(this.dgvCust);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "costomerList";
+            this.Name = "costomerListWin";
             this.Text = "costomerList";
             this.Load += new System.EventHandler(this.costomerList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCust)).EndInit();

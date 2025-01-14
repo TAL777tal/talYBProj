@@ -39,11 +39,11 @@
             this.cbxCust = new System.Windows.Forms.ComboBox();
             this.costomerTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbxZan = new System.Windows.Forms.ComboBox();
-            this.nUDnumOfDolevim = new System.Windows.Forms.NumericUpDown();
             this.zanTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nUDnumOfDolevim = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDnumOfDolevim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zanTBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDnumOfDolevim)).BeginInit();
             this.SuspendLayout();
             // 
             // oliveSpeciesLabel
@@ -114,13 +114,15 @@
             // cbxZan
             // 
             this.cbxZan.DataSource = this.zanTBLBindingSource;
-            this.cbxZan.DisplayMember = "name";
             this.cbxZan.FormattingEnabled = true;
             this.cbxZan.Location = new System.Drawing.Point(393, 111);
             this.cbxZan.Name = "cbxZan";
             this.cbxZan.Size = new System.Drawing.Size(201, 24);
             this.cbxZan.TabIndex = 26;
-            this.cbxZan.ValueMember = "Id";
+            // 
+            // zanTBLBindingSource
+            // 
+            this.zanTBLBindingSource.DataSource = typeof(talYBProj.zanTBL);
             // 
             // nUDnumOfDolevim
             // 
@@ -128,10 +130,6 @@
             this.nUDnumOfDolevim.Name = "nUDnumOfDolevim";
             this.nUDnumOfDolevim.Size = new System.Drawing.Size(120, 22);
             this.nUDnumOfDolevim.TabIndex = 27;
-            // 
-            // zanTBLBindingSource
-            // 
-            this.zanTBLBindingSource.DataSource = typeof(talYBProj.zanTBL);
             // 
             // addOrderWin
             // 
@@ -151,8 +149,8 @@
             this.Text = "addOrderWin";
             this.Load += new System.EventHandler(this.addOrderWin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDnumOfDolevim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zanTBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDnumOfDolevim)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

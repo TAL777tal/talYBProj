@@ -99,5 +99,41 @@ namespace talYBProj
             mainPanel.Controls.Add(current);
             current.Show();
         }
+        private void btnOpenUpdateOrderWin_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is updateOrder)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new updateOrder();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
+
+        private void kryptonRibbonGroupButton3_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is orderListWin)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new orderListWin();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
     }
+    
 }

@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace talYBProj.Forms
 {
-    public partial class orderListWin : Form
+    public partial class addOil : Form
     {
-        public orderListWin()
+        public addOil()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

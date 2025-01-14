@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace talYBProj.Forms
 {
-    public partial class updateOrderWin : Form
+    public partial class addOilWin : Form
     {
-        public updateOrderWin()
+        public addOilWin()
         {
             InitializeComponent();
         }
