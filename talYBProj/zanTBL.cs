@@ -22,10 +22,9 @@ namespace talYBProj
     
         public int Id { get; set; }
         public string name { get; set; }
-        public int orderID { get; set; }
+        public string description { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<orderTBL> orderTBL { get; set; }
-        public virtual orderTBL orderTBL1 { get; set; }
     }
 }

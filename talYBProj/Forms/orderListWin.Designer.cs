@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.orderTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.numOfDolevimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTBLBindingSource)).BeginInit();
@@ -61,18 +61,14 @@
             this.numOfDolevimDataGridViewTextBoxColumn,
             this.notesDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.orderTBLBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(43, 23);
+            this.dataGridView2.Location = new System.Drawing.Point(30, 23);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(678, 364);
+            this.dataGridView2.Size = new System.Drawing.Size(691, 364);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // orderTBLBindingSource
-            // 
-            this.orderTBLBindingSource.DataSource = typeof(talYBProj.orderTBL);
             // 
             // numOfDolevimDataGridViewTextBoxColumn
             // 
@@ -80,6 +76,7 @@
             this.numOfDolevimDataGridViewTextBoxColumn.HeaderText = "numOfDolevim";
             this.numOfDolevimDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.numOfDolevimDataGridViewTextBoxColumn.Name = "numOfDolevimDataGridViewTextBoxColumn";
+            this.numOfDolevimDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // notesDataGridViewTextBoxColumn
             // 
@@ -87,6 +84,11 @@
             this.notesDataGridViewTextBoxColumn.HeaderText = "notes";
             this.notesDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
+            this.notesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // orderTBLBindingSource
+            // 
+            this.orderTBLBindingSource.DataSource = typeof(talYBProj.orderTBL);
             // 
             // orderListWin
             // 

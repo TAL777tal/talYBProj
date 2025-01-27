@@ -19,23 +19,17 @@ namespace talYBProj
         {
             this.oilTBL = new HashSet<oilTBL>();
             this.oliveTBL = new HashSet<oliveTBL>();
-            this.zanTBL1 = new HashSet<zanTBL>();
         }
     
         public int Id { get; set; }
-        public string orderDate { get; set; }
+        public int costomerID { get; set; }
         public int zanID { get; set; }
         public int numOfDolevim { get; set; }
+        public int userID { get; set; }
+        public System.DateTime orderDate { get; set; }
         public bool isDone { get; set; }
         public bool isPayd { get; set; }
-        public int userID { get; set; }
         public string notes { get; set; }
-        public int totalPayment { get; set; }
-        public int totalOlive { get; set; }
-        public int totalOil { get; set; }
-        public int numOfOiPacks { get; set; }
-        public int orderPrice { get; set; }
-        public int costomerID { get; set; }
     
         public virtual costomerTBL costomerTBL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -44,7 +38,5 @@ namespace talYBProj
         public virtual ICollection<oliveTBL> oliveTBL { get; set; }
         public virtual userTBL userTBL { get; set; }
         public virtual zanTBL zanTBL { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<zanTBL> zanTBL1 { get; set; }
     }
 }

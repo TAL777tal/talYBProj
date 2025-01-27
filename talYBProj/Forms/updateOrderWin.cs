@@ -11,10 +11,10 @@ using talYBProj.IFS;
 
 namespace talYBProj.Forms
 {
-    public partial class updateOrder : Form
+    public partial class updateOrderWin : Form
     {
         List<orderTBL> lst;
-        public updateOrder()
+        public updateOrderWin()
         {
             InitializeComponent();
         }
@@ -26,8 +26,7 @@ namespace talYBProj.Forms
             {
                 return;
             }
-            cbxCostumerName.Text = selected.; //צריך להיות צרכן מהטבלה
-            cbxOliveKind,.Text = selected.;
+           
             numericUpDownDolevim.Value = selected.numOfDolevim;
             if (selected.notes != null)
                 kRTBXnotes.Text = selected.notes;

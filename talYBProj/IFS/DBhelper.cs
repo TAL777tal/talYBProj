@@ -36,7 +36,7 @@ namespace talYBProj.IFS
         }
         public static void loadOrderList()
         {
-            orderList = (from s in db.orderTBL orderby s.totalPayment select s).ToList();
+            orderList = (from s in db.orderTBL  select s).ToList();
         }
         public static void loadCostomerList()
         {
@@ -186,11 +186,7 @@ namespace talYBProj.IFS
                 toUpdate.isPayd = o1.isPayd;
                 toUpdate.userID = o1.userID;
                 toUpdate.notes = o1.notes;
-                toUpdate.totalPayment = o1.totalPayment;
-                toUpdate.totalOlive = o1.totalOlive;
-                toUpdate.totalOil = o1.totalOil;
-                toUpdate.numOfOiPacks = o1.numOfOiPacks;
-                toUpdate.orderPrice = o1.orderPrice;
+                
                 return true;
             }
             catch
@@ -269,7 +265,7 @@ namespace talYBProj.IFS
                 if (toUpdate != null)
                     return false;
                 toUpdate.name = z1.name;
-                toUpdate.orderID = z1.orderID;              
+                    
                 return true;
             }
             catch

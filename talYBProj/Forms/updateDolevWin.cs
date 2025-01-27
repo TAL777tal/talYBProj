@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace talYBProj.Forms
 {
-    public partial class addOilWin : Form
+    public partial class updateDolevWin : Form
     {
-        public addOilWin()
+        public updateDolevWin()
         {
             InitializeComponent();
-        }
-
-        private void addOilWin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

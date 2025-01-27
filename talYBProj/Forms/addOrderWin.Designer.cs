@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.kryptonLanguageManager1 = new Krypton.Toolkit.KryptonLanguageManager();
             this.oliveSpeciesLabel = new Krypton.Toolkit.KryptonLabel();
             this.numOfDolevimLabel = new Krypton.Toolkit.KryptonLabel();
             this.notesLabel = new Krypton.Toolkit.KryptonLabel();
@@ -37,13 +36,17 @@
             this.TBXnotes = new Krypton.Toolkit.KryptonRichTextBox();
             this.btnAddOrder = new Krypton.Toolkit.KryptonButton();
             this.cbxCust = new System.Windows.Forms.ComboBox();
-            this.costomerTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbxZan = new System.Windows.Forms.ComboBox();
-            this.zanTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nUDnumOfDolevim = new System.Windows.Forms.NumericUpDown();
+            this.costomerTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.zanTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
+            this.cbxUsers = new System.Windows.Forms.ComboBox();
+            this.userTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.nUDnumOfDolevim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zanTBLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDnumOfDolevim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // oliveSpeciesLabel
@@ -107,29 +110,56 @@
             this.cbxCust.ValueMember = "Id";
             this.cbxCust.SelectedIndexChanged += new System.EventHandler(this.cbxCust_SelectedIndexChanged);
             // 
-            // costomerTBLBindingSource
-            // 
-            this.costomerTBLBindingSource.DataSource = typeof(talYBProj.costomerTBL);
-            // 
             // cbxZan
             // 
             this.cbxZan.DataSource = this.zanTBLBindingSource;
+            this.cbxZan.DisplayMember = "name";
             this.cbxZan.FormattingEnabled = true;
             this.cbxZan.Location = new System.Drawing.Point(393, 111);
             this.cbxZan.Name = "cbxZan";
             this.cbxZan.Size = new System.Drawing.Size(201, 24);
             this.cbxZan.TabIndex = 26;
+            this.cbxZan.ValueMember = "Id";
+            // 
+            // nUDnumOfDolevim
+            // 
+            this.nUDnumOfDolevim.Location = new System.Drawing.Point(523, 151);
+            this.nUDnumOfDolevim.Name = "nUDnumOfDolevim";
+            this.nUDnumOfDolevim.Size = new System.Drawing.Size(70, 22);
+            this.nUDnumOfDolevim.TabIndex = 27;
+            this.nUDnumOfDolevim.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // costomerTBLBindingSource
+            // 
+            this.costomerTBLBindingSource.DataSource = typeof(talYBProj.costomerTBL);
             // 
             // zanTBLBindingSource
             // 
             this.zanTBLBindingSource.DataSource = typeof(talYBProj.zanTBL);
             // 
-            // nUDnumOfDolevim
+            // kryptonLabel1
             // 
-            this.nUDnumOfDolevim.Location = new System.Drawing.Point(473, 151);
-            this.nUDnumOfDolevim.Name = "nUDnumOfDolevim";
-            this.nUDnumOfDolevim.Size = new System.Drawing.Size(120, 22);
-            this.nUDnumOfDolevim.TabIndex = 27;
+            this.kryptonLabel1.Location = new System.Drawing.Point(619, 51);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(79, 24);
+            this.kryptonLabel1.TabIndex = 11;
+            this.kryptonLabel1.Values.Text = "שם העובד";
+            // 
+            // cbxUsers
+            // 
+            this.cbxUsers.DataSource = this.userTBLBindingSource;
+            this.cbxUsers.DisplayMember = "fullName";
+            this.cbxUsers.FormattingEnabled = true;
+            this.cbxUsers.Location = new System.Drawing.Point(393, 51);
+            this.cbxUsers.Name = "cbxUsers";
+            this.cbxUsers.Size = new System.Drawing.Size(200, 24);
+            this.cbxUsers.TabIndex = 26;
+            this.cbxUsers.ValueMember = "Id";
+            this.cbxUsers.SelectedIndexChanged += new System.EventHandler(this.cbxCust_SelectedIndexChanged);
+            // 
+            // userTBLBindingSource
+            // 
+            this.userTBLBindingSource.DataSource = typeof(talYBProj.userTBL);
             // 
             // addOrderWin
             // 
@@ -138,9 +168,11 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.nUDnumOfDolevim);
             this.Controls.Add(this.cbxZan);
+            this.Controls.Add(this.cbxUsers);
             this.Controls.Add(this.cbxCust);
             this.Controls.Add(this.btnAddOrder);
             this.Controls.Add(this.TBXnotes);
+            this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.costomerNameLabel);
             this.Controls.Add(this.notesLabel);
             this.Controls.Add(this.numOfDolevimLabel);
@@ -148,16 +180,16 @@
             this.Name = "addOrderWin";
             this.Text = "addOrderWin";
             this.Load += new System.EventHandler(this.addOrderWin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nUDnumOfDolevim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zanTBLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nUDnumOfDolevim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private Krypton.Toolkit.KryptonLanguageManager kryptonLanguageManager1;
         private Krypton.Toolkit.KryptonLabel oliveSpeciesLabel;
         private Krypton.Toolkit.KryptonLabel numOfDolevimLabel;
         private Krypton.Toolkit.KryptonLabel notesLabel;
@@ -169,5 +201,8 @@
         private System.Windows.Forms.NumericUpDown nUDnumOfDolevim;
         private System.Windows.Forms.BindingSource costomerTBLBindingSource;
         private System.Windows.Forms.BindingSource zanTBLBindingSource;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private System.Windows.Forms.ComboBox cbxUsers;
+        private System.Windows.Forms.BindingSource userTBLBindingSource;
     }
 }

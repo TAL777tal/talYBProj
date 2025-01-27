@@ -1,6 +1,6 @@
 ﻿namespace talYBProj.Forms
 {
-    partial class updateOrder
+    partial class updateOrderWin
     {
         /// <summary>
         /// Required designer variable.

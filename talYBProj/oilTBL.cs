@@ -25,8 +25,8 @@ namespace talYBProj
         public int userID { get; set; }
         public System.DateTime orderDate { get; set; }
     
-        public virtual orderTBL orderTBL { get; set; }
         public virtual packTBL packTBL { get; set; }
         public virtual userTBL userTBL { get; set; }
+        public virtual orderTBL orderTBL { get; set; }
     }
 }

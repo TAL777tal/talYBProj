@@ -103,13 +103,13 @@ namespace talYBProj
         {
             if (current != null)
             {
-                if (current is updateOrder)
+                if (current is updateOrderWin)
                 {
                     return;
                 }
                 current.Close();
             }
-            current = new updateOrder();
+            current = new updateOrderWin();
             current.Dock = DockStyle.Fill;
             current.TopLevel = false;
             current.TopMost = true;
