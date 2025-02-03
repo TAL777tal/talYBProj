@@ -16,5 +16,10 @@ namespace talYBProj.Forms
         {
             InitializeComponent();
         }
+
+        private void kryptonLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

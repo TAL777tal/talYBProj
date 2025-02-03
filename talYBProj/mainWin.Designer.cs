@@ -63,7 +63,7 @@
             this.customerTab,
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab2});
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
             this.kryptonRibbon1.ShowMinimizeButton = false;
             this.kryptonRibbon1.Size = new System.Drawing.Size(800, 136);
             this.kryptonRibbon1.TabIndex = 0;

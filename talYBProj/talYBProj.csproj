@@ -209,6 +209,9 @@
     <EmbeddedResource Include="Forms\updateCostomerWin.resx">
       <DependentUpon>updateCostomerWin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\updateDolevWin.resx">
+      <DependentUpon>updateDolevWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\updateOrderWin.resx">
       <DependentUpon>updateOrderWin.cs</DependentUpon>
     </EmbeddedResource>
