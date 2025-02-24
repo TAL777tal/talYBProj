@@ -188,7 +188,6 @@
             // 
             // costomerTBLBindingSource
             // 
-            this.costomerTBLBindingSource.DataSource = typeof(talYBProj.costomerTBL);
             // 
             // costomerListWin
             // 

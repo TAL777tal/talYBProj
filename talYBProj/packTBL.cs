@@ -21,10 +21,13 @@ namespace talYBProj
         }
     
         public int Id { get; set; }
-        public string name { get; set; }
-        public int volume { get; set; }
         public int weight { get; set; }
         public int price { get; set; }
+        public string notes { get; set; }
+        public int userID { get; set; }
+        public System.DateTime date { get; set; }
+        public int dolevNum { get; set; }
+        public int orderID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<oilTBL> oilTBL { get; set; }

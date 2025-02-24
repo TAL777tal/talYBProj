@@ -225,10 +225,13 @@ namespace talYBProj.IFS
                 packTBL toUpdate = (from s in db.packTBL where s.Id == p1.Id select s).FirstOrDefault();
                 if (toUpdate != null)
                     return false;
-                toUpdate.name = p1.name;
-                toUpdate.volume = p1.volume;
                 toUpdate.weight = p1.weight;
                 toUpdate.price = p1.price;
+                toUpdate.notes = p1.notes;
+                toUpdate.orderID = p1.orderID;
+                toUpdate.userID = p1.userID;
+                toUpdate.date = p1.date;
+                toUpdate.dolevNum = p1.dolevNum;
                 return true;
             }
             catch

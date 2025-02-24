@@ -52,7 +52,7 @@ namespace talYBProj.Forms
             zanTBL selectedZan = (zanTBL) cbxZan.SelectedItem ;
 
             orderTBL o1 = new orderTBL();
-           o1.userID = selectedUser.Id ;
+            o1.userID = selectedUser.Id ;
             o1.zanID = selectedZan.Id ;
             o1.costomerID = selectedCust.Id ;
            

@@ -88,7 +88,6 @@
             // 
             // orderTBLBindingSource
             // 
-            this.orderTBLBindingSource.DataSource = typeof(talYBProj.orderTBL);
             // 
             // orderListWin
             // 

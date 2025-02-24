@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace talYBProj.Forms
 {
-    public partial class dolevsListWin : Form
+    public partial class zanListWin : Form
     {
-        public dolevsListWin()
+        public zanListWin()
         {
             InitializeComponent();
-        }
-
-        private void dolevsListWin_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

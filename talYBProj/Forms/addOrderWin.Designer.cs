@@ -131,11 +131,11 @@
             // 
             // costomerTBLBindingSource
             // 
-            this.costomerTBLBindingSource.DataSource = typeof(talYBProj.costomerTBL);
+         
             // 
             // zanTBLBindingSource
             // 
-            this.zanTBLBindingSource.DataSource = typeof(talYBProj.zanTBL);
+         
             // 
             // kryptonLabel1
             // 
@@ -159,7 +159,7 @@
             // 
             // userTBLBindingSource
             // 
-            this.userTBLBindingSource.DataSource = typeof(talYBProj.userTBL);
+          
             // 
             // addOrderWin
             // 

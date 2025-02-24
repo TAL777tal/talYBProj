@@ -30,13 +30,12 @@
         {
             this.kryptonRibbon1 = new Krypton.Ribbon.KryptonRibbon();
             this.customerTab = new Krypton.Ribbon.KryptonRibbonTab();
-            this.kryptonRibbonTab1 = new Krypton.Ribbon.KryptonRibbonTab();
-            this.mainPanel = new System.Windows.Forms.Panel();
             this.kryptonRibbonGroup1 = new Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple1 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnOpenCustWin = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.krRGBopenUpdateWin = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.BtnOpenCostomerListWin = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonTab1 = new Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup2 = new Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple2 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.btnOpenAddOrderWin = new Krypton.Ribbon.KryptonRibbonGroupButton();
@@ -48,6 +47,7 @@
             this.kryptonRibbonGroupButton1 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupButton4 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupButton5 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.mainPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,9 +63,9 @@
             this.customerTab,
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab2});
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab1;
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
             this.kryptonRibbon1.ShowMinimizeButton = false;
-            this.kryptonRibbon1.Size = new System.Drawing.Size(800, 136);
+            this.kryptonRibbon1.Size = new System.Drawing.Size(600, 143);
             this.kryptonRibbon1.TabIndex = 0;
             // 
             // customerTab
@@ -73,20 +73,6 @@
             this.customerTab.Groups.AddRange(new Krypton.Ribbon.KryptonRibbonGroup[] {
             this.kryptonRibbonGroup1});
             this.customerTab.Text = "ניהול לקוחות";
-            // 
-            // kryptonRibbonTab1
-            // 
-            this.kryptonRibbonTab1.Groups.AddRange(new Krypton.Ribbon.KryptonRibbonGroup[] {
-            this.kryptonRibbonGroup2});
-            this.kryptonRibbonTab1.Text = "ניהול הזמנות";
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 136);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(800, 314);
-            this.mainPanel.TabIndex = 1;
             // 
             // kryptonRibbonGroup1
             // 
@@ -115,6 +101,12 @@
             // 
             this.BtnOpenCostomerListWin.TextLine1 = "רשימת לקוחות";
             this.BtnOpenCostomerListWin.Click += new System.EventHandler(this.BtnOpenCostomerListWin_Click);
+            // 
+            // kryptonRibbonTab1
+            // 
+            this.kryptonRibbonTab1.Groups.AddRange(new Krypton.Ribbon.KryptonRibbonGroup[] {
+            this.kryptonRibbonGroup2});
+            this.kryptonRibbonTab1.Text = "ניהול הזמנות";
             // 
             // kryptonRibbonGroup2
             // 
@@ -165,6 +157,7 @@
             // kryptonRibbonGroupButton1
             // 
             this.kryptonRibbonGroupButton1.TextLine1 = "עצב דולב";
+            this.kryptonRibbonGroupButton1.Click += new System.EventHandler(this.kryptonRibbonGroupButton1_Click);
             // 
             // kryptonRibbonGroupButton4
             // 
@@ -174,13 +167,23 @@
             // 
             this.kryptonRibbonGroupButton5.TextLine1 = "רשימת דולבים של כל לקוח";
             // 
+            // mainPanel
+            // 
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 143);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(600, 223);
+            this.mainPanel.TabIndex = 1;
+            // 
             // mainWin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.kryptonRibbon1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "mainWin";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

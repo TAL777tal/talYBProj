@@ -95,17 +95,17 @@
     <Compile Include="Forms\addCustomerWin.Designer.cs">
       <DependentUpon>addCustomerWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\addOilWin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\addOilWin.Designer.cs">
-      <DependentUpon>addOilWin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\addOrderWin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\addOrderWin.Designer.cs">
       <DependentUpon>addOrderWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\addZanWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\addZanWin.Designer.cs">
+      <DependentUpon>addZanWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\costomerListWin.cs">
       <SubType>Form</SubType>
@@ -148,6 +148,18 @@
     </Compile>
     <Compile Include="Forms\updateOrderWin.Designer.cs">
       <DependentUpon>updateOrderWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\updateZanWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\updateZanWin.Designer.cs">
+      <DependentUpon>updateZanWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\zanListWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\zanListWin.Designer.cs">
+      <DependentUpon>zanListWin.cs</DependentUpon>
     </Compile>
     <Compile Include="mainWin.cs">
       <SubType>Form</SubType>
@@ -194,14 +206,17 @@
     <EmbeddedResource Include="Forms\addCustomerWin.resx">
       <DependentUpon>addCustomerWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\addOilWin.resx">
-      <DependentUpon>addOilWin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\addOrderWin.resx">
       <DependentUpon>addOrderWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\costomerListWin.resx">
       <DependentUpon>costomerListWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\dolevsListWin.resx">
+      <DependentUpon>dolevsListWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\editDolevWin.resx">
+      <DependentUpon>editDolevWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\orderListWin.resx">
       <DependentUpon>orderListWin.cs</DependentUpon>
@@ -263,8 +278,8 @@
     </Content>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

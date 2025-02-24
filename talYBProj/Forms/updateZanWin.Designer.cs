@@ -1,6 +1,6 @@
 ﻿namespace talYBProj.Forms
 {
-    partial class dolevsListWin
+    partial class updateZanWin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // dolevsListWin
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "dolevsListWin";
-            this.Text = "dolevsListWin";
-            this.Load += new System.EventHandler(this.dolevsListWin_Load);
-            this.ResumeLayout(false);
-
+            this.Text = "updateZanWin";
         }
 
         #endregion
