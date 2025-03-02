@@ -209,6 +209,9 @@
     <EmbeddedResource Include="Forms\addOrderWin.resx">
       <DependentUpon>addOrderWin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\addZanWin.resx">
+      <DependentUpon>addZanWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\costomerListWin.resx">
       <DependentUpon>costomerListWin.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +232,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\updateOrderWin.resx">
       <DependentUpon>updateOrderWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\updateZanWin.resx">
+      <DependentUpon>updateZanWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\zanListWin.resx">
+      <DependentUpon>zanListWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainWin.resx">
       <DependentUpon>mainWin.cs</DependentUpon>
@@ -252,9 +261,11 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\costomerTBL.datasource" />
+    <None Include="Properties\DataSources\oliveTBL.datasource" />
     <None Include="Properties\DataSources\orderTBL.datasource" />
     <None Include="Properties\DataSources\userTBL.datasource" />
     <None Include="Properties\DataSources\zanTBL.datasource" />
+    <None Include="Properties\DataSources\zanTBL1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

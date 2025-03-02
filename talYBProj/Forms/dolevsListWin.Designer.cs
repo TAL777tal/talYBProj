@@ -28,20 +28,159 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.oliveTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dolevNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weightBrutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weightNetoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orderTBLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userTBLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oliveTBLBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.orderIDDataGridViewTextBoxColumn,
+            this.dolevNumDataGridViewTextBoxColumn,
+            this.currDateDataGridViewTextBoxColumn,
+            this.weightBrutoDataGridViewTextBoxColumn,
+            this.weightNetoDataGridViewTextBoxColumn,
+            this.notesDataGridViewTextBoxColumn,
+            this.userIDDataGridViewTextBoxColumn,
+            this.orderDateDataGridViewTextBoxColumn,
+            this.orderTBLDataGridViewTextBoxColumn,
+            this.userTBLDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.oliveTBLBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(34, 36);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(729, 352);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // oliveTBLBindingSource
+            // 
+            this.oliveTBLBindingSource.DataSource = typeof(talYBProj.oliveTBL);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // orderIDDataGridViewTextBoxColumn
+            // 
+            this.orderIDDataGridViewTextBoxColumn.DataPropertyName = "orderID";
+            this.orderIDDataGridViewTextBoxColumn.HeaderText = "orderID";
+            this.orderIDDataGridViewTextBoxColumn.Name = "orderIDDataGridViewTextBoxColumn";
+            this.orderIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dolevNumDataGridViewTextBoxColumn
+            // 
+            this.dolevNumDataGridViewTextBoxColumn.DataPropertyName = "dolevNum";
+            this.dolevNumDataGridViewTextBoxColumn.HeaderText = "dolevNum";
+            this.dolevNumDataGridViewTextBoxColumn.Name = "dolevNumDataGridViewTextBoxColumn";
+            this.dolevNumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // currDateDataGridViewTextBoxColumn
+            // 
+            this.currDateDataGridViewTextBoxColumn.DataPropertyName = "currDate";
+            this.currDateDataGridViewTextBoxColumn.HeaderText = "currDate";
+            this.currDateDataGridViewTextBoxColumn.Name = "currDateDataGridViewTextBoxColumn";
+            this.currDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // weightBrutoDataGridViewTextBoxColumn
+            // 
+            this.weightBrutoDataGridViewTextBoxColumn.DataPropertyName = "weightBruto";
+            this.weightBrutoDataGridViewTextBoxColumn.HeaderText = "weightBruto";
+            this.weightBrutoDataGridViewTextBoxColumn.Name = "weightBrutoDataGridViewTextBoxColumn";
+            this.weightBrutoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // weightNetoDataGridViewTextBoxColumn
+            // 
+            this.weightNetoDataGridViewTextBoxColumn.DataPropertyName = "weightNeto";
+            this.weightNetoDataGridViewTextBoxColumn.HeaderText = "weightNeto";
+            this.weightNetoDataGridViewTextBoxColumn.Name = "weightNetoDataGridViewTextBoxColumn";
+            this.weightNetoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // notesDataGridViewTextBoxColumn
+            // 
+            this.notesDataGridViewTextBoxColumn.DataPropertyName = "notes";
+            this.notesDataGridViewTextBoxColumn.HeaderText = "notes";
+            this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
+            this.notesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userIDDataGridViewTextBoxColumn
+            // 
+            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "userID";
+            this.userIDDataGridViewTextBoxColumn.HeaderText = "userID";
+            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // orderDateDataGridViewTextBoxColumn
+            // 
+            this.orderDateDataGridViewTextBoxColumn.DataPropertyName = "orderDate";
+            this.orderDateDataGridViewTextBoxColumn.HeaderText = "orderDate";
+            this.orderDateDataGridViewTextBoxColumn.Name = "orderDateDataGridViewTextBoxColumn";
+            this.orderDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // orderTBLDataGridViewTextBoxColumn
+            // 
+            this.orderTBLDataGridViewTextBoxColumn.DataPropertyName = "orderTBL";
+            this.orderTBLDataGridViewTextBoxColumn.HeaderText = "orderTBL";
+            this.orderTBLDataGridViewTextBoxColumn.Name = "orderTBLDataGridViewTextBoxColumn";
+            this.orderTBLDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userTBLDataGridViewTextBoxColumn
+            // 
+            this.userTBLDataGridViewTextBoxColumn.DataPropertyName = "userTBL";
+            this.userTBLDataGridViewTextBoxColumn.HeaderText = "userTBL";
+            this.userTBLDataGridViewTextBoxColumn.Name = "userTBLDataGridViewTextBoxColumn";
+            this.userTBLDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dolevsListWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "dolevsListWin";
             this.Text = "dolevsListWin";
             this.Load += new System.EventHandler(this.dolevsListWin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oliveTBLBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dolevNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn currDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weightBrutoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weightNetoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderTBLDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userTBLDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource oliveTBLBindingSource;
     }
 }

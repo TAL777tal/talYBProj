@@ -44,8 +44,8 @@ namespace talYBProj.Forms
             int count = 1;
            // while (count != selectedOrder.numOfDolevim + 1  || DBhelper.packList)
             //{
-            //
-           // }
+            //באיזה דולב צריך לטפל עכשיו
+            // }
             p1.weight = ((int)numericUpDownBruto.Value);
             p1.orderID = selectedOrder.Id;
             p1.userID = selectedUser.Id;

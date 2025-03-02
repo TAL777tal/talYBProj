@@ -152,6 +152,97 @@ namespace talYBProj
             mainPanel.Controls.Add(current);
             current.Show();
         }
+
+        private void kryptonRibbonGroupButton6_Click(object sender, EventArgs e)
+        {
+
+            if (current != null)
+            {
+                if (current is addZanWin)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new addZanWin();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
+
+        private void kryptonRibbonGroupButton7_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is updateZanWin)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new updateZanWin();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
+
+        private void kryptonRibbonGroupButton8_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is zanListWin)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new zanListWin();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
+
+        private void kryptonRibbonGroupButton4_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is editDolevWin)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new editDolevWin();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
+
+        private void kryptonRibbonGroupButton5_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is dolevsListWin)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new dolevsListWin();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
     }
     
     
