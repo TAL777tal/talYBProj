@@ -32,7 +32,6 @@
             this.LabelDolevNum = new Krypton.Toolkit.KryptonLabel();
             this.LabelCurDate = new Krypton.Toolkit.KryptonLabel();
             this.LabelBruto = new Krypton.Toolkit.KryptonLabel();
-            this.LabelNeto = new Krypton.Toolkit.KryptonLabel();
             this.LabelNotes = new Krypton.Toolkit.KryptonLabel();
             this.LabelUserName = new Krypton.Toolkit.KryptonLabel();
             this.cbxOrderId = new System.Windows.Forms.ComboBox();
@@ -42,9 +41,7 @@
             this.txbNotes = new Krypton.Toolkit.KryptonRichTextBox();
             this.dateTimeP = new System.Windows.Forms.DateTimePicker();
             this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
-            this.netoValue = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBruto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.netoValue)).BeginInit();
             this.SuspendLayout();
             // 
             // LabelOrderId
@@ -84,18 +81,9 @@
             this.LabelBruto.TabIndex = 4;
             this.LabelBruto.Values.Text = "משקל-ברוטו";
             // 
-            // LabelNeto
-            // 
-            this.LabelNeto.Location = new System.Drawing.Point(472, 181);
-            this.LabelNeto.Margin = new System.Windows.Forms.Padding(2);
-            this.LabelNeto.Name = "LabelNeto";
-            this.LabelNeto.Size = new System.Drawing.Size(65, 20);
-            this.LabelNeto.TabIndex = 5;
-            this.LabelNeto.Values.Text = "משקל-נטו";
-            // 
             // LabelNotes
             // 
-            this.LabelNotes.Location = new System.Drawing.Point(472, 252);
+            this.LabelNotes.Location = new System.Drawing.Point(468, 243);
             this.LabelNotes.Margin = new System.Windows.Forms.Padding(2);
             this.LabelNotes.Name = "LabelNotes";
             this.LabelNotes.Size = new System.Drawing.Size(46, 20);
@@ -104,7 +92,7 @@
             // 
             // LabelUserName
             // 
-            this.LabelUserName.Location = new System.Drawing.Point(472, 219);
+            this.LabelUserName.Location = new System.Drawing.Point(468, 196);
             this.LabelUserName.Margin = new System.Windows.Forms.Padding(2);
             this.LabelUserName.Name = "LabelUserName";
             this.LabelUserName.Size = new System.Drawing.Size(85, 20);
@@ -124,7 +112,7 @@
             // cbxUserName
             // 
             this.cbxUserName.FormattingEnabled = true;
-            this.cbxUserName.Location = new System.Drawing.Point(332, 218);
+            this.cbxUserName.Location = new System.Drawing.Point(330, 196);
             this.cbxUserName.Margin = new System.Windows.Forms.Padding(2);
             this.cbxUserName.Name = "cbxUserName";
             this.cbxUserName.Size = new System.Drawing.Size(92, 21);
@@ -155,7 +143,7 @@
             // 
             // txbNotes
             // 
-            this.txbNotes.Location = new System.Drawing.Point(273, 252);
+            this.txbNotes.Location = new System.Drawing.Point(273, 243);
             this.txbNotes.Margin = new System.Windows.Forms.Padding(2);
             this.txbNotes.Name = "txbNotes";
             this.txbNotes.Size = new System.Drawing.Size(153, 93);
@@ -179,25 +167,11 @@
             this.kryptonButton1.Values.Text = "עצב דולב";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
-            // netoValue
-            // 
-            this.netoValue.Location = new System.Drawing.Point(334, 181);
-            this.netoValue.Margin = new System.Windows.Forms.Padding(2);
-            this.netoValue.Maximum = new decimal(new int[] {
-            400,
-            0,
-            0,
-            0});
-            this.netoValue.Name = "netoValue";
-            this.netoValue.Size = new System.Drawing.Size(90, 20);
-            this.netoValue.TabIndex = 18;
-            // 
             // updateDolevWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(592, 406);
-            this.Controls.Add(this.netoValue);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.dateTimeP);
             this.Controls.Add(this.txbNotes);
@@ -207,7 +181,6 @@
             this.Controls.Add(this.cbxOrderId);
             this.Controls.Add(this.LabelUserName);
             this.Controls.Add(this.LabelNotes);
-            this.Controls.Add(this.LabelNeto);
             this.Controls.Add(this.LabelBruto);
             this.Controls.Add(this.LabelCurDate);
             this.Controls.Add(this.LabelDolevNum);
@@ -216,7 +189,6 @@
             this.Name = "updateDolevWin";
             this.Text = "updateDolev";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBruto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.netoValue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,7 +200,6 @@
         private Krypton.Toolkit.KryptonLabel LabelDolevNum;
         private Krypton.Toolkit.KryptonLabel LabelCurDate;
         private Krypton.Toolkit.KryptonLabel LabelBruto;
-        private Krypton.Toolkit.KryptonLabel LabelNeto;
         private Krypton.Toolkit.KryptonLabel LabelNotes;
         private Krypton.Toolkit.KryptonLabel LabelUserName;
         private System.Windows.Forms.ComboBox cbxOrderId;
@@ -238,6 +209,5 @@
         private Krypton.Toolkit.KryptonRichTextBox txbNotes;
         private System.Windows.Forms.DateTimePicker dateTimeP;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
-        private System.Windows.Forms.NumericUpDown netoValue;
     }
 }

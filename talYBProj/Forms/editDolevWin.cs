@@ -21,7 +21,7 @@ namespace talYBProj.Forms
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            packTBL toUpdate = (packTBL)cbxchose.SelectedItem;
+            oliveTBL toUpdate = (oliveTBL)cbxchose.SelectedItem;
             if (toUpdate == null)
             {
                 return;
@@ -32,9 +32,9 @@ namespace talYBProj.Forms
             toUpdate.userID = selectedUser.Id ;
             toUpdate.orderID = selectedOrder.Id;
             toUpdate.notes = txbNotes.Text.Trim();
-            toUpdate.weight = (int)numericUpDownBruto.Value;
+            toUpdate.weightBruto = (int)numericUpDownBruto.Value;
             //toUpdate.dolevNum = cbxDolevNum;
-            netoValue.Value = ((int)numericUpDownBruto.Value - 40);
+            toUpdate.weightNeto = ((int)numericUpDownBruto.Value - 40);
 
         }
 

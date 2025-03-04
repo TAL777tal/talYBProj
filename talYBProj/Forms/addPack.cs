@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using talYBProj.IFS;
+
+namespace talYBProj.Forms
+{
+    public partial class addPack : Form
+    {
+        public addPack()
+        {
+            InitializeComponent();
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            packTBL p1 = new packTBL();
+            p1.weight = (int)weightNumericUpDown.Value;
+            p1.price = (int)priceNumericUpDown.Value;
+            p1.notes = notesTBX.Text.Trim();
+            p1 = DBhelper.addPack(p1);
+            if (p1 == null)
+            {
+                MessageBox.Show("error");
+            }
+            else
+            {
+                MessageBox.Show("OK");
+            }
+        }
+    }
+}
