@@ -297,6 +297,60 @@ namespace talYBProj
             mainPanel.Controls.Add(current);
             current.Show();
         }
+
+        private void addUser_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is addUserWin)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new addUserWin();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
+
+        private void updateUser_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is apdateUserWin)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new apdateUserWin();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
+
+        private void userList_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is userListWin)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new userListWin();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
     }
     
     

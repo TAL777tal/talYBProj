@@ -29,70 +29,84 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGrdView1 = new System.Windows.Forms.DataGridView();
+            this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cellPhoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userTBLBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.userTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cellPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrdView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGrdView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGrdView1.AllowUserToAddRows = false;
+            this.dataGrdView1.AllowUserToDeleteRows = false;
+            this.dataGrdView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.fullName,
-            this.email,
-            this.cellPhone});
-            this.dataGridView1.DataSource = this.userTBLBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(775, 383);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGrdView1.AutoGenerateColumns = false;
+            this.dataGrdView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGrdView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrdView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fullNameDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.cellPhoneDataGridViewTextBoxColumn});
+            this.dataGrdView1.DataSource = this.userTBLBindingSource1;
+            this.dataGrdView1.Location = new System.Drawing.Point(1, 12);
+            this.dataGrdView1.Name = "dataGrdView1";
+            this.dataGrdView1.ReadOnly = true;
+            this.dataGrdView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dataGrdView1.RowHeadersVisible = false;
+            this.dataGrdView1.RowHeadersWidth = 51;
+            this.dataGrdView1.Size = new System.Drawing.Size(775, 383);
+            this.dataGrdView1.TabIndex = 0;
+            this.dataGrdView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // fullNameDataGridViewTextBoxColumn
+            // 
+            this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "fullName";
+            this.fullNameDataGridViewTextBoxColumn.HeaderText = "fullName";
+            this.fullNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
+            this.fullNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cellPhoneDataGridViewTextBoxColumn
+            // 
+            this.cellPhoneDataGridViewTextBoxColumn.DataPropertyName = "cellPhone";
+            this.cellPhoneDataGridViewTextBoxColumn.HeaderText = "cellPhone";
+            this.cellPhoneDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cellPhoneDataGridViewTextBoxColumn.Name = "cellPhoneDataGridViewTextBoxColumn";
+            this.cellPhoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userTBLBindingSource1
+            // 
+            this.userTBLBindingSource1.DataSource = typeof(talYBProj.userTBL);
             // 
             // userTBLBindingSource
             // 
             this.userTBLBindingSource.DataSource = typeof(talYBProj.userTBL);
-            // 
-            // fullName
-            // 
-            this.fullName.DataPropertyName = "fullName";
-            this.fullName.HeaderText = "fullName";
-            this.fullName.Name = "fullName";
-            this.fullName.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // cellPhone
-            // 
-            this.cellPhone.DataPropertyName = "cellPhone";
-            this.cellPhone.HeaderText = "cellPhone";
-            this.cellPhone.Name = "cellPhone";
-            this.cellPhone.ReadOnly = true;
             // 
             // userListWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGrdView1);
             this.Name = "userListWin";
             this.Text = "userListWin";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrdView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -100,10 +114,11 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cellPhone;
+        private System.Windows.Forms.DataGridView dataGrdView1;
         private System.Windows.Forms.BindingSource userTBLBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cellPhoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource userTBLBindingSource1;
     }
 }

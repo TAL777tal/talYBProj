@@ -29,44 +29,45 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.packTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridVie1 = new System.Windows.Forms.DataGridView();
             this.weightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.packTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridVie1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.packTBLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridVie1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridVie1.AllowUserToAddRows = false;
+            this.dataGridVie1.AllowUserToDeleteRows = false;
+            this.dataGridVie1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridVie1.AutoGenerateColumns = false;
+            this.dataGridVie1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridVie1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridVie1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.weightDataGridViewTextBoxColumn,
             this.priceDataGridViewTextBoxColumn,
             this.notesDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.packTBLBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 387);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // packTBLBindingSource
-            // 
-            this.packTBLBindingSource.DataSource = typeof(talYBProj.packTBL);
+            this.dataGridVie1.DataSource = this.packTBLBindingSource;
+            this.dataGridVie1.Location = new System.Drawing.Point(-1, -4);
+            this.dataGridVie1.Name = "dataGridVie1";
+            this.dataGridVie1.ReadOnly = true;
+            this.dataGridVie1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dataGridVie1.RowHeadersVisible = false;
+            this.dataGridVie1.RowHeadersWidth = 51;
+            this.dataGridVie1.Size = new System.Drawing.Size(854, 387);
+            this.dataGridVie1.TabIndex = 0;
+            this.dataGridVie1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // weightDataGridViewTextBoxColumn
             // 
             this.weightDataGridViewTextBoxColumn.DataPropertyName = "weight";
             this.weightDataGridViewTextBoxColumn.HeaderText = "weight";
+            this.weightDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.weightDataGridViewTextBoxColumn.Name = "weightDataGridViewTextBoxColumn";
             this.weightDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -74,6 +75,7 @@
             // 
             this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
             this.priceDataGridViewTextBoxColumn.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
             this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -81,18 +83,23 @@
             // 
             this.notesDataGridViewTextBoxColumn.DataPropertyName = "notes";
             this.notesDataGridViewTextBoxColumn.HeaderText = "notes";
+            this.notesDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
             this.notesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // packTBLBindingSource
+            // 
+            this.packTBLBindingSource.DataSource = typeof(talYBProj.packTBL);
             // 
             // packList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(878, 450);
+            this.Controls.Add(this.dataGridVie1);
             this.Name = "packList";
             this.Text = "packList";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridVie1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.packTBLBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -100,7 +107,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridVie1;
         private System.Windows.Forms.DataGridViewTextBoxColumn weightDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;

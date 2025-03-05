@@ -59,6 +59,6 @@ namespace talYBProj.Forms
                 lst = DBhelper.userList;
                 chooseCBX.DataSource = lst;
             }
-        }
+        
     }
 }

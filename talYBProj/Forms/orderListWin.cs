@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using talYBProj.IFS;
 
 namespace talYBProj.Forms
 {
     public partial class orderListWin : Form
     {
+        List<orderTBL> list;
         public orderListWin()
         {
             InitializeComponent();
@@ -19,7 +21,8 @@ namespace talYBProj.Forms
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            list = DBhelper.orderList;
+            dataGridView2.DataSource = list;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
