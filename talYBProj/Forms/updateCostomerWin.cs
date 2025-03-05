@@ -94,5 +94,10 @@ namespace talYBProj.Forms
             lst = DBhelper.costomerList;
             kCBXchose.DataSource = lst;
         }
+
+        private void updatePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
