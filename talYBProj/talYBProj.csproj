@@ -107,11 +107,23 @@
     <Compile Include="Forms\addPack.Designer.cs">
       <DependentUpon>addPack.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\addUserWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\addUserWin.Designer.cs">
+      <DependentUpon>addUserWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\addZanWin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\addZanWin.Designer.cs">
       <DependentUpon>addZanWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\apdateUserWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\apdateUserWin.Designer.cs">
+      <DependentUpon>apdateUserWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\costomerListWin.cs">
       <SubType>Form</SubType>
@@ -173,6 +185,12 @@
     <Compile Include="Forms\updateZanWin.Designer.cs">
       <DependentUpon>updateZanWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\userListWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\userListWin.Designer.cs">
+      <DependentUpon>userListWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\zanListWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +248,9 @@
     <EmbeddedResource Include="Forms\addPack.resx">
       <DependentUpon>addPack.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\addUserWin.resx">
+      <DependentUpon>addUserWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\addZanWin.resx">
       <DependentUpon>addZanWin.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +266,9 @@
     <EmbeddedResource Include="Forms\orderListWin.resx">
       <DependentUpon>orderListWin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\packList.resx">
+      <DependentUpon>packList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\updateCostomerWin.resx">
       <DependentUpon>updateCostomerWin.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\updateOrderWin.resx">
       <DependentUpon>updateOrderWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\updatePack.resx">
+      <DependentUpon>updatePack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\updateZanWin.resx">
       <DependentUpon>updateZanWin.cs</DependentUpon>
@@ -284,6 +311,7 @@
     <None Include="Properties\DataSources\costomerTBL.datasource" />
     <None Include="Properties\DataSources\oliveTBL.datasource" />
     <None Include="Properties\DataSources\orderTBL.datasource" />
+    <None Include="Properties\DataSources\packTBL.datasource" />
     <None Include="Properties\DataSources\userTBL.datasource" />
     <None Include="Properties\DataSources\zanTBL.datasource" />
     <None Include="Properties\DataSources\zanTBL1.datasource" />

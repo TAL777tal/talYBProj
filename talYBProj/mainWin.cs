@@ -243,6 +243,60 @@ namespace talYBProj
             mainPanel.Controls.Add(current);
             current.Show();
         }
+
+        private void kryptonRibbonGroupButton11_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is packList)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new packList();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
+
+        private void addClick_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is addPack)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new addPack();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
+
+        private void updateClick_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is updatePack)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new updatePack();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
     }
     
     

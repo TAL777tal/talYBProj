@@ -53,6 +53,12 @@
             this.kryptonRibbonGroupButton6 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupButton7 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupButton8 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonTab4 = new Krypton.Ribbon.KryptonRibbonTab();
+            this.kryptonRibbonGroup5 = new Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple5 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.addClick = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.updateClick = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.listClick = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.mainPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             this.SuspendLayout();
@@ -69,8 +75,9 @@
             this.customerTab,
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab2,
-            this.kryptonRibbonTab3});
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab3;
+            this.kryptonRibbonTab3,
+            this.kryptonRibbonTab4});
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab4;
             this.kryptonRibbon1.ShowMinimizeButton = false;
             this.kryptonRibbon1.Size = new System.Drawing.Size(600, 143);
             this.kryptonRibbon1.TabIndex = 0;
@@ -209,6 +216,39 @@
             this.kryptonRibbonGroupButton8.TextLine1 = "רשימת זנים";
             this.kryptonRibbonGroupButton8.Click += new System.EventHandler(this.kryptonRibbonGroupButton8_Click);
             // 
+            // kryptonRibbonTab4
+            // 
+            this.kryptonRibbonTab4.Groups.AddRange(new Krypton.Ribbon.KryptonRibbonGroup[] {
+            this.kryptonRibbonGroup5});
+            this.kryptonRibbonTab4.Text = "ניהול חבילות";
+            // 
+            // kryptonRibbonGroup5
+            // 
+            this.kryptonRibbonGroup5.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple5});
+            // 
+            // kryptonRibbonGroupTriple5
+            // 
+            this.kryptonRibbonGroupTriple5.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.addClick,
+            this.updateClick,
+            this.listClick});
+            // 
+            // addClick
+            // 
+            this.addClick.TextLine1 = "הוסף חבילה";
+            this.addClick.Click += new System.EventHandler(this.addClick_Click);
+            // 
+            // updateClick
+            // 
+            this.updateClick.TextLine1 = "ערוך חבילה";
+            this.updateClick.Click += new System.EventHandler(this.updateClick_Click);
+            // 
+            // listClick
+            // 
+            this.listClick.TextLine1 = "רשימת חבילות";
+            this.listClick.Click += new System.EventHandler(this.kryptonRibbonGroupButton11_Click);
+            // 
             // mainPanel
             // 
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -264,6 +304,12 @@
         private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton6;
         private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton7;
         private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton8;
+        private Krypton.Ribbon.KryptonRibbonTab kryptonRibbonTab4;
+        private Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup5;
+        private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple5;
+        private Krypton.Ribbon.KryptonRibbonGroupButton addClick;
+        private Krypton.Ribbon.KryptonRibbonGroupButton updateClick;
+        private Krypton.Ribbon.KryptonRibbonGroupButton listClick;
     }
 }
 

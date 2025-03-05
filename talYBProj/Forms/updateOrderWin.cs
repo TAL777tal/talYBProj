@@ -22,11 +22,11 @@ namespace talYBProj.Forms
         private void ordersComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             orderTBL selected = (orderTBL)cbxOrders.SelectedItem;
-            if (selected != null)
+            if (selected == null)
             {
                 return;
             }
-           
+            // תשאל את ארז איך אתה מקשר בין שם הלקוח לקסטומר איי די ומשווה לשם 
             numericUpDownDolevim.Value = selected.numOfDolevim;
             if (selected.notes != null)
                 kRTBXnotes.Text = selected.notes;
@@ -65,6 +65,11 @@ namespace talYBProj.Forms
         private void updateOrder_Load(object sender, EventArgs e)
         {
             updateCBX();
+        }
+
+        private void cbxCostumerName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }    
 }
