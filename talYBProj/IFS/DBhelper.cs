@@ -112,7 +112,6 @@ namespace talYBProj.IFS
                 return null;
             }
         }
-
         public static userTBL addUser(userTBL u1)
         {
             try
@@ -227,11 +226,8 @@ namespace talYBProj.IFS
                     return false;
                 toUpdate.weight = p1.weight;
                 toUpdate.price = p1.price;
+                toUpdate.packName = p1.packName;
                 toUpdate.notes = p1.notes;
-                toUpdate.orderID = p1.orderID;
-                toUpdate.userID = p1.userID;
-                toUpdate.date = p1.date;
-                toUpdate.dolevNum = p1.dolevNum;
                 return true;
             }
             catch
@@ -268,7 +264,7 @@ namespace talYBProj.IFS
                 if (toUpdate != null)
                     return false;
                 toUpdate.name = z1.name;
-                    
+                toUpdate.description = z1.description;
                 return true;
             }
             catch

@@ -13,7 +13,7 @@ namespace talYBProj.Forms
 {
     public partial class updateDolevWin : Form
     {
-        List<costomerTBL> custList;
+        List<orderTBL> orderList;
         List<userTBL> userList;
         public updateDolevWin()
         {
@@ -63,6 +63,14 @@ namespace talYBProj.Forms
                 o1.notes = "";
 
             }
+        }
+
+        private void updateDolevWin_Load(object sender, EventArgs e)
+        {
+            orderList = DBhelper.orderList;
+            userList = DBhelper.userList;
+            cbxUserName.DataSource = userList;
+            cbxOrderId.DataSource = orderList;
         }
     }
 }

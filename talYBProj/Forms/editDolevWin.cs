@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using talYBProj.IFS;
 
 namespace talYBProj.Forms
 {
@@ -14,6 +15,7 @@ namespace talYBProj.Forms
     {
         List<costomerTBL> custList;
         List<userTBL> userList;
+        List<oliveTBL> lst;
         public editDolevWin()
         {
             InitializeComponent();
@@ -41,6 +43,16 @@ namespace talYBProj.Forms
         private void cbxchose_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void editDolevWin_Load(object sender, EventArgs e)
+        {
+            updateCBX();
+        }
+        private void updateCBX()
+        {
+            lst = DBhelper.oliveList;
+            cbxchose.DataSource = lst;
         }
     }
 }

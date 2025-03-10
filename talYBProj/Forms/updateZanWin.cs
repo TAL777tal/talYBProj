@@ -48,13 +48,31 @@ namespace talYBProj.Forms
             {
                 return;
             }
-            tbxDes.Text = selected.description;
+            if (selected.description != null)
+                tbxDes.Text = selected.description;
 
         }
         private void updateCBX()
         {
             lst = DBhelper.zanList;
             cbxZanName.DataSource = lst;
+        }
+
+        private void updateZanWin_Load(object sender, EventArgs e)
+        {
+            updateCBX();
+        }
+
+        private void cbxZanName_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            zanTBL selected = (zanTBL)cbxZanName.SelectedItem;
+            if (selected == null)
+            {
+                return;
+            }
+            if (selected.description != null)
+                tbxDes.Text = selected.description;
+
         }
     }
 }

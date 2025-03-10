@@ -5,21 +5,21 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="d65271dbe0dd4902950e2aa4104bfd47" Name="Diagram1">
-        <EntityTypeShape EntityType="dbModel.costomerTBL" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbModel.oilTBL" Width="1.5" PointX="3" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbModel.oliveTBL" Width="1.5" PointX="6" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbModel.orderTBL" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbModel.packTBL" Width="1.5" PointX="0.75" PointY="2.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbModel.userTBL" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="dbModel.zanTBL" Width="1.5" PointX="0.75" PointY="14.125" IsExpanded="true" />
-        <AssociationConnector Association="dbModel.FK_orderTBL_ToCostomerTBL" ManuallyRouted="false" />
-        <AssociationConnector Association="dbModel.FK_oilTBL_ToOrderTBL" ManuallyRouted="false" />
-        <AssociationConnector Association="dbModel.FK_oilTBL_ToPackTBL" ManuallyRouted="false" />
-        <AssociationConnector Association="dbModel.FK_oilTBL_ToUserTBL" ManuallyRouted="false" />
-        <AssociationConnector Association="dbModel.FK_oliveTBL_orderTBL" ManuallyRouted="false" />
-        <AssociationConnector Association="dbModel.FK_oliveTBL_userTBL" ManuallyRouted="false" />
-        <AssociationConnector Association="dbModel.FK_orderTBL_ToUserTBL" ManuallyRouted="false" />
-        <AssociationConnector Association="dbModel.FK_orderTBL_ToZanTBL" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="dbModel.costomerTBL" Width="1.5" PointX="3.75" PointY="1.375" />
+        <EntityTypeShape EntityType="dbModel.oilTBL" Width="1.5" PointX="8.25" PointY="5.625" />
+        <EntityTypeShape EntityType="dbModel.oliveTBL" Width="1.5" PointX="3" PointY="5.75" />
+        <EntityTypeShape EntityType="dbModel.orderTBL" Width="1.5" PointX="6" PointY="5.5" />
+        <EntityTypeShape EntityType="dbModel.packTBL" Width="1.5" PointX="6" PointY="1.875" />
+        <EntityTypeShape EntityType="dbModel.userTBL" Width="1.5" PointX="0.75" PointY="5.875" />
+        <EntityTypeShape EntityType="dbModel.zanTBL" Width="1.5" PointX="3.75" PointY="10.625" />
+        <AssociationConnector Association="dbModel.FK_orderTBL_ToCostomerTBL" />
+        <AssociationConnector Association="dbModel.FK_oilTBL_ToOrderTBL" />
+        <AssociationConnector Association="dbModel.FK_oilTBL_ToPackTBL_Id_" />
+        <AssociationConnector Association="dbModel.FK_oilTBL_ToUserTBL" />
+        <AssociationConnector Association="dbModel.FK_oliveTBL_orderTBL" />
+        <AssociationConnector Association="dbModel.FK_oliveTBL_userTBL" />
+        <AssociationConnector Association="dbModel.FK_orderTBL_ToUserTBL" />
+        <AssociationConnector Association="dbModel.FK_orderTBL_ToZanTBL" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

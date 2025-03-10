@@ -39,8 +39,9 @@
             this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
-            this.chooseCBX = new System.Windows.Forms.ComboBox();
+            this.chooseCBX = new Krypton.Toolkit.KryptonComboBox();
             this.userTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.chooseCBX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,21 +57,21 @@
             // 
             this.TBXgmail.Location = new System.Drawing.Point(543, 252);
             this.TBXgmail.Name = "TBXgmail";
-            this.TBXgmail.Size = new System.Drawing.Size(100, 23);
+            this.TBXgmail.Size = new System.Drawing.Size(100, 27);
             this.TBXgmail.TabIndex = 19;
             // 
             // TBXlastName
             // 
             this.TBXlastName.Location = new System.Drawing.Point(543, 192);
             this.TBXlastName.Name = "TBXlastName";
-            this.TBXlastName.Size = new System.Drawing.Size(100, 23);
+            this.TBXlastName.Size = new System.Drawing.Size(100, 27);
             this.TBXlastName.TabIndex = 18;
             // 
             // TBXfirstName
             // 
             this.TBXfirstName.Location = new System.Drawing.Point(543, 139);
             this.TBXfirstName.Name = "TBXfirstName";
-            this.TBXfirstName.Size = new System.Drawing.Size(100, 23);
+            this.TBXfirstName.Size = new System.Drawing.Size(100, 27);
             this.TBXfirstName.TabIndex = 17;
             // 
             // addBTN
@@ -86,7 +87,7 @@
             // 
             this.kryptonLabel5.Location = new System.Drawing.Point(676, 311);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(75, 20);
+            this.kryptonLabel5.Size = new System.Drawing.Size(92, 24);
             this.kryptonLabel5.TabIndex = 15;
             this.kryptonLabel5.Values.Text = "מספר טלפון";
             // 
@@ -94,7 +95,7 @@
             // 
             this.kryptonLabel4.Location = new System.Drawing.Point(693, 255);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(43, 20);
+            this.kryptonLabel4.Size = new System.Drawing.Size(53, 24);
             this.kryptonLabel4.TabIndex = 14;
             this.kryptonLabel4.Values.Text = "אימייל";
             // 
@@ -102,7 +103,7 @@
             // 
             this.kryptonLabel3.Location = new System.Drawing.Point(477, 73);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(82, 20);
+            this.kryptonLabel3.Size = new System.Drawing.Size(101, 24);
             this.kryptonLabel3.TabIndex = 13;
             this.kryptonLabel3.Values.Text = "עדכן משתמש";
             // 
@@ -110,7 +111,7 @@
             // 
             this.kryptonLabel2.Location = new System.Drawing.Point(677, 192);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(74, 20);
+            this.kryptonLabel2.Size = new System.Drawing.Size(91, 24);
             this.kryptonLabel2.TabIndex = 12;
             this.kryptonLabel2.Values.Text = "שם משפחה";
             // 
@@ -118,7 +119,7 @@
             // 
             this.kryptonLabel1.Location = new System.Drawing.Point(676, 139);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(58, 20);
+            this.kryptonLabel1.Size = new System.Drawing.Size(71, 24);
             this.kryptonLabel1.TabIndex = 11;
             this.kryptonLabel1.Values.Text = "שם פרטי";
             // 
@@ -126,12 +127,14 @@
             // 
             this.chooseCBX.DataSource = this.userTBLBindingSource;
             this.chooseCBX.DisplayMember = "fullName";
-            this.chooseCBX.FormattingEnabled = true;
-            this.chooseCBX.Location = new System.Drawing.Point(329, 72);
+            this.chooseCBX.DropDownWidth = 121;
+            this.chooseCBX.IntegralHeight = false;
+            this.chooseCBX.Location = new System.Drawing.Point(339, 73);
             this.chooseCBX.Name = "chooseCBX";
-            this.chooseCBX.Size = new System.Drawing.Size(121, 21);
-            this.chooseCBX.TabIndex = 21;
-            this.chooseCBX.SelectedIndexChanged += new System.EventHandler(this.chooseCBX_SelectedIndexChanged);
+            this.chooseCBX.Size = new System.Drawing.Size(121, 26);
+            this.chooseCBX.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.chooseCBX.TabIndex = 22;
+            this.chooseCBX.SelectedIndexChanged += new System.EventHandler(this.chooseCBX_SelectedIndexChanged_1);
             // 
             // userTBLBindingSource
             // 
@@ -153,8 +156,11 @@
             this.Controls.Add(this.kryptonLabel3);
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.kryptonLabel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "apdateUserWin";
             this.Text = "apdateUserWin";
+            this.Load += new System.EventHandler(this.apdateUserWin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.chooseCBX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -173,7 +179,7 @@
         private Krypton.Toolkit.KryptonLabel kryptonLabel3;
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private System.Windows.Forms.ComboBox chooseCBX;
         private System.Windows.Forms.BindingSource userTBLBindingSource;
+        private Krypton.Toolkit.KryptonComboBox chooseCBX;
     }
 }

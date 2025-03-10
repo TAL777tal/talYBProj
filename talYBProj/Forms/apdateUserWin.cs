@@ -59,6 +59,23 @@ namespace talYBProj.Forms
                 lst = DBhelper.userList;
                 chooseCBX.DataSource = lst;
             }
-        
+
+        private void chooseCBX_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            userTBL selected = (userTBL)chooseCBX.SelectedItem;
+            if (selected == null)
+            {
+                return;
+            }
+            TBXfirstName.Text = selected.firstName;
+            TBXlastName.Text = selected.lastName;
+            TBXgmail.Text = selected.email;
+            MTXphoneNumber.Text = selected.cellPhone;
+        }
+
+        private void apdateUserWin_Load(object sender, EventArgs e)
+        {
+            updateCBX();
+        }
     }
 }

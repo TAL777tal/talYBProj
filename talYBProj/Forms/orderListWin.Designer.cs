@@ -116,6 +116,7 @@
             this.ClientSize = new System.Drawing.Size(874, 513);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "orderListWin";
             this.Text = "orderListWin";

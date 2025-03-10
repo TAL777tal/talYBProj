@@ -21,7 +21,7 @@ namespace talYBProj.Forms
         private void addButton_Click(object sender, EventArgs e)
         {
             packTBL p1 = new packTBL();
-            p1.date = DateTime.Now; 
+            p1.packName = nameTBX.Text.Trim();
             p1.weight = CBXweight.SelectedIndex;
             if (CBXweight.SelectedIndex == 1)
             {

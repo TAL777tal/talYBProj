@@ -51,7 +51,7 @@
             this.orderLabel.Location = new System.Drawing.Point(368, 52);
             this.orderLabel.Margin = new System.Windows.Forms.Padding(2);
             this.orderLabel.Name = "orderLabel";
-            this.orderLabel.Size = new System.Drawing.Size(53, 20);
+            this.orderLabel.Size = new System.Drawing.Size(65, 24);
             this.orderLabel.TabIndex = 0;
             this.orderLabel.Values.Text = "ההזמנה";
             // 
@@ -60,7 +60,7 @@
             this.costomerNameLabel.Location = new System.Drawing.Point(434, 109);
             this.costomerNameLabel.Margin = new System.Windows.Forms.Padding(2);
             this.costomerNameLabel.Name = "costomerNameLabel";
-            this.costomerNameLabel.Size = new System.Drawing.Size(65, 20);
+            this.costomerNameLabel.Size = new System.Drawing.Size(79, 24);
             this.costomerNameLabel.TabIndex = 1;
             this.costomerNameLabel.Values.Text = "שם הצרכן";
             // 
@@ -69,7 +69,7 @@
             this.oliveSpeciesLabel.Location = new System.Drawing.Point(434, 142);
             this.oliveSpeciesLabel.Margin = new System.Windows.Forms.Padding(2);
             this.oliveSpeciesLabel.Name = "oliveSpeciesLabel";
-            this.oliveSpeciesLabel.Size = new System.Drawing.Size(56, 20);
+            this.oliveSpeciesLabel.Size = new System.Drawing.Size(68, 24);
             this.oliveSpeciesLabel.TabIndex = 2;
             this.oliveSpeciesLabel.Values.Text = "סוג הזית";
             // 
@@ -78,7 +78,7 @@
             this.numOfDolevimLabel.Location = new System.Drawing.Point(434, 176);
             this.numOfDolevimLabel.Margin = new System.Windows.Forms.Padding(2);
             this.numOfDolevimLabel.Name = "numOfDolevimLabel";
-            this.numOfDolevimLabel.Size = new System.Drawing.Size(80, 20);
+            this.numOfDolevimLabel.Size = new System.Drawing.Size(98, 24);
             this.numOfDolevimLabel.TabIndex = 3;
             this.numOfDolevimLabel.Values.Text = "מספר דולבים";
             // 
@@ -87,7 +87,7 @@
             this.notesLabel.Location = new System.Drawing.Point(434, 210);
             this.notesLabel.Margin = new System.Windows.Forms.Padding(2);
             this.notesLabel.Name = "notesLabel";
-            this.notesLabel.Size = new System.Drawing.Size(46, 20);
+            this.notesLabel.Size = new System.Drawing.Size(55, 24);
             this.notesLabel.TabIndex = 4;
             this.notesLabel.Values.Text = "הערות";
             // 
@@ -100,7 +100,7 @@
             this.cbxOrders.Location = new System.Drawing.Point(249, 50);
             this.cbxOrders.Margin = new System.Windows.Forms.Padding(2);
             this.cbxOrders.Name = "cbxOrders";
-            this.cbxOrders.Size = new System.Drawing.Size(91, 22);
+            this.cbxOrders.Size = new System.Drawing.Size(91, 26);
             this.cbxOrders.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.cbxOrders.TabIndex = 5;
             this.cbxOrders.SelectedIndexChanged += new System.EventHandler(this.ordersComboBox_SelectedIndexChanged);
@@ -171,6 +171,7 @@
             this.Controls.Add(this.oliveSpeciesLabel);
             this.Controls.Add(this.costomerNameLabel);
             this.Controls.Add(this.orderLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "updateOrderWin";
             this.Text = "updateOrder";

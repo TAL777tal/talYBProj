@@ -103,6 +103,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGrdView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "userListWin";
             this.Text = "userListWin";
             ((System.ComponentModel.ISupportInitialize)(this.dataGrdView1)).EndInit();

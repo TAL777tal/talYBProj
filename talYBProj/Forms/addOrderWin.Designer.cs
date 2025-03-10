@@ -36,22 +36,23 @@
             this.TBXnotes = new Krypton.Toolkit.KryptonRichTextBox();
             this.btnAddOrder = new Krypton.Toolkit.KryptonButton();
             this.cbxCust = new System.Windows.Forms.ComboBox();
-            this.cbxZan = new System.Windows.Forms.ComboBox();
-            this.nUDnumOfDolevim = new System.Windows.Forms.NumericUpDown();
             this.costomerTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cbxZan = new System.Windows.Forms.ComboBox();
             this.zanTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nUDnumOfDolevim = new System.Windows.Forms.NumericUpDown();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.cbxUsers = new System.Windows.Forms.ComboBox();
             this.userTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.nUDnumOfDolevim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zanTBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDnumOfDolevim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // oliveSpeciesLabel
             // 
-            this.oliveSpeciesLabel.Location = new System.Drawing.Point(619, 111);
+            this.oliveSpeciesLabel.Location = new System.Drawing.Point(464, 90);
+            this.oliveSpeciesLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.oliveSpeciesLabel.Name = "oliveSpeciesLabel";
             this.oliveSpeciesLabel.Size = new System.Drawing.Size(68, 24);
             this.oliveSpeciesLabel.TabIndex = 1;
@@ -59,7 +60,8 @@
             // 
             // numOfDolevimLabel
             // 
-            this.numOfDolevimLabel.Location = new System.Drawing.Point(619, 149);
+            this.numOfDolevimLabel.Location = new System.Drawing.Point(464, 121);
+            this.numOfDolevimLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numOfDolevimLabel.Name = "numOfDolevimLabel";
             this.numOfDolevimLabel.Size = new System.Drawing.Size(98, 24);
             this.numOfDolevimLabel.TabIndex = 2;
@@ -67,7 +69,8 @@
             // 
             // notesLabel
             // 
-            this.notesLabel.Location = new System.Drawing.Point(619, 195);
+            this.notesLabel.Location = new System.Drawing.Point(464, 158);
+            this.notesLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.notesLabel.Name = "notesLabel";
             this.notesLabel.Size = new System.Drawing.Size(55, 24);
             this.notesLabel.TabIndex = 5;
@@ -75,7 +78,8 @@
             // 
             // costomerNameLabel
             // 
-            this.costomerNameLabel.Location = new System.Drawing.Point(619, 81);
+            this.costomerNameLabel.Location = new System.Drawing.Point(464, 66);
+            this.costomerNameLabel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.costomerNameLabel.Name = "costomerNameLabel";
             this.costomerNameLabel.Size = new System.Drawing.Size(79, 24);
             this.costomerNameLabel.TabIndex = 11;
@@ -83,17 +87,19 @@
             // 
             // TBXnotes
             // 
-            this.TBXnotes.Location = new System.Drawing.Point(420, 204);
+            this.TBXnotes.Location = new System.Drawing.Point(315, 166);
+            this.TBXnotes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TBXnotes.Name = "TBXnotes";
-            this.TBXnotes.Size = new System.Drawing.Size(174, 138);
+            this.TBXnotes.Size = new System.Drawing.Size(130, 112);
             this.TBXnotes.TabIndex = 14;
             this.TBXnotes.Text = "";
             // 
             // btnAddOrder
             // 
-            this.btnAddOrder.Location = new System.Drawing.Point(327, 399);
+            this.btnAddOrder.Location = new System.Drawing.Point(245, 324);
+            this.btnAddOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddOrder.Name = "btnAddOrder";
-            this.btnAddOrder.Size = new System.Drawing.Size(122, 25);
+            this.btnAddOrder.Size = new System.Drawing.Size(92, 20);
             this.btnAddOrder.TabIndex = 25;
             this.btnAddOrder.Values.Text = "הוסף הזמנה";
             this.btnAddOrder.Click += new System.EventHandler(this.btnAddOrder_Click);
@@ -103,9 +109,10 @@
             this.cbxCust.DataSource = this.costomerTBLBindingSource;
             this.cbxCust.DisplayMember = "fullName";
             this.cbxCust.FormattingEnabled = true;
-            this.cbxCust.Location = new System.Drawing.Point(393, 81);
+            this.cbxCust.Location = new System.Drawing.Point(295, 66);
+            this.cbxCust.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxCust.Name = "cbxCust";
-            this.cbxCust.Size = new System.Drawing.Size(200, 24);
+            this.cbxCust.Size = new System.Drawing.Size(151, 21);
             this.cbxCust.TabIndex = 26;
             this.cbxCust.ValueMember = "Id";
             this.cbxCust.SelectedIndexChanged += new System.EventHandler(this.cbxCust_SelectedIndexChanged);
@@ -115,31 +122,26 @@
             this.cbxZan.DataSource = this.zanTBLBindingSource;
             this.cbxZan.DisplayMember = "name";
             this.cbxZan.FormattingEnabled = true;
-            this.cbxZan.Location = new System.Drawing.Point(393, 111);
+            this.cbxZan.Location = new System.Drawing.Point(295, 90);
+            this.cbxZan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxZan.Name = "cbxZan";
-            this.cbxZan.Size = new System.Drawing.Size(201, 24);
+            this.cbxZan.Size = new System.Drawing.Size(152, 21);
             this.cbxZan.TabIndex = 26;
             this.cbxZan.ValueMember = "Id";
             // 
             // nUDnumOfDolevim
             // 
-            this.nUDnumOfDolevim.Location = new System.Drawing.Point(523, 151);
+            this.nUDnumOfDolevim.Location = new System.Drawing.Point(392, 123);
+            this.nUDnumOfDolevim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nUDnumOfDolevim.Name = "nUDnumOfDolevim";
-            this.nUDnumOfDolevim.Size = new System.Drawing.Size(70, 22);
+            this.nUDnumOfDolevim.Size = new System.Drawing.Size(52, 20);
             this.nUDnumOfDolevim.TabIndex = 27;
             this.nUDnumOfDolevim.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // costomerTBLBindingSource
-            // 
-         
-            // 
-            // zanTBLBindingSource
-            // 
-         
-            // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(619, 51);
+            this.kryptonLabel1.Location = new System.Drawing.Point(464, 41);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(79, 24);
             this.kryptonLabel1.TabIndex = 11;
@@ -150,22 +152,19 @@
             this.cbxUsers.DataSource = this.userTBLBindingSource;
             this.cbxUsers.DisplayMember = "fullName";
             this.cbxUsers.FormattingEnabled = true;
-            this.cbxUsers.Location = new System.Drawing.Point(393, 51);
+            this.cbxUsers.Location = new System.Drawing.Point(295, 41);
+            this.cbxUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbxUsers.Name = "cbxUsers";
-            this.cbxUsers.Size = new System.Drawing.Size(200, 24);
+            this.cbxUsers.Size = new System.Drawing.Size(151, 21);
             this.cbxUsers.TabIndex = 26;
             this.cbxUsers.ValueMember = "Id";
             this.cbxUsers.SelectedIndexChanged += new System.EventHandler(this.cbxCust_SelectedIndexChanged);
             // 
-            // userTBLBindingSource
-            // 
-          
-            // 
             // addOrderWin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.nUDnumOfDolevim);
             this.Controls.Add(this.cbxZan);
             this.Controls.Add(this.cbxUsers);
@@ -177,12 +176,14 @@
             this.Controls.Add(this.notesLabel);
             this.Controls.Add(this.numOfDolevimLabel);
             this.Controls.Add(this.oliveSpeciesLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "addOrderWin";
             this.Text = "addOrderWin";
             this.Load += new System.EventHandler(this.addOrderWin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nUDnumOfDolevim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zanTBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDnumOfDolevim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.LabelOrderId = new Krypton.Toolkit.KryptonLabel();
             this.LabelDolevNum = new Krypton.Toolkit.KryptonLabel();
             this.LabelCurDate = new Krypton.Toolkit.KryptonLabel();
@@ -35,12 +36,16 @@
             this.LabelNotes = new Krypton.Toolkit.KryptonLabel();
             this.LabelUserName = new Krypton.Toolkit.KryptonLabel();
             this.cbxOrderId = new System.Windows.Forms.ComboBox();
+            this.orderTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbxUserName = new System.Windows.Forms.ComboBox();
+            this.userTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.numericUpDownBruto = new System.Windows.Forms.NumericUpDown();
             this.cbxDolevNum = new System.Windows.Forms.ComboBox();
             this.txbNotes = new Krypton.Toolkit.KryptonRichTextBox();
             this.dateTimeP = new System.Windows.Forms.DateTimePicker();
             this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
+            ((System.ComponentModel.ISupportInitialize)(this.orderTBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBruto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +54,7 @@
             this.LabelOrderId.Location = new System.Drawing.Point(468, 23);
             this.LabelOrderId.Margin = new System.Windows.Forms.Padding(2);
             this.LabelOrderId.Name = "LabelOrderId";
-            this.LabelOrderId.Size = new System.Drawing.Size(88, 20);
+            this.LabelOrderId.Size = new System.Drawing.Size(108, 24);
             this.LabelOrderId.TabIndex = 0;
             this.LabelOrderId.Values.Text = "מספר ההזמנה";
             // 
@@ -58,7 +63,7 @@
             this.LabelDolevNum.Location = new System.Drawing.Point(468, 66);
             this.LabelDolevNum.Margin = new System.Windows.Forms.Padding(2);
             this.LabelDolevNum.Name = "LabelDolevNum";
-            this.LabelDolevNum.Size = new System.Drawing.Size(76, 20);
+            this.LabelDolevNum.Size = new System.Drawing.Size(94, 24);
             this.LabelDolevNum.TabIndex = 2;
             this.LabelDolevNum.Values.Text = "מספר הדולב";
             // 
@@ -67,7 +72,7 @@
             this.LabelCurDate.Location = new System.Drawing.Point(465, 102);
             this.LabelCurDate.Margin = new System.Windows.Forms.Padding(2);
             this.LabelCurDate.Name = "LabelCurDate";
-            this.LabelCurDate.Size = new System.Drawing.Size(91, 20);
+            this.LabelCurDate.Size = new System.Drawing.Size(112, 24);
             this.LabelCurDate.TabIndex = 3;
             this.LabelCurDate.Values.Text = "התאריך הנוכחי";
             this.LabelCurDate.Click += new System.EventHandler(this.kryptonLabel4_Click);
@@ -77,7 +82,7 @@
             this.LabelBruto.Location = new System.Drawing.Point(468, 142);
             this.LabelBruto.Margin = new System.Windows.Forms.Padding(2);
             this.LabelBruto.Name = "LabelBruto";
-            this.LabelBruto.Size = new System.Drawing.Size(77, 20);
+            this.LabelBruto.Size = new System.Drawing.Size(95, 24);
             this.LabelBruto.TabIndex = 4;
             this.LabelBruto.Values.Text = "משקל-ברוטו";
             // 
@@ -86,7 +91,7 @@
             this.LabelNotes.Location = new System.Drawing.Point(468, 243);
             this.LabelNotes.Margin = new System.Windows.Forms.Padding(2);
             this.LabelNotes.Name = "LabelNotes";
-            this.LabelNotes.Size = new System.Drawing.Size(46, 20);
+            this.LabelNotes.Size = new System.Drawing.Size(55, 24);
             this.LabelNotes.TabIndex = 6;
             this.LabelNotes.Values.Text = "הערות";
             // 
@@ -95,12 +100,14 @@
             this.LabelUserName.Location = new System.Drawing.Point(468, 196);
             this.LabelUserName.Margin = new System.Windows.Forms.Padding(2);
             this.LabelUserName.Name = "LabelUserName";
-            this.LabelUserName.Size = new System.Drawing.Size(85, 20);
+            this.LabelUserName.Size = new System.Drawing.Size(105, 24);
             this.LabelUserName.TabIndex = 7;
             this.LabelUserName.Values.Text = "שם המשתמש";
             // 
             // cbxOrderId
             // 
+            this.cbxOrderId.DataSource = this.orderTBLBindingSource;
+            this.cbxOrderId.DisplayMember = "Id";
             this.cbxOrderId.FormattingEnabled = true;
             this.cbxOrderId.Location = new System.Drawing.Point(330, 23);
             this.cbxOrderId.Margin = new System.Windows.Forms.Padding(2);
@@ -109,14 +116,24 @@
             this.cbxOrderId.TabIndex = 8;
             this.cbxOrderId.SelectedIndexChanged += new System.EventHandler(this.cbxNameCust_SelectedIndexChanged);
             // 
+            // orderTBLBindingSource
+            // 
+            this.orderTBLBindingSource.DataSource = typeof(talYBProj.orderTBL);
+            // 
             // cbxUserName
             // 
+            this.cbxUserName.DataSource = this.userTBLBindingSource;
+            this.cbxUserName.DisplayMember = "fullName";
             this.cbxUserName.FormattingEnabled = true;
             this.cbxUserName.Location = new System.Drawing.Point(330, 196);
             this.cbxUserName.Margin = new System.Windows.Forms.Padding(2);
             this.cbxUserName.Name = "cbxUserName";
             this.cbxUserName.Size = new System.Drawing.Size(92, 21);
             this.cbxUserName.TabIndex = 10;
+            // 
+            // userTBLBindingSource
+            // 
+            this.userTBLBindingSource.DataSource = typeof(talYBProj.userTBL);
             // 
             // numericUpDownBruto
             // 
@@ -185,9 +202,13 @@
             this.Controls.Add(this.LabelCurDate);
             this.Controls.Add(this.LabelDolevNum);
             this.Controls.Add(this.LabelOrderId);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "updateDolevWin";
             this.Text = "updateDolev";
+            this.Load += new System.EventHandler(this.updateDolevWin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.orderTBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBruto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -209,5 +230,7 @@
         private Krypton.Toolkit.KryptonRichTextBox txbNotes;
         private System.Windows.Forms.DateTimePicker dateTimeP;
         private Krypton.Toolkit.KryptonButton kryptonButton1;
+        private System.Windows.Forms.BindingSource orderTBLBindingSource;
+        private System.Windows.Forms.BindingSource userTBLBindingSource;
     }
 }

@@ -40,7 +40,7 @@
             // 
             this.nameLabel.Location = new System.Drawing.Point(624, 86);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(48, 20);
+            this.nameLabel.Size = new System.Drawing.Size(58, 24);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Values.Text = "שם הזן";
             // 
@@ -48,7 +48,7 @@
             // 
             this.descriptionLabel.Location = new System.Drawing.Point(624, 150);
             this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(41, 20);
+            this.descriptionLabel.Size = new System.Drawing.Size(49, 24);
             this.descriptionLabel.TabIndex = 1;
             this.descriptionLabel.Values.Text = "תיאור";
             // 
@@ -56,7 +56,7 @@
             // 
             this.PresentLabel.Location = new System.Drawing.Point(344, 29);
             this.PresentLabel.Name = "PresentLabel";
-            this.PresentLabel.Size = new System.Drawing.Size(49, 20);
+            this.PresentLabel.Size = new System.Drawing.Size(60, 24);
             this.PresentLabel.TabIndex = 2;
             this.PresentLabel.Values.Text = "הוסף זן";
             // 
@@ -64,7 +64,7 @@
             // 
             this.tbxZan.Location = new System.Drawing.Point(487, 86);
             this.tbxZan.Name = "tbxZan";
-            this.tbxZan.Size = new System.Drawing.Size(100, 23);
+            this.tbxZan.Size = new System.Drawing.Size(100, 27);
             this.tbxZan.TabIndex = 3;
             // 
             // tbxDes
@@ -96,6 +96,7 @@
             this.Controls.Add(this.PresentLabel);
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.nameLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "addZanWin";
             this.Text = "addZanWin";
             this.Load += new System.EventHandler(this.addZanWin_Load);
