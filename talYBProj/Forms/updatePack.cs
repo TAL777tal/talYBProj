@@ -98,5 +98,10 @@ namespace talYBProj.Forms
         {
             updateCBX();
         }
+
+        private void CBXweight_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

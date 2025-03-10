@@ -28,5 +28,11 @@ namespace talYBProj.Forms
         {
 
         }
+
+        private void zanListWin_Load(object sender, EventArgs e)
+        {
+            list = DBhelper.zanList;
+            dtGridView1.DataSource = list;
+        }
     }
 }

@@ -27,5 +27,12 @@ namespace talYBProj.Forms
         {
 
         }
+
+        private void userListWin_Load(object sender, EventArgs e)
+        {
+            list = DBhelper.userList;
+            dataGrdView1.DataSource = list;
+        }
     }
+    
 }

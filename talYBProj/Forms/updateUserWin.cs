@@ -46,7 +46,7 @@ namespace talYBProj.Forms
             toUpdate.cellPhone = MTXphoneNumber.Text;
             if (DBhelper.updateUser(toUpdate))
             {
-                MessageBox.Show("add succefuly");
+                MessageBox.Show("add successfuly");
                 updateCBX();
             }
             else //error

@@ -106,6 +106,7 @@
             this.CBXweight.Name = "CBXweight";
             this.CBXweight.Size = new System.Drawing.Size(121, 21);
             this.CBXweight.TabIndex = 30;
+            this.CBXweight.SelectedIndexChanged += new System.EventHandler(this.CBXweight_SelectedIndexChanged);
             // 
             // userTBLBindingSource
             // 

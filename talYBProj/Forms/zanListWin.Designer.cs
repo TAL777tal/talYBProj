@@ -90,6 +90,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "zanListWin";
             this.Text = "zanListWin";
+            this.Load += new System.EventHandler(this.zanListWin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zanTBLBindingSource)).EndInit();
             this.ResumeLayout(false);

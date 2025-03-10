@@ -106,6 +106,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "userListWin";
             this.Text = "userListWin";
+            this.Load += new System.EventHandler(this.userListWin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGrdView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).EndInit();

@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.orderTBLBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.orderTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderTBLBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.orderTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTBLBindingSource1)).BeginInit();
@@ -81,6 +81,10 @@
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
+            // orderTBLBindingSource1
+            // 
+            this.orderTBLBindingSource1.DataSource = typeof(talYBProj.orderTBL);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "numOfDolevim";
@@ -105,10 +109,6 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // orderTBLBindingSource1
-            // 
-            this.orderTBLBindingSource1.DataSource = typeof(talYBProj.orderTBL);
-            // 
             // orderListWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,6 +120,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "orderListWin";
             this.Text = "orderListWin";
+            this.Load += new System.EventHandler(this.orderListWin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTBLBindingSource1)).EndInit();
@@ -135,9 +136,9 @@
         private System.Windows.Forms.BindingSource orderTBLBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn numOfDolevimDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource orderTBLBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn orderDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.BindingSource orderTBLBindingSource1;
     }
 }

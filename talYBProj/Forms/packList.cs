@@ -37,5 +37,11 @@ namespace talYBProj.Forms
         {
 
         }
+
+        private void packList_Load_1(object sender, EventArgs e)
+        {
+            list = DBhelper.packList;
+            dataGridView1.DataSource = list;
+        }
     }
 }

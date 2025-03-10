@@ -29,5 +29,11 @@ namespace talYBProj.Forms
         {
 
         }
+
+        private void orderListWin_Load(object sender, EventArgs e)
+        {
+            list = DBhelper.orderList;
+            dataGridView2.DataSource = list;
+        }
     }
 }
