@@ -41,6 +41,8 @@
             this.numericUpDownDolevim = new System.Windows.Forms.NumericUpDown();
             this.kRTBXnotes = new Krypton.Toolkit.KryptonRichTextBox();
             this.updateButton = new Krypton.Toolkit.KryptonButton();
+            this.cbxUsers = new System.Windows.Forms.ComboBox();
+            this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.cbxOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDolevim)).BeginInit();
@@ -48,7 +50,7 @@
             // 
             // orderLabel
             // 
-            this.orderLabel.Location = new System.Drawing.Point(368, 52);
+            this.orderLabel.Location = new System.Drawing.Point(414, 28);
             this.orderLabel.Margin = new System.Windows.Forms.Padding(2);
             this.orderLabel.Name = "orderLabel";
             this.orderLabel.Size = new System.Drawing.Size(65, 24);
@@ -97,7 +99,7 @@
             this.cbxOrders.DisplayMember = "costomerID";
             this.cbxOrders.DropDownWidth = 121;
             this.cbxOrders.IntegralHeight = false;
-            this.cbxOrders.Location = new System.Drawing.Point(249, 50);
+            this.cbxOrders.Location = new System.Drawing.Point(300, 28);
             this.cbxOrders.Margin = new System.Windows.Forms.Padding(2);
             this.cbxOrders.Name = "cbxOrders";
             this.cbxOrders.Size = new System.Drawing.Size(91, 26);
@@ -155,11 +157,33 @@
             this.updateButton.Values.Text = "עדכן";
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
+            // cbxUsers
+            // 
+            this.cbxUsers.DisplayMember = "fullName";
+            this.cbxUsers.FormattingEnabled = true;
+            this.cbxUsers.Location = new System.Drawing.Point(300, 81);
+            this.cbxUsers.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxUsers.Name = "cbxUsers";
+            this.cbxUsers.Size = new System.Drawing.Size(92, 21);
+            this.cbxUsers.TabIndex = 28;
+            this.cbxUsers.ValueMember = "Id";
+            // 
+            // kryptonLabel1
+            // 
+            this.kryptonLabel1.Location = new System.Drawing.Point(434, 78);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(2);
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Size = new System.Drawing.Size(79, 24);
+            this.kryptonLabel1.TabIndex = 27;
+            this.kryptonLabel1.Values.Text = "שם העובד";
+            // 
             // updateOrderWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.cbxUsers);
+            this.Controls.Add(this.kryptonLabel1);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.kRTBXnotes);
             this.Controls.Add(this.numericUpDownDolevim);
@@ -198,5 +222,7 @@
         private Krypton.Toolkit.KryptonRichTextBox kRTBXnotes;
         private Krypton.Toolkit.KryptonButton updateButton;
         private System.Windows.Forms.BindingSource orderTBLBindingSource;
+        private System.Windows.Forms.ComboBox cbxUsers;
+        private Krypton.Toolkit.KryptonLabel kryptonLabel1;
     }
 }

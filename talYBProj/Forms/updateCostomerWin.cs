@@ -46,7 +46,7 @@ namespace talYBProj.Forms
             toUpdate.notes = kRTBXNotes.Text.Trim();
            if (DBhelper.updateCostomer(toUpdate))
             {
-                MessageBox.Show("add succefuly");
+                MessageBox.Show("update successfuly");
                 updateCBX();
             }
             else //error

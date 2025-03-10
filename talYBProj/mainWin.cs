@@ -320,13 +320,13 @@ namespace talYBProj
         {
             if (current != null)
             {
-                if (current is apdateUserWin)
+                if (current is updateUserWin)
                 {
                     return;
                 }
                 current.Close();
             }
-            current = new apdateUserWin();
+            current = new updateUserWin();
             current.Dock = DockStyle.Fill;
             current.TopLevel = false;
             current.TopMost = true;

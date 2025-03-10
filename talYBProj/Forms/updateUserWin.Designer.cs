@@ -1,6 +1,6 @@
 ﻿namespace talYBProj.Forms
 {
-    partial class apdateUserWin
+    partial class updateUserWin
     {
         /// <summary>
         /// Required designer variable.

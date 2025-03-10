@@ -176,7 +176,7 @@ namespace talYBProj.IFS
             try
             {
                 orderTBL toUpdate = (from s in db.orderTBL where s.Id == o1.Id select s).FirstOrDefault();
-                if (toUpdate != null)
+                if (toUpdate == null)
                     return false;
                 toUpdate.orderDate = o1.orderDate;
                 toUpdate.zanID = o1.zanID;
@@ -198,7 +198,7 @@ namespace talYBProj.IFS
             try
             {
                 costomerTBL toUpdate = (from s in db.costomerTBL where s.Id == c1.Id select s).FirstOrDefault();
-                if (toUpdate != null)
+                if (toUpdate == null)
                     return false;
                 toUpdate.firstName = c1.firstName;
                 toUpdate.lastName = c1.lastName;
@@ -222,7 +222,7 @@ namespace talYBProj.IFS
             try
             {
                 packTBL toUpdate = (from s in db.packTBL where s.Id == p1.Id select s).FirstOrDefault();
-                if (toUpdate != null)
+                if (toUpdate == null)
                     return false;
                 toUpdate.weight = p1.weight;
                 toUpdate.price = p1.price;
@@ -241,7 +241,7 @@ namespace talYBProj.IFS
             try
             {
                 userTBL toUpdate = (from s in db.userTBL where s.Id == u1.Id select s).FirstOrDefault();
-                if (toUpdate != null)
+                if (toUpdate == null)
                     return false;
                 toUpdate.firstName = u1.firstName;
                 toUpdate.lastName = u1.lastName;
@@ -261,7 +261,7 @@ namespace talYBProj.IFS
             try
             {
                 zanTBL toUpdate = (from s in db.zanTBL where s.Id == z1.Id select s).FirstOrDefault();
-                if (toUpdate != null)
+                if (toUpdate == null)
                     return false;
                 toUpdate.name = z1.name;
                 toUpdate.description = z1.description;
@@ -278,7 +278,7 @@ namespace talYBProj.IFS
             try
             {
                 oilTBL toUpdate = (from s in db.oilTBL where s.Id == o1.Id select s).FirstOrDefault();
-                if (toUpdate != null)
+                if (toUpdate == null)
                     return false;
                 toUpdate.orderID = o1.orderID;
                 toUpdate.PackID = o1.PackID;
@@ -302,7 +302,7 @@ namespace talYBProj.IFS
             try
             {
                 oliveTBL toUpdate = (from s in db.oliveTBL where s.Id == o1.Id select s).FirstOrDefault();
-                if (toUpdate != null)
+                if (toUpdate == null)
                     return false;
                 toUpdate.orderID = o1.orderID;
                 toUpdate.dolevNum = o1.dolevNum;

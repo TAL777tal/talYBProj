@@ -11,10 +11,10 @@ using talYBProj.IFS;
 
 namespace talYBProj.Forms
 {
-    public partial class apdateUserWin : Form
+    public partial class updateUserWin : Form
     {
         List<userTBL> lst;
-        public apdateUserWin()
+        public updateUserWin()
         {
             InitializeComponent();
         }
@@ -39,6 +39,7 @@ namespace talYBProj.Forms
             {
                 return;
             }
+            int idx = chooseCBX.SelectedIndex;
             toUpdate.firstName = TBXfirstName.Text;
             toUpdate.lastName = TBXlastName.Text;
             toUpdate.email = TBXgmail.Text;

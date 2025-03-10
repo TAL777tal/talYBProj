@@ -14,6 +14,9 @@ namespace talYBProj.Forms
     public partial class updateOrderWin : Form
     {
         List<orderTBL> lst;
+        List<costomerTBL> custList;
+        List<zanTBL> zanList;
+        List<userTBL> userList;
         public updateOrderWin()
         {
             InitializeComponent();
@@ -22,11 +25,16 @@ namespace talYBProj.Forms
         private void ordersComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             orderTBL selected = (orderTBL)cbxOrders.SelectedItem;
+            userTBL selectedUser = (userTBL)cbxUsers.SelectedItem;
+            costomerTBL selectedCust = (costomerTBL)cbxCostumerName.SelectedItem;
+            zanTBL selectedZan = (zanTBL)cbxOliveKind.SelectedItem;
             if (selected == null)
             {
                 return;
             }
-            // תשאל את ארז איך אתה מקשר בין שם הלקוח לקסטומר איי די ומשווה לשם 
+            //cbxUsers.SelectedIndex = selected.userID;
+            //cbxCostumerName.SelectedIndex = selected.costomerID;
+            //cbxOliveKind.SelectedIndex = selected.zanID;
             numericUpDownDolevim.Value = selected.numOfDolevim;
             if (selected.notes != null)
                 kRTBXnotes.Text = selected.notes;
@@ -36,12 +44,17 @@ namespace talYBProj.Forms
         private void updateButton_Click(object sender, EventArgs e)
         {
             orderTBL toUpdate = (orderTBL)cbxOrders.SelectedItem;
-
+            userTBL selectedUser = (userTBL)cbxUsers.SelectedItem;
+            costomerTBL selectedCust = (costomerTBL)cbxCostumerName.SelectedItem;
+            zanTBL selectedZan = (zanTBL)cbxOliveKind.SelectedItem;
             if (toUpdate == null)
             {
                 return;
             }
             int idx = cbxOrders.SelectedIndex;
+            toUpdate.userID = selectedUser.Id;
+            toUpdate.costomerID = selectedCust.Id;
+            toUpdate.zanID = selectedZan.Id;
             toUpdate.notes = kRTBXnotes.Text.Trim();
             toUpdate.numOfDolevim = Convert.ToInt32(numericUpDownDolevim.Value);
             if (DBhelper.updateOrder(toUpdate))
@@ -65,6 +78,12 @@ namespace talYBProj.Forms
         private void updateOrder_Load(object sender, EventArgs e)
         {
             updateCBX();
+            custList = DBhelper.costomerList;
+            zanList = DBhelper.zanList;
+            userList = DBhelper.userList;
+            cbxUsers.DataSource = userList;
+            cbxCostumerName.DataSource = custList;
+            cbxOliveKind.DataSource = zanList;
         }
 
         private void cbxCostumerName_SelectedIndexChanged(object sender, EventArgs e)

@@ -41,7 +41,7 @@ namespace talYBProj.Forms
             }
             else
             {
-                MessageBox.Show("OK");
+                MessageBox.Show("add successfuly");
                 kTBXFN.Text = "";
                 kTBXLN.Text = "";
                 kTBXCN.Text = "";

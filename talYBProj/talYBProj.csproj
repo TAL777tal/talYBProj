@@ -120,11 +120,11 @@
     <Compile Include="Forms\addZanWin.Designer.cs">
       <DependentUpon>addZanWin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\apdateUserWin.cs">
+    <Compile Include="Forms\updateUserWin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\apdateUserWin.Designer.cs">
-      <DependentUpon>apdateUserWin.cs</DependentUpon>
+    <Compile Include="Forms\updateUserWin.Designer.cs">
+      <DependentUpon>updateUserWin.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\costomerListWin.cs">
       <SubType>Form</SubType>
@@ -255,8 +255,8 @@
     <EmbeddedResource Include="Forms\addZanWin.resx">
       <DependentUpon>addZanWin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\apdateUserWin.resx">
-      <DependentUpon>apdateUserWin.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\updateUserWin.resx">
+      <DependentUpon>updateUserWin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\costomerListWin.resx">
       <DependentUpon>costomerListWin.cs</DependentUpon>
