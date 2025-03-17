@@ -37,35 +37,8 @@ namespace talYBProj.Forms
                 return;
             }
             int idx = choseCBX.SelectedIndex;
-            toUpdate.weight = CBXweight.SelectedIndex;
-            if (CBXweight.SelectedIndex == 1)
-            {
-                toUpdate.price = 5;
-            }
-            if (CBXweight.SelectedIndex == 2)
-            {
-                toUpdate.price = 10;
-            }
-            if (CBXweight.SelectedIndex == 4)
-            {
-                toUpdate.price = 20;
-            }
-            if (CBXweight.SelectedIndex == 5)
-            {
-                toUpdate.price = 25;
-            }
-            if (CBXweight.SelectedIndex == 10)
-            {
-                toUpdate.price = 50;
-            }
-            if (CBXweight.SelectedIndex == 15)
-            {
-                toUpdate.price = 75;
-            }
-            if (CBXweight.SelectedIndex == 20)
-            {
-                toUpdate.price = 100;
-            }
+            toUpdate.weight = (int)CBXweight.Value;
+            toUpdate.price = (int)((int)CBXweight.Value * 2);
             toUpdate.packName = nameTBX.Text;
             toUpdate.notes = notesTBX.Text.Trim();
             if (DBhelper.updatePack(toUpdate))
@@ -87,7 +60,7 @@ namespace talYBProj.Forms
             {
                 return;
             }
-            CBXweight.SelectedIndex = selected.weight;
+            CBXweight.Value = selected.weight;
             nameTBX.Text = selected.packName;
             if (selected.notes != null)
                 notesTBX.Text = selected.notes; 

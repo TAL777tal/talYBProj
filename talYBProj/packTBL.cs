@@ -22,7 +22,7 @@ namespace talYBProj
     
         public int Id { get; set; }
         public int weight { get; set; }
-        public int price { get; set; }
+        public double price { get; set; }
         public string packName { get; set; }
         public string notes { get; set; }
     

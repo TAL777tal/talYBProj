@@ -22,35 +22,8 @@ namespace talYBProj.Forms
         {
             packTBL p1 = new packTBL();
             p1.packName = nameTBX.Text.Trim();
-            p1.weight = CBXweight.SelectedIndex;
-            if (CBXweight.SelectedIndex == 1)
-            {
-                p1.price = 5;
-            }
-            if (CBXweight.SelectedIndex == 2)
-            {
-                p1.price = 10;
-            }
-            if (CBXweight.SelectedIndex == 4)
-            {
-                p1.price = 20;
-            }
-            if (CBXweight.SelectedIndex == 5)
-            {
-                p1.price = 25;
-            }
-            if (CBXweight.SelectedIndex == 10)
-            {
-                p1.price = 50;
-            }
-            if (CBXweight.SelectedIndex == 15)
-            {
-                p1.price = 75;
-            }
-            if (CBXweight.SelectedIndex == 20)
-            {
-                p1.price = 100;
-            }
+            p1.weight = (int)CBXweight.Value;
+            p1.price = Convert.ToDouble(MTBprice.Text.Trim());
             p1.notes = notesTBX.Text.Trim();
             p1 = DBhelper.addPack(p1);
             if (p1 == null)
@@ -61,6 +34,11 @@ namespace talYBProj.Forms
             {
                 MessageBox.Show("OK");
             }
+        }
+
+        private void addPack_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

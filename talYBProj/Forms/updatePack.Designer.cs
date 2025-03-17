@@ -35,7 +35,6 @@
             this.packTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.zanTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.zanTBLBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.CBXweight = new System.Windows.Forms.ComboBox();
             this.userTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.costomerTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.notesTBX = new Krypton.Toolkit.KryptonRichTextBox();
@@ -43,6 +42,7 @@
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             this.nameTBX = new Krypton.Toolkit.KryptonTextBox();
+            this.CBXweight = new Krypton.Toolkit.KryptonNumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.packTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zanTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zanTBLBindingSource1)).BeginInit();
@@ -91,23 +91,6 @@
             // 
             this.zanTBLBindingSource1.DataSource = typeof(talYBProj.zanTBL);
             // 
-            // CBXweight
-            // 
-            this.CBXweight.FormattingEnabled = true;
-            this.CBXweight.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "4",
-            "5",
-            "10",
-            "15",
-            "20"});
-            this.CBXweight.Location = new System.Drawing.Point(570, 125);
-            this.CBXweight.Name = "CBXweight";
-            this.CBXweight.Size = new System.Drawing.Size(121, 21);
-            this.CBXweight.TabIndex = 30;
-            this.CBXweight.SelectedIndexChanged += new System.EventHandler(this.CBXweight_SelectedIndexChanged);
-            // 
             // userTBLBindingSource
             // 
             this.userTBLBindingSource.DataSource = typeof(talYBProj.userTBL);
@@ -155,14 +138,41 @@
             this.nameTBX.Size = new System.Drawing.Size(121, 27);
             this.nameTBX.TabIndex = 32;
             // 
+            // CBXweight
+            // 
+            this.CBXweight.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.CBXweight.Location = new System.Drawing.Point(571, 125);
+            this.CBXweight.Maximum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.CBXweight.Minimum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.CBXweight.Name = "CBXweight";
+            this.CBXweight.Size = new System.Drawing.Size(120, 26);
+            this.CBXweight.TabIndex = 36;
+            this.CBXweight.Value = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            // 
             // updatePack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(880, 551);
+            this.Controls.Add(this.CBXweight);
             this.Controls.Add(this.nameTBX);
             this.Controls.Add(this.kryptonLabel2);
-            this.Controls.Add(this.CBXweight);
             this.Controls.Add(this.notesTBX);
             this.Controls.Add(this.kryptonLabel3);
             this.Controls.Add(this.kryptonLabel1);
@@ -191,7 +201,6 @@
         private System.Windows.Forms.BindingSource packTBLBindingSource;
         private System.Windows.Forms.BindingSource zanTBLBindingSource;
         private System.Windows.Forms.BindingSource zanTBLBindingSource1;
-        private System.Windows.Forms.ComboBox CBXweight;
         private Krypton.Toolkit.KryptonRichTextBox notesTBX;
         private Krypton.Toolkit.KryptonLabel kryptonLabel3;
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
@@ -199,5 +208,6 @@
         private System.Windows.Forms.BindingSource costomerTBLBindingSource;
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private Krypton.Toolkit.KryptonTextBox nameTBX;
+        private Krypton.Toolkit.KryptonNumericUpDown CBXweight;
     }
 }

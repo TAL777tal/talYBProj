@@ -25,11 +25,7 @@ namespace talYBProj.Forms
 
         }
 
-        private void cbxNameCust_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-            
-        }
+       
 
         private void cbxDolevNum_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -41,11 +37,7 @@ namespace talYBProj.Forms
             userTBL selectedUser = (userTBL)cbxUserName.SelectedItem;
             orderTBL selectedOrder = (orderTBL)cbxOrderId.SelectedItem;
             oliveTBL o1 = new oliveTBL();
-            int count = 1;
-           // while (count != selectedOrder.numOfDolevim + 1  || DBhelper.packList)
-            //{
-            //באיזה דולב צריך לטפל עכשיו
-            // }
+            
             o1.weightBruto = ((int)numericUpDownBruto.Value);
             o1.orderID = selectedOrder.Id;
             o1.userID = selectedUser.Id;
@@ -71,6 +63,29 @@ namespace talYBProj.Forms
             userList = DBhelper.userList;
             cbxUserName.DataSource = userList;
             cbxOrderId.DataSource = orderList;
+            
+        }
+
+        private void cbxOrderId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            orderTBL selectedOrder = (orderTBL)(cbxOrderId.SelectedItem);
+            if (selectedOrder == null)
+            {
+                return;
+            }
+            lblTotalDolevim.Text = "מס דולבים בהזמנה : " + selectedOrder.numOfDolevim;
+            int totalDolevim = selectedOrder.numOfDolevim;
+            List<oliveTBL> list = DBhelper.oliveList.Where(x => x.orderID == selectedOrder.Id).ToList();
+            int currentNumOfDolevim = list.Count;
+            dolevNum.Value = currentNumOfDolevim + 1;
+            if (currentNumOfDolevim == totalDolevim)
+            {
+                btnAddDolev.Enabled = false;
+            }
+            else
+            {
+                btnAddDolev.Enabled = true;
+            }
         }
     }
 }

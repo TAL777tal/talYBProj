@@ -319,7 +319,6 @@
     <None Include="Properties\DataSources\oliveTBL.datasource" />
     <None Include="Properties\DataSources\orderTBL.datasource" />
     <None Include="Properties\DataSources\packTBL.datasource" />
-    <None Include="Properties\DataSources\packTBL1.datasource" />
     <None Include="Properties\DataSources\userTBL.datasource" />
     <None Include="Properties\DataSources\zanTBL.datasource" />
     <None Include="Properties\DataSources\zanTBL1.datasource" />

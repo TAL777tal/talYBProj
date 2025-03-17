@@ -71,7 +71,7 @@
           </Key>
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="weight" Type="int" Nullable="false" />
-          <Property Name="price" Type="int" Nullable="false" />
+          <Property Name="price" Type="float" Nullable="false" />
           <Property Name="packName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="notes" Type="nvarchar" MaxLength="250" />
         </EntityType>
@@ -354,7 +354,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="weight" Type="Int32" Nullable="false" />
-          <Property Name="price" Type="Int32" Nullable="false" />
+          <Property Name="price" Type="Double" Nullable="false" />
           <Property Name="packName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="notes" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="oilTBL" Relationship="dbModel.FK_oilTBL_ToPackTBL_Id_" FromRole="packTBL" ToRole="oilTBL" />

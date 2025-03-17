@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.addPanel = new System.Windows.Forms.Panel();
+            this.kryptonLabel11 = new Krypton.Toolkit.KryptonLabel();
             this.addCostumer = new Krypton.Toolkit.KryptonButton();
             this.kTBXPrice = new System.Windows.Forms.MaskedTextBox();
             this.MTBXPOffice = new System.Windows.Forms.MaskedTextBox();
@@ -50,7 +51,6 @@
             this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonLabel11 = new Krypton.Toolkit.KryptonLabel();
             this.addPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,6 +84,14 @@
             this.addPanel.Size = new System.Drawing.Size(599, 356);
             this.addPanel.TabIndex = 0;
             // 
+            // kryptonLabel11
+            // 
+            this.kryptonLabel11.Location = new System.Drawing.Point(268, 15);
+            this.kryptonLabel11.Name = "kryptonLabel11";
+            this.kryptonLabel11.Size = new System.Drawing.Size(84, 24);
+            this.kryptonLabel11.TabIndex = 35;
+            this.kryptonLabel11.Values.Text = "הוסף לקוח";
+            // 
             // addCostumer
             // 
             this.addCostumer.Location = new System.Drawing.Point(283, 271);
@@ -96,7 +104,7 @@
             // 
             // kTBXPrice
             // 
-            this.kTBXPrice.Location = new System.Drawing.Point(111, 119);
+            this.kTBXPrice.Location = new System.Drawing.Point(110, 122);
             this.kTBXPrice.Margin = new System.Windows.Forms.Padding(2);
             this.kTBXPrice.Mask = "00000.00";
             this.kTBXPrice.Name = "kTBXPrice";
@@ -145,7 +153,7 @@
             this.kTBXEmail.Location = new System.Drawing.Point(111, 93);
             this.kTBXEmail.Margin = new System.Windows.Forms.Padding(2);
             this.kTBXEmail.Name = "kTBXEmail";
-            this.kTBXEmail.Size = new System.Drawing.Size(75, 23);
+            this.kTBXEmail.Size = new System.Drawing.Size(75, 27);
             this.kTBXEmail.TabIndex = 8;
             // 
             // kTBXADD
@@ -153,7 +161,7 @@
             this.kTBXADD.Location = new System.Drawing.Point(397, 146);
             this.kTBXADD.Margin = new System.Windows.Forms.Padding(2);
             this.kTBXADD.Name = "kTBXADD";
-            this.kTBXADD.Size = new System.Drawing.Size(75, 23);
+            this.kTBXADD.Size = new System.Drawing.Size(75, 27);
             this.kTBXADD.TabIndex = 4;
             // 
             // kTBXCN
@@ -161,7 +169,7 @@
             this.kTBXCN.Location = new System.Drawing.Point(397, 119);
             this.kTBXCN.Margin = new System.Windows.Forms.Padding(2);
             this.kTBXCN.Name = "kTBXCN";
-            this.kTBXCN.Size = new System.Drawing.Size(75, 23);
+            this.kTBXCN.Size = new System.Drawing.Size(75, 27);
             this.kTBXCN.TabIndex = 3;
             // 
             // kTBXLN
@@ -169,7 +177,7 @@
             this.kTBXLN.Location = new System.Drawing.Point(397, 93);
             this.kTBXLN.Margin = new System.Windows.Forms.Padding(2);
             this.kTBXLN.Name = "kTBXLN";
-            this.kTBXLN.Size = new System.Drawing.Size(75, 23);
+            this.kTBXLN.Size = new System.Drawing.Size(75, 27);
             this.kTBXLN.TabIndex = 2;
             // 
             // kTBXFN
@@ -177,7 +185,7 @@
             this.kTBXFN.Location = new System.Drawing.Point(397, 66);
             this.kTBXFN.Margin = new System.Windows.Forms.Padding(2);
             this.kTBXFN.Name = "kTBXFN";
-            this.kTBXFN.Size = new System.Drawing.Size(75, 23);
+            this.kTBXFN.Size = new System.Drawing.Size(75, 27);
             this.kTBXFN.TabIndex = 1;
             this.kTBXFN.TextChanged += new System.EventHandler(this.kTBXFN_TextChanged);
             // 
@@ -186,7 +194,7 @@
             this.kryptonLabel10.Location = new System.Drawing.Point(245, 146);
             this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel10.Name = "kryptonLabel10";
-            this.kryptonLabel10.Size = new System.Drawing.Size(46, 20);
+            this.kryptonLabel10.Size = new System.Drawing.Size(55, 24);
             this.kryptonLabel10.TabIndex = 34;
             this.kryptonLabel10.Values.Text = "הערות";
             // 
@@ -195,7 +203,7 @@
             this.kryptonLabel9.Location = new System.Drawing.Point(230, 119);
             this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel9.Name = "kryptonLabel9";
-            this.kryptonLabel9.Size = new System.Drawing.Size(73, 20);
+            this.kryptonLabel9.Size = new System.Drawing.Size(90, 24);
             this.kryptonLabel9.TabIndex = 33;
             this.kryptonLabel9.Values.Text = "מחיר עסקה";
             // 
@@ -204,7 +212,7 @@
             this.kryptonLabel8.Location = new System.Drawing.Point(247, 93);
             this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel8.Name = "kryptonLabel8";
-            this.kryptonLabel8.Size = new System.Drawing.Size(43, 20);
+            this.kryptonLabel8.Size = new System.Drawing.Size(53, 24);
             this.kryptonLabel8.TabIndex = 32;
             this.kryptonLabel8.Values.Text = "אימייל";
             // 
@@ -213,7 +221,7 @@
             this.kryptonLabel7.Location = new System.Drawing.Point(203, 66);
             this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel7.Name = "kryptonLabel7";
-            this.kryptonLabel7.Size = new System.Drawing.Size(102, 20);
+            this.kryptonLabel7.Size = new System.Drawing.Size(126, 24);
             this.kryptonLabel7.TabIndex = 31;
             this.kryptonLabel7.Values.Text = "טלפון של המשרד";
             // 
@@ -222,7 +230,7 @@
             this.kryptonLabel6.Location = new System.Drawing.Point(517, 200);
             this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel6.Name = "kryptonLabel6";
-            this.kryptonLabel6.Size = new System.Drawing.Size(50, 20);
+            this.kryptonLabel6.Size = new System.Drawing.Size(61, 24);
             this.kryptonLabel6.TabIndex = 30;
             this.kryptonLabel6.Values.Text = "טלפון 2";
             // 
@@ -231,7 +239,7 @@
             this.kryptonLabel5.Location = new System.Drawing.Point(522, 173);
             this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(40, 20);
+            this.kryptonLabel5.Size = new System.Drawing.Size(48, 24);
             this.kryptonLabel5.TabIndex = 29;
             this.kryptonLabel5.Values.Text = "טלפון";
             // 
@@ -240,7 +248,7 @@
             this.kryptonLabel4.Location = new System.Drawing.Point(517, 146);
             this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(46, 20);
+            this.kryptonLabel4.Size = new System.Drawing.Size(55, 24);
             this.kryptonLabel4.TabIndex = 28;
             this.kryptonLabel4.Values.Text = "כתובת";
             // 
@@ -249,7 +257,7 @@
             this.kryptonLabel3.Location = new System.Drawing.Point(505, 119);
             this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(63, 20);
+            this.kryptonLabel3.Size = new System.Drawing.Size(77, 24);
             this.kryptonLabel3.TabIndex = 27;
             this.kryptonLabel3.Values.Text = "שם חברה";
             // 
@@ -258,7 +266,7 @@
             this.kryptonLabel2.Location = new System.Drawing.Point(499, 93);
             this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(74, 20);
+            this.kryptonLabel2.Size = new System.Drawing.Size(91, 24);
             this.kryptonLabel2.TabIndex = 26;
             this.kryptonLabel2.Values.Text = "שם משפחה";
             // 
@@ -267,17 +275,9 @@
             this.kryptonLabel1.Location = new System.Drawing.Point(509, 66);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(58, 20);
+            this.kryptonLabel1.Size = new System.Drawing.Size(71, 24);
             this.kryptonLabel1.TabIndex = 25;
             this.kryptonLabel1.Values.Text = "שם פרטי";
-            // 
-            // kryptonLabel11
-            // 
-            this.kryptonLabel11.Location = new System.Drawing.Point(268, 15);
-            this.kryptonLabel11.Name = "kryptonLabel11";
-            this.kryptonLabel11.Size = new System.Drawing.Size(68, 20);
-            this.kryptonLabel11.TabIndex = 35;
-            this.kryptonLabel11.Values.Text = "הוסף לקוח";
             // 
             // addCustomerWin
             // 

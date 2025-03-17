@@ -45,7 +45,7 @@ namespace talYBProj.IFS
 
         public static void loadPackList()
         {
-            packList = (from s in db.packTBL orderby s.price select s).ToList();
+            packList = (from s in db.packTBL orderby s.packName select s).ToList();
         }
         public static void loadUserList()
         {
@@ -185,7 +185,8 @@ namespace talYBProj.IFS
                 toUpdate.isPayd = o1.isPayd;
                 toUpdate.userID = o1.userID;
                 toUpdate.notes = o1.notes;
-                
+                db.SaveChanges();
+                loadOrderList();
                 return true;
             }
             catch
@@ -210,6 +211,8 @@ namespace talYBProj.IFS
                 toUpdate.email = c1.email;
                 toUpdate.price = c1.price;
                 toUpdate.notes = c1.notes;
+                db.SaveChanges();
+                loadCostomerList();
                 return true;
             }
             catch
@@ -228,6 +231,8 @@ namespace talYBProj.IFS
                 toUpdate.price = p1.price;
                 toUpdate.packName = p1.packName;
                 toUpdate.notes = p1.notes;
+                db.SaveChanges();
+                loadPackList();
                 return true;
             }
             catch
@@ -248,6 +253,8 @@ namespace talYBProj.IFS
                 toUpdate.email = u1.email;
                 toUpdate.cellPhone = u1.cellPhone;
                 toUpdate.lastLogIn = u1.lastLogIn;
+                db.SaveChanges();
+                loadUserList();
                 return true;
             }
             catch
@@ -265,6 +272,8 @@ namespace talYBProj.IFS
                     return false;
                 toUpdate.name = z1.name;
                 toUpdate.description = z1.description;
+                db.SaveChanges();
+                loadZanList();
                 return true;
             }
             catch
@@ -289,6 +298,8 @@ namespace talYBProj.IFS
                 toUpdate.notes = o1.notes;
                 toUpdate.userID = o1.userID;
                 toUpdate.orderDate = o1.orderDate;
+                db.SaveChanges();
+                loadOilList();
                 return true;
             }
             catch
@@ -312,6 +323,8 @@ namespace talYBProj.IFS
                 toUpdate.notes = o1.notes;
                 toUpdate.userID = o1.userID;
                 toUpdate.orderDate = o1.orderDate;
+                db.SaveChanges();
+                loadOliveList();
                 return true;
             }
             catch
