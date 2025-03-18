@@ -37,7 +37,7 @@ namespace talYBProj.Forms
             userTBL selectedUser = (userTBL)cbxUserName.SelectedItem;
             orderTBL selectedOrder = (orderTBL)cbxOrderId.SelectedItem;
             oliveTBL o1 = new oliveTBL();
-            
+            o1.dolevNum = (int)dolevNum.Value;
             o1.weightBruto = ((int)numericUpDownBruto.Value);
             o1.orderID = selectedOrder.Id;
             o1.userID = selectedUser.Id;
@@ -73,7 +73,7 @@ namespace talYBProj.Forms
             {
                 return;
             }
-            lblTotalDolevim.Text = "מס דולבים בהזמנה : " + selectedOrder.numOfDolevim;
+            lblTotalDolevim.Text = "מס' דולבים בהזמנה : " + selectedOrder.numOfDolevim;
             int totalDolevim = selectedOrder.numOfDolevim;
             List<oliveTBL> list = DBhelper.oliveList.Where(x => x.orderID == selectedOrder.Id).ToList();
             int currentNumOfDolevim = list.Count;
