@@ -198,6 +198,7 @@
     <Compile Include="Forms\zanListWin.Designer.cs">
       <DependentUpon>zanListWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="IFS\Utils.cs" />
     <Compile Include="mainWin.cs">
       <SubType>Form</SubType>
     </Compile>

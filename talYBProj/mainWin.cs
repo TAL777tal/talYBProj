@@ -208,7 +208,7 @@ namespace talYBProj
             current.Show();
         }
 
-        private void kryptonRibbonGroupButton4_Click(object sender, EventArgs e)
+        private void btnOpenDolevWin_Click(object sender, EventArgs e)
         {
             if (current != null)
             {

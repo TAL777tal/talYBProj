@@ -14,41 +14,16 @@ namespace talYBProj.Forms
     public partial class editDolevWin : Form
     {
         List<userTBL> userList;
-        List<oliveTBL> lst;
         List<orderTBL> orderList;
+        List<oliveTBL> olives;
         public editDolevWin()
         {
             InitializeComponent();
         }
 
-        private void kryptonButton1_Click(object sender, EventArgs e)
-        {
-            oliveTBL toUpdate = null;
-            if (toUpdate == null)
-            {
-                return;
-            }
-            toUpdate.dolevNum = (int)dolevNumb.Value;
-            toUpdate.currDate = dateTimeP.Value;
-            toUpdate.weightBruto = (int)numericUpDownBruto.Value;
-            toUpdate.weightNeto = toUpdate.weightBruto - 40;
-            userTBL chooseUser = (userTBL)cbxUserName.SelectedItem;
-            toUpdate.userID = chooseUser.Id;
-            toUpdate.notes = txbNotes.Text;
-            toUpdate.orderDate = toUpdate.currDate;
-            if (DBhelper.updateOlive(toUpdate))
-            {
-                MessageBox.Show("apdate successfuly");
-                updateCBX();
-            }
-            else //error
-            {
-                MessageBox.Show("error");
 
-            }
-        }
 
-            private void cbxchose_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbxchose_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -59,46 +34,68 @@ namespace talYBProj.Forms
         }
         private void updateCBX()
         {
-            lst = DBhelper.oliveList;
-            orderList = DBhelper.orderList;
+
+            orderList = DBhelper.orderList.Where(x => !x.isDone).ToList();
             cbxOrderId.DataSource = orderList;
         }
 
-        private void kryptonButton1_Click_1(object sender, EventArgs e)
+        private void cbxOrderId_SelectedIndexChanged(object sender, EventArgs e)
         {
             orderTBL selectedOrder = (orderTBL)cbxOrderId.SelectedItem;
             if (selectedOrder == null)
             {
-                return;
-            }
-            int count = selectedOrder.numOfDolevim;
-            if(dolevNumb.Value == count)
-            {
-                dolevNumb.Value = 1;
+                olives = new List<oliveTBL>();
+
             }
             else
             {
-                dolevNumb.Value++;
+                olives = DBhelper.oliveList.Where(x => x.orderID == selectedOrder.Id).ToList();
+
             }
+            updateDGV();
         }
 
-        private void dolevNumb_ValueChanged(object sender, EventArgs e)
+        private void updateDGV()
         {
-          //  userTBL chooseUser = (userTBL)cbxUserName.SelectedItem;
-        //    orderTBL selectedOrder = (orderTBL)cbxOrderId.SelectedItem;
-        //    int dolevnum = (int)dolevNumb.Value;
-        //    List<oliveTBL> list = DBhelper.oliveList.Where(x => x.orderID == selectedOrder.Id  && x.dolevNum == (int)dolevNumb.Value).ToList();
-       //     if (list.Count > 0)
-       //     {
-      //          dateTimeP.Value = list[0].currDate;
-       //         numericUpDownBruto.Value = list[0].weightBruto;
-       //         chooseUser.Id = list[0].userID;
-        //        txbNotes.Text = list[0].notes;
-      //      }
-        //    else
-         //   {
-         //       MessageBox.Show("הכנס דולבים להזמנה");
+            dgvOlives.DataSource = cbxOlives.DataSource = olives;
+        }
+
+        private void cbxOlives_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            oliveTBL selectedOlive = (oliveTBL)cbxOlives.SelectedItem;
+            btnUpdate.Enabled = selectedOlive != null;
+            if (selectedOlive == null)
+            {
+               nupEditDolev.Value = 0;
             }
-      //  }
+            else
+            {
+                nupEditDolev.Value = selectedOlive.weightBruto;
+            }
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            oliveTBL selectedOlive = (oliveTBL)cbxOlives.SelectedItem;
+            int bruto = (int)nupEditDolev.Value;
+            if (bruto <= 40)
+            {
+                /// error
+                return;
+            }
+            selectedOlive.weightBruto = bruto;
+            selectedOlive.weightNeto = bruto-40;
+            selectedOlive.currDate = DateTime.Now;
+            if (DBhelper.updateOlive(selectedOlive))
+            {
+                MessageBox.Show("עודכן בהצלחה");
+                cbxOrderId_SelectedIndexChanged(null, null);
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+        }
     }
 }

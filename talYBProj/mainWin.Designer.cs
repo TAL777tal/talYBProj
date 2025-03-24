@@ -45,7 +45,7 @@
             this.kryptonRibbonGroup3 = new Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple3 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
             this.kryptonRibbonGroupButton1 = new Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.kryptonRibbonGroupButton4 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.btnOpenEditDolevWin = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupButton5 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonTab3 = new Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup4 = new Krypton.Ribbon.KryptonRibbonGroup();
@@ -84,8 +84,7 @@
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4,
             this.kryptonRibbonTab5});
-            this.kryptonRibbon1.SelectedContext = null;
-            this.kryptonRibbon1.SelectedTab = this.customerTab;
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
             this.kryptonRibbon1.ShowMinimizeButton = false;
             this.kryptonRibbon1.Size = new System.Drawing.Size(600, 171);
             this.kryptonRibbon1.TabIndex = 0;
@@ -173,7 +172,7 @@
             // 
             this.kryptonRibbonGroupTriple3.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
             this.kryptonRibbonGroupButton1,
-            this.kryptonRibbonGroupButton4,
+            this.btnOpenEditDolevWin,
             this.kryptonRibbonGroupButton5});
             // 
             // kryptonRibbonGroupButton1
@@ -181,10 +180,10 @@
             this.kryptonRibbonGroupButton1.TextLine1 = "עצב דולב";
             this.kryptonRibbonGroupButton1.Click += new System.EventHandler(this.kryptonRibbonGroupButton1_Click);
             // 
-            // kryptonRibbonGroupButton4
+            // btnOpenEditDolevWin
             // 
-            this.kryptonRibbonGroupButton4.TextLine1 = "עדכן דולב";
-            this.kryptonRibbonGroupButton4.Click += new System.EventHandler(this.kryptonRibbonGroupButton4_Click);
+            this.btnOpenEditDolevWin.TextLine1 = "עדכן דולב";
+            this.btnOpenEditDolevWin.Click += new System.EventHandler(this.btnOpenDolevWin_Click);
             // 
             // kryptonRibbonGroupButton5
             // 
@@ -337,7 +336,7 @@
         private Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup3;
         private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple3;
         private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton1;
-        private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton4;
+        private Krypton.Ribbon.KryptonRibbonGroupButton btnOpenEditDolevWin;
         private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton5;
         private Krypton.Ribbon.KryptonRibbonTab kryptonRibbonTab3;
         private Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup4;

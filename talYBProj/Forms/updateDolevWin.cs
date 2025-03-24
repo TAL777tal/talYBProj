@@ -53,7 +53,7 @@ namespace talYBProj.Forms
             {
                 MessageBox.Show("OK");
                 o1.notes = "";
-
+                cbxOrderId_SelectedIndexChanged(null, null);
             }
         }
 

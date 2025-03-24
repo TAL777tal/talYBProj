@@ -29,77 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.updateDolev = new Krypton.Toolkit.KryptonButton();
-            this.dateTimeP = new System.Windows.Forms.DateTimePicker();
-            this.txbNotes = new Krypton.Toolkit.KryptonRichTextBox();
-            this.numericUpDownBruto = new System.Windows.Forms.NumericUpDown();
-            this.cbxUserName = new System.Windows.Forms.ComboBox();
             this.userTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbxOrderId = new System.Windows.Forms.ComboBox();
             this.orderTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.LabelUserName = new Krypton.Toolkit.KryptonLabel();
-            this.LabelNotes = new Krypton.Toolkit.KryptonLabel();
-            this.LabelBruto = new Krypton.Toolkit.KryptonLabel();
-            this.LabelCurDate = new Krypton.Toolkit.KryptonLabel();
             this.LabelOrderId = new Krypton.Toolkit.KryptonLabel();
-            this.choseLabel = new Krypton.Toolkit.KryptonLabel();
-            this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
-            this.dolevNumb = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBruto)).BeginInit();
+            this.dgvOlives = new System.Windows.Forms.DataGridView();
+            this.cbxOlives = new System.Windows.Forms.ComboBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.nupEditDolev = new System.Windows.Forms.NumericUpDown();
+            this.oliveTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dolevNumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weightBrutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.weightNetoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.currDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTBLBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dolevNumb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOlives)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupEditDolev)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oliveTBLBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // updateDolev
-            // 
-            this.updateDolev.Location = new System.Drawing.Point(360, 413);
-            this.updateDolev.Name = "updateDolev";
-            this.updateDolev.Size = new System.Drawing.Size(90, 25);
-            this.updateDolev.TabIndex = 32;
-            this.updateDolev.Values.Text = "עדכן דולב";
-            this.updateDolev.Click += new System.EventHandler(this.kryptonButton1_Click);
-            // 
-            // dateTimeP
-            // 
-            this.dateTimeP.Location = new System.Drawing.Point(440, 136);
-            this.dateTimeP.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimeP.Name = "dateTimeP";
-            this.dateTimeP.Size = new System.Drawing.Size(151, 20);
-            this.dateTimeP.TabIndex = 31;
-            // 
-            // txbNotes
-            // 
-            this.txbNotes.Location = new System.Drawing.Point(440, 304);
-            this.txbNotes.Margin = new System.Windows.Forms.Padding(2);
-            this.txbNotes.Name = "txbNotes";
-            this.txbNotes.Size = new System.Drawing.Size(153, 93);
-            this.txbNotes.TabIndex = 29;
-            this.txbNotes.Text = "";
-            // 
-            // numericUpDownBruto
-            // 
-            this.numericUpDownBruto.Location = new System.Drawing.Point(503, 185);
-            this.numericUpDownBruto.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDownBruto.Maximum = new decimal(new int[] {
-            400,
-            0,
-            0,
-            0});
-            this.numericUpDownBruto.Name = "numericUpDownBruto";
-            this.numericUpDownBruto.Size = new System.Drawing.Size(90, 20);
-            this.numericUpDownBruto.TabIndex = 27;
-            // 
-            // cbxUserName
-            // 
-            this.cbxUserName.DataSource = this.userTBLBindingSource;
-            this.cbxUserName.DisplayMember = "fullName";
-            this.cbxUserName.FormattingEnabled = true;
-            this.cbxUserName.Location = new System.Drawing.Point(501, 244);
-            this.cbxUserName.Margin = new System.Windows.Forms.Padding(2);
-            this.cbxUserName.Name = "cbxUserName";
-            this.cbxUserName.Size = new System.Drawing.Size(92, 21);
-            this.cbxUserName.TabIndex = 26;
             // 
             // userTBLBindingSource
             // 
@@ -109,52 +58,18 @@
             // 
             this.cbxOrderId.DataSource = this.orderTBLBindingSource;
             this.cbxOrderId.DisplayMember = "Id";
+            this.cbxOrderId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxOrderId.FormattingEnabled = true;
             this.cbxOrderId.Location = new System.Drawing.Point(501, 32);
             this.cbxOrderId.Margin = new System.Windows.Forms.Padding(2);
             this.cbxOrderId.Name = "cbxOrderId";
             this.cbxOrderId.Size = new System.Drawing.Size(92, 21);
             this.cbxOrderId.TabIndex = 25;
+            this.cbxOrderId.SelectedIndexChanged += new System.EventHandler(this.cbxOrderId_SelectedIndexChanged);
             // 
             // orderTBLBindingSource
             // 
             this.orderTBLBindingSource.DataSource = typeof(talYBProj.orderTBL);
-            // 
-            // LabelUserName
-            // 
-            this.LabelUserName.Location = new System.Drawing.Point(619, 244);
-            this.LabelUserName.Margin = new System.Windows.Forms.Padding(2);
-            this.LabelUserName.Name = "LabelUserName";
-            this.LabelUserName.Size = new System.Drawing.Size(105, 24);
-            this.LabelUserName.TabIndex = 24;
-            this.LabelUserName.Values.Text = "שם המשתמש";
-            // 
-            // LabelNotes
-            // 
-            this.LabelNotes.Location = new System.Drawing.Point(629, 304);
-            this.LabelNotes.Margin = new System.Windows.Forms.Padding(2);
-            this.LabelNotes.Name = "LabelNotes";
-            this.LabelNotes.Size = new System.Drawing.Size(55, 24);
-            this.LabelNotes.TabIndex = 23;
-            this.LabelNotes.Values.Text = "הערות";
-            // 
-            // LabelBruto
-            // 
-            this.LabelBruto.Location = new System.Drawing.Point(629, 185);
-            this.LabelBruto.Margin = new System.Windows.Forms.Padding(2);
-            this.LabelBruto.Name = "LabelBruto";
-            this.LabelBruto.Size = new System.Drawing.Size(95, 24);
-            this.LabelBruto.TabIndex = 21;
-            this.LabelBruto.Values.Text = "משקל-ברוטו";
-            // 
-            // LabelCurDate
-            // 
-            this.LabelCurDate.Location = new System.Drawing.Point(629, 136);
-            this.LabelCurDate.Margin = new System.Windows.Forms.Padding(2);
-            this.LabelCurDate.Name = "LabelCurDate";
-            this.LabelCurDate.Size = new System.Drawing.Size(112, 24);
-            this.LabelCurDate.TabIndex = 20;
-            this.LabelCurDate.Values.Text = "התאריך הנוכחי";
             // 
             // LabelOrderId
             // 
@@ -165,86 +80,148 @@
             this.LabelOrderId.TabIndex = 18;
             this.LabelOrderId.Values.Text = "מספר ההזמנה";
             // 
-            // choseLabel
+            // dgvOlives
             // 
-            this.choseLabel.Location = new System.Drawing.Point(629, 90);
-            this.choseLabel.Name = "choseLabel";
-            this.choseLabel.Size = new System.Drawing.Size(44, 24);
-            this.choseLabel.TabIndex = 34;
-            this.choseLabel.Values.Text = " דולב";
+            this.dgvOlives.AllowUserToAddRows = false;
+            this.dgvOlives.AllowUserToDeleteRows = false;
+            this.dgvOlives.AutoGenerateColumns = false;
+            this.dgvOlives.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOlives.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOlives.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dolevNumDataGridViewTextBoxColumn,
+            this.weightBrutoDataGridViewTextBoxColumn,
+            this.weightNetoDataGridViewTextBoxColumn,
+            this.currDateDataGridViewTextBoxColumn,
+            this.notesDataGridViewTextBoxColumn});
+            this.dgvOlives.DataSource = this.oliveTBLBindingSource;
+            this.dgvOlives.Location = new System.Drawing.Point(124, 69);
+            this.dgvOlives.Name = "dgvOlives";
+            this.dgvOlives.ReadOnly = true;
+            this.dgvOlives.RowHeadersVisible = false;
+            this.dgvOlives.RowHeadersWidth = 51;
+            this.dgvOlives.Size = new System.Drawing.Size(524, 150);
+            this.dgvOlives.TabIndex = 26;
             // 
-            // kryptonButton1
+            // cbxOlives
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(333, 90);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(105, 20);
-            this.kryptonButton1.TabIndex = 37;
-            this.kryptonButton1.Values.Text = "שנה מס\' דולב";
-            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click_1);
+            this.cbxOlives.FormattingEnabled = true;
+            this.cbxOlives.Location = new System.Drawing.Point(361, 115);
+            this.cbxOlives.Name = "cbxOlives";
+            this.cbxOlives.Size = new System.Drawing.Size(121, 21);
+            this.cbxOlives.TabIndex = 27;
+            this.cbxOlives.Visible = false;
+            this.cbxOlives.SelectedIndexChanged += new System.EventHandler(this.cbxOlives_SelectedIndexChanged);
             // 
-            // dolevNumb
+            // btnUpdate
             // 
-            this.dolevNumb.Location = new System.Drawing.Point(473, 90);
-            this.dolevNumb.Name = "dolevNumb";
-            this.dolevNumb.ReadOnly = true;
-            this.dolevNumb.Size = new System.Drawing.Size(120, 20);
-            this.dolevNumb.TabIndex = 38;
-            this.dolevNumb.Value = new decimal(new int[] {
-            1,
+            this.btnUpdate.Location = new System.Drawing.Point(372, 327);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(109, 35);
+            this.btnUpdate.TabIndex = 29;
+            this.btnUpdate.Text = "עדכן משקל";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // nupEditDolev
+            // 
+            this.nupEditDolev.Location = new System.Drawing.Point(361, 269);
+            this.nupEditDolev.Maximum = new decimal(new int[] {
+            1000,
             0,
             0,
             0});
-            this.dolevNumb.ValueChanged += new System.EventHandler(this.dolevNumb_ValueChanged);
+            this.nupEditDolev.Name = "nupEditDolev";
+            this.nupEditDolev.Size = new System.Drawing.Size(120, 20);
+            this.nupEditDolev.TabIndex = 30;
+            this.nupEditDolev.Value = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
+            // 
+            // oliveTBLBindingSource
+            // 
+            this.oliveTBLBindingSource.DataSource = typeof(talYBProj.oliveTBL);
+            // 
+            // dolevNumDataGridViewTextBoxColumn
+            // 
+            this.dolevNumDataGridViewTextBoxColumn.DataPropertyName = "dolevNum";
+            this.dolevNumDataGridViewTextBoxColumn.HeaderText = "dolevNum";
+            this.dolevNumDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dolevNumDataGridViewTextBoxColumn.Name = "dolevNumDataGridViewTextBoxColumn";
+            this.dolevNumDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // weightBrutoDataGridViewTextBoxColumn
+            // 
+            this.weightBrutoDataGridViewTextBoxColumn.DataPropertyName = "weightBruto";
+            this.weightBrutoDataGridViewTextBoxColumn.HeaderText = "weightBruto";
+            this.weightBrutoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.weightBrutoDataGridViewTextBoxColumn.Name = "weightBrutoDataGridViewTextBoxColumn";
+            this.weightBrutoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // weightNetoDataGridViewTextBoxColumn
+            // 
+            this.weightNetoDataGridViewTextBoxColumn.DataPropertyName = "weightNeto";
+            this.weightNetoDataGridViewTextBoxColumn.HeaderText = "weightNeto";
+            this.weightNetoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.weightNetoDataGridViewTextBoxColumn.Name = "weightNetoDataGridViewTextBoxColumn";
+            this.weightNetoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // currDateDataGridViewTextBoxColumn
+            // 
+            this.currDateDataGridViewTextBoxColumn.DataPropertyName = "currDate";
+            this.currDateDataGridViewTextBoxColumn.HeaderText = "currDate";
+            this.currDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.currDateDataGridViewTextBoxColumn.Name = "currDateDataGridViewTextBoxColumn";
+            this.currDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // notesDataGridViewTextBoxColumn
+            // 
+            this.notesDataGridViewTextBoxColumn.DataPropertyName = "notes";
+            this.notesDataGridViewTextBoxColumn.HeaderText = "notes";
+            this.notesDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
+            this.notesDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // editDolevWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dolevNumb);
-            this.Controls.Add(this.kryptonButton1);
-            this.Controls.Add(this.choseLabel);
-            this.Controls.Add(this.updateDolev);
-            this.Controls.Add(this.dateTimeP);
-            this.Controls.Add(this.txbNotes);
-            this.Controls.Add(this.numericUpDownBruto);
-            this.Controls.Add(this.cbxUserName);
+            this.Controls.Add(this.nupEditDolev);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.cbxOlives);
+            this.Controls.Add(this.dgvOlives);
             this.Controls.Add(this.cbxOrderId);
-            this.Controls.Add(this.LabelUserName);
-            this.Controls.Add(this.LabelNotes);
-            this.Controls.Add(this.LabelBruto);
-            this.Controls.Add(this.LabelCurDate);
             this.Controls.Add(this.LabelOrderId);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "editDolevWin";
             this.Text = "editDolev";
             this.Load += new System.EventHandler(this.editDolevWin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBruto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTBLBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dolevNumb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOlives)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupEditDolev)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.oliveTBLBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Krypton.Toolkit.KryptonButton updateDolev;
-        private System.Windows.Forms.DateTimePicker dateTimeP;
-        private Krypton.Toolkit.KryptonRichTextBox txbNotes;
-        private System.Windows.Forms.NumericUpDown numericUpDownBruto;
-        private System.Windows.Forms.ComboBox cbxUserName;
         private System.Windows.Forms.ComboBox cbxOrderId;
-        private Krypton.Toolkit.KryptonLabel LabelUserName;
-        private Krypton.Toolkit.KryptonLabel LabelNotes;
-        private Krypton.Toolkit.KryptonLabel LabelBruto;
-        private Krypton.Toolkit.KryptonLabel LabelCurDate;
         private Krypton.Toolkit.KryptonLabel LabelOrderId;
-        private Krypton.Toolkit.KryptonLabel choseLabel;
         private System.Windows.Forms.BindingSource userTBLBindingSource;
         private System.Windows.Forms.BindingSource orderTBLBindingSource;
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
-        private System.Windows.Forms.NumericUpDown dolevNumb;
+        private System.Windows.Forms.DataGridView dgvOlives;
+        private System.Windows.Forms.ComboBox cbxOlives;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.NumericUpDown nupEditDolev;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dolevNumDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weightBrutoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn weightNetoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn currDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource oliveTBLBindingSource;
     }
 }

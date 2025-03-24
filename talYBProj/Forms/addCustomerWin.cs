@@ -29,6 +29,7 @@ namespace talYBProj.Forms
             c1.address = kTBXADD.Text.Trim();
             c1.cellPhone = MTBXPFirst.Text.Trim();
             c1.phone1 = MTBXPSecend.Text.Trim();
+
             c1.officePhone = MTBXPOffice.Text.Trim();
             c1.email = kTBXEmail.Text.Trim();
             c1.price = Convert.ToDouble(kTBXPrice.Text.Trim());
