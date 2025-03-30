@@ -55,7 +55,6 @@ namespace talYBProj.Forms
             o1.userID = selectedUser.Id ;
             o1.zanID = selectedZan.Id ;
             o1.costomerID = selectedCust.Id ;
-           
             o1.numOfDolevim = ((int)nUDnumOfDolevim.Value);
             o1.orderDate = DateTime.Now;
             o1.isDone = false;

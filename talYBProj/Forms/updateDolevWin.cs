@@ -87,5 +87,10 @@ namespace talYBProj.Forms
                 btnAddDolev.Enabled = true;
             }
         }
+
+        private void numericUpDownBruto_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

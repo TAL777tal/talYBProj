@@ -34,25 +34,36 @@ namespace talYBProj.Forms
                 return;
             }
             int idx = kCBXchose.SelectedIndex;
-            toUpdate.firstName = kTBXFirstName.Text.Trim();
-            toUpdate.lastName = kTBXLastName.Text.Trim();
-            toUpdate.companyName = kTBXCompanyName.Text.Trim();
-            toUpdate.address = kTBXAddress.Text.Trim();
-            toUpdate.cellPhone = MTBphone1.Text.Trim();
-            toUpdate.phone1 = MTBphone2.Text.Trim();
-            toUpdate.officePhone = MTBOfficephone.Text.Trim();
-            toUpdate.address = kTBXEmail.Text.Trim();
-            toUpdate.price = Convert.ToDouble(MTBXprice.Text.Trim());
-            toUpdate.notes = kRTBXNotes.Text.Trim();
-           if (DBhelper.updateCostomer(toUpdate))
+            bool isValidFirstName = Utils.validateName(kTBXFirstName.Text.Trim(), kTBXFirstName.TextBox, ep, "שם פרטי לא תקין.");
+            bool isValidLastName = Utils.validateName(kTBXLastName.Text.Trim(), kTBXLastName.TextBox, ep, "שם משפחה לא תקין.");
+            bool isValidCompanyName = Utils.validateName(kTBXCompanyName.Text.Trim(), kTBXCompanyName.TextBox, ep, "שם החברה לא תקין");
+            bool isValidAddress = Utils.validateName(kTBXAddress.Text.Trim(), kTBXAddress.TextBox, ep, "כתובת לא תקינה");
+            bool isValidCellPhone = Utils.validatePhoneNumber(MTBphone1.Text, MTBphone1, ep, "טלפון לא תקין");
+            bool isValidphone1 = Utils.validatePhoneNumber(MTBphone2.Text, MTBphone2, ep, "טלפון לא תקין");
+            bool isValidofficePhone = Utils.validatePhoneNumber(MTBOfficephone.Text, MTBOfficephone, ep, "טלפון לא תקין");
+            bool isValidEmail = Utils.validateEmail(kTBXEmail.Text.Trim(), kTBXEmail.TextBox, ep, "אימייל לא תקין");
+            if (isValidFirstName && isValidLastName && isValidCompanyName && isValidAddress && isValidCellPhone && isValidphone1 && isValidofficePhone && isValidEmail)
             {
-                MessageBox.Show("update successfuly");
-                updateCBX();
-            }
-            else //error
-            {
-                MessageBox.Show("error");
+                toUpdate.firstName = kTBXFirstName.Text.Trim();
+                toUpdate.lastName = kTBXLastName.Text.Trim();
+                toUpdate.companyName = kTBXCompanyName.Text.Trim();
+                toUpdate.address = kTBXAddress.Text.Trim();
+                toUpdate.cellPhone = MTBphone1.Text.Trim();
+                toUpdate.phone1 = MTBphone2.Text.Trim();
+                toUpdate.officePhone = MTBOfficephone.Text.Trim();
+                toUpdate.email = kTBXEmail.Text.Trim();
+                toUpdate.price = Convert.ToDouble(MTBXprice.Text.Trim());
+                toUpdate.notes = kRTBXNotes.Text.Trim();
+                if (DBhelper.updateCostomer(toUpdate))
+                {
+                    MessageBox.Show("update successfuly");
+                    updateCBX();
+                }
+                else //error
+                {
+                    MessageBox.Show("error");
 
+                }
             }
 
         }

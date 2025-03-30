@@ -32,16 +32,20 @@ namespace talYBProj.Forms
         private void addBtn_Click(object sender, EventArgs e)
         {
             zanTBL z1 = new zanTBL();
-            z1.name = tbxZan.Text;
-            z1.description = tbxDes.Text.Trim();
-            z1 = DBhelper.addZan(z1);
-            if (z1 == null)
+            bool isValidName = Utils.validateName(tbxZan.Text , tbxZan.TextBox , ep , "שם לא תקין");
+            if (isValidName)
             {
-                MessageBox.Show("error");
-            }
-            else
-            {
-                MessageBox.Show("OK");
+                z1.name = tbxZan.Text;
+                z1.description = tbxDes.Text.Trim();
+                z1 = DBhelper.addZan(z1);
+                if (z1 == null)
+                {
+                    MessageBox.Show("arror");
+                }
+                else
+                {
+                    MessageBox.Show("add succeccfuly");
+                }
             }
         }
     }

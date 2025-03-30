@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             this.kryptonLabel3 = new Krypton.Toolkit.KryptonLabel();
@@ -38,11 +39,14 @@
             this.TBXlastName = new Krypton.Toolkit.KryptonTextBox();
             this.TBXgmail = new Krypton.Toolkit.KryptonTextBox();
             this.MTXphoneNumber = new System.Windows.Forms.MaskedTextBox();
+            this.ep = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.ep)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(657, 82);
+            this.kryptonLabel1.Location = new System.Drawing.Point(876, 101);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(71, 24);
             this.kryptonLabel1.TabIndex = 0;
@@ -50,7 +54,8 @@
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(641, 134);
+            this.kryptonLabel2.Location = new System.Drawing.Point(855, 165);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(91, 24);
             this.kryptonLabel2.TabIndex = 1;
@@ -58,7 +63,8 @@
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(374, 41);
+            this.kryptonLabel3.Location = new System.Drawing.Point(499, 50);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(106, 24);
             this.kryptonLabel3.TabIndex = 2;
@@ -66,7 +72,8 @@
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(672, 194);
+            this.kryptonLabel4.Location = new System.Drawing.Point(896, 239);
+            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(53, 24);
             this.kryptonLabel4.TabIndex = 3;
@@ -74,7 +81,8 @@
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(640, 252);
+            this.kryptonLabel5.Location = new System.Drawing.Point(853, 310);
+            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel5.Name = "kryptonLabel5";
             this.kryptonLabel5.Size = new System.Drawing.Size(92, 24);
             this.kryptonLabel5.TabIndex = 4;
@@ -82,47 +90,56 @@
             // 
             // addBTN
             // 
-            this.addBTN.Location = new System.Drawing.Point(374, 345);
+            this.addBTN.Location = new System.Drawing.Point(499, 425);
+            this.addBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addBTN.Name = "addBTN";
-            this.addBTN.Size = new System.Drawing.Size(90, 25);
+            this.addBTN.Size = new System.Drawing.Size(120, 31);
             this.addBTN.TabIndex = 5;
             this.addBTN.Values.Text = "הוספה";
             this.addBTN.Click += new System.EventHandler(this.addBTN_Click);
             // 
             // TBXfirstName
             // 
-            this.TBXfirstName.Location = new System.Drawing.Point(523, 82);
+            this.TBXfirstName.Location = new System.Drawing.Point(697, 101);
+            this.TBXfirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBXfirstName.Name = "TBXfirstName";
-            this.TBXfirstName.Size = new System.Drawing.Size(100, 27);
+            this.TBXfirstName.Size = new System.Drawing.Size(133, 27);
             this.TBXfirstName.TabIndex = 6;
             // 
             // TBXlastName
             // 
-            this.TBXlastName.Location = new System.Drawing.Point(523, 131);
+            this.TBXlastName.Location = new System.Drawing.Point(697, 161);
+            this.TBXlastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBXlastName.Name = "TBXlastName";
-            this.TBXlastName.Size = new System.Drawing.Size(100, 27);
+            this.TBXlastName.Size = new System.Drawing.Size(133, 27);
             this.TBXlastName.TabIndex = 7;
             // 
             // TBXgmail
             // 
-            this.TBXgmail.Location = new System.Drawing.Point(523, 194);
+            this.TBXgmail.Location = new System.Drawing.Point(697, 239);
+            this.TBXgmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TBXgmail.Name = "TBXgmail";
-            this.TBXgmail.Size = new System.Drawing.Size(100, 27);
+            this.TBXgmail.Size = new System.Drawing.Size(133, 27);
             this.TBXgmail.TabIndex = 8;
             // 
             // MTXphoneNumber
             // 
-            this.MTXphoneNumber.Location = new System.Drawing.Point(523, 252);
+            this.MTXphoneNumber.Location = new System.Drawing.Point(697, 310);
+            this.MTXphoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MTXphoneNumber.Mask = "(999) 000-0000";
             this.MTXphoneNumber.Name = "MTXphoneNumber";
-            this.MTXphoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.MTXphoneNumber.Size = new System.Drawing.Size(132, 22);
             this.MTXphoneNumber.TabIndex = 10;
+            // 
+            // ep
+            // 
+            this.ep.ContainerControl = this;
             // 
             // addUserWin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.MTXphoneNumber);
             this.Controls.Add(this.TBXgmail);
             this.Controls.Add(this.TBXlastName);
@@ -134,8 +151,11 @@
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.kryptonLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "addUserWin";
             this.Text = "addUserWin";
+            this.Load += new System.EventHandler(this.addUserWin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ep)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,5 +173,6 @@
         private Krypton.Toolkit.KryptonTextBox TBXlastName;
         private Krypton.Toolkit.KryptonTextBox TBXgmail;
         private System.Windows.Forms.MaskedTextBox MTXphoneNumber;
+        private System.Windows.Forms.ErrorProvider ep;
     }
 }

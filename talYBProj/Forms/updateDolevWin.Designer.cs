@@ -53,8 +53,8 @@
             // 
             // LabelOrderId
             // 
-            this.LabelOrderId.Location = new System.Drawing.Point(468, 23);
-            this.LabelOrderId.Margin = new System.Windows.Forms.Padding(2);
+            this.LabelOrderId.Location = new System.Drawing.Point(624, 28);
+            this.LabelOrderId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LabelOrderId.Name = "LabelOrderId";
             this.LabelOrderId.Size = new System.Drawing.Size(108, 24);
             this.LabelOrderId.TabIndex = 0;
@@ -62,8 +62,8 @@
             // 
             // LabelDolevNum
             // 
-            this.LabelDolevNum.Location = new System.Drawing.Point(468, 66);
-            this.LabelDolevNum.Margin = new System.Windows.Forms.Padding(2);
+            this.LabelDolevNum.Location = new System.Drawing.Point(624, 81);
+            this.LabelDolevNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LabelDolevNum.Name = "LabelDolevNum";
             this.LabelDolevNum.Size = new System.Drawing.Size(94, 24);
             this.LabelDolevNum.TabIndex = 2;
@@ -71,8 +71,8 @@
             // 
             // LabelCurDate
             // 
-            this.LabelCurDate.Location = new System.Drawing.Point(465, 102);
-            this.LabelCurDate.Margin = new System.Windows.Forms.Padding(2);
+            this.LabelCurDate.Location = new System.Drawing.Point(620, 126);
+            this.LabelCurDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LabelCurDate.Name = "LabelCurDate";
             this.LabelCurDate.Size = new System.Drawing.Size(112, 24);
             this.LabelCurDate.TabIndex = 3;
@@ -81,8 +81,8 @@
             // 
             // LabelBruto
             // 
-            this.LabelBruto.Location = new System.Drawing.Point(468, 142);
-            this.LabelBruto.Margin = new System.Windows.Forms.Padding(2);
+            this.LabelBruto.Location = new System.Drawing.Point(624, 175);
+            this.LabelBruto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LabelBruto.Name = "LabelBruto";
             this.LabelBruto.Size = new System.Drawing.Size(95, 24);
             this.LabelBruto.TabIndex = 4;
@@ -90,8 +90,8 @@
             // 
             // LabelNotes
             // 
-            this.LabelNotes.Location = new System.Drawing.Point(468, 243);
-            this.LabelNotes.Margin = new System.Windows.Forms.Padding(2);
+            this.LabelNotes.Location = new System.Drawing.Point(624, 299);
+            this.LabelNotes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LabelNotes.Name = "LabelNotes";
             this.LabelNotes.Size = new System.Drawing.Size(55, 24);
             this.LabelNotes.TabIndex = 6;
@@ -99,8 +99,8 @@
             // 
             // LabelUserName
             // 
-            this.LabelUserName.Location = new System.Drawing.Point(468, 196);
-            this.LabelUserName.Margin = new System.Windows.Forms.Padding(2);
+            this.LabelUserName.Location = new System.Drawing.Point(624, 241);
+            this.LabelUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LabelUserName.Name = "LabelUserName";
             this.LabelUserName.Size = new System.Drawing.Size(105, 24);
             this.LabelUserName.TabIndex = 7;
@@ -112,10 +112,10 @@
             this.cbxOrderId.DisplayMember = "Id";
             this.cbxOrderId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxOrderId.FormattingEnabled = true;
-            this.cbxOrderId.Location = new System.Drawing.Point(330, 23);
-            this.cbxOrderId.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxOrderId.Location = new System.Drawing.Point(440, 28);
+            this.cbxOrderId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxOrderId.Name = "cbxOrderId";
-            this.cbxOrderId.Size = new System.Drawing.Size(92, 21);
+            this.cbxOrderId.Size = new System.Drawing.Size(121, 24);
             this.cbxOrderId.TabIndex = 8;
             this.cbxOrderId.SelectedIndexChanged += new System.EventHandler(this.cbxOrderId_SelectedIndexChanged);
             // 
@@ -128,10 +128,10 @@
             this.cbxUserName.DataSource = this.userTBLBindingSource;
             this.cbxUserName.DisplayMember = "fullName";
             this.cbxUserName.FormattingEnabled = true;
-            this.cbxUserName.Location = new System.Drawing.Point(330, 196);
-            this.cbxUserName.Margin = new System.Windows.Forms.Padding(2);
+            this.cbxUserName.Location = new System.Drawing.Point(440, 241);
+            this.cbxUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxUserName.Name = "cbxUserName";
-            this.cbxUserName.Size = new System.Drawing.Size(92, 21);
+            this.cbxUserName.Size = new System.Drawing.Size(121, 24);
             this.cbxUserName.TabIndex = 10;
             // 
             // userTBLBindingSource
@@ -140,57 +140,70 @@
             // 
             // numericUpDownBruto
             // 
-            this.numericUpDownBruto.Location = new System.Drawing.Point(334, 142);
-            this.numericUpDownBruto.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDownBruto.Location = new System.Drawing.Point(445, 175);
+            this.numericUpDownBruto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownBruto.Maximum = new decimal(new int[] {
             400,
             0,
             0,
             0});
+            this.numericUpDownBruto.Minimum = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
             this.numericUpDownBruto.Name = "numericUpDownBruto";
-            this.numericUpDownBruto.Size = new System.Drawing.Size(90, 20);
+            this.numericUpDownBruto.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownBruto.TabIndex = 11;
             this.numericUpDownBruto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numericUpDownBruto.Value = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
+            this.numericUpDownBruto.ValueChanged += new System.EventHandler(this.numericUpDownBruto_ValueChanged);
             // 
             // txbNotes
             // 
-            this.txbNotes.Location = new System.Drawing.Point(273, 243);
-            this.txbNotes.Margin = new System.Windows.Forms.Padding(2);
+            this.txbNotes.Location = new System.Drawing.Point(364, 299);
+            this.txbNotes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbNotes.Name = "txbNotes";
-            this.txbNotes.Size = new System.Drawing.Size(153, 93);
+            this.txbNotes.Size = new System.Drawing.Size(204, 114);
             this.txbNotes.TabIndex = 14;
             this.txbNotes.Text = "";
             // 
             // dateTimeP
             // 
-            this.dateTimeP.Location = new System.Drawing.Point(273, 102);
-            this.dateTimeP.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimeP.Location = new System.Drawing.Point(364, 126);
+            this.dateTimeP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimeP.Name = "dateTimeP";
-            this.dateTimeP.Size = new System.Drawing.Size(151, 20);
+            this.dateTimeP.Size = new System.Drawing.Size(200, 22);
             this.dateTimeP.TabIndex = 16;
             // 
             // btnAddDolev
             // 
-            this.btnAddDolev.Location = new System.Drawing.Point(223, 369);
+            this.btnAddDolev.Location = new System.Drawing.Point(297, 454);
+            this.btnAddDolev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddDolev.Name = "btnAddDolev";
-            this.btnAddDolev.Size = new System.Drawing.Size(90, 25);
+            this.btnAddDolev.Size = new System.Drawing.Size(120, 31);
             this.btnAddDolev.TabIndex = 17;
             this.btnAddDolev.Values.Text = "עצב דולב";
             this.btnAddDolev.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // dolevNum
             // 
-            this.dolevNum.Location = new System.Drawing.Point(330, 69);
+            this.dolevNum.Location = new System.Drawing.Point(440, 85);
+            this.dolevNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dolevNum.Name = "dolevNum";
             this.dolevNum.ReadOnly = true;
-            this.dolevNum.Size = new System.Drawing.Size(92, 20);
+            this.dolevNum.Size = new System.Drawing.Size(123, 22);
             this.dolevNum.TabIndex = 18;
             this.dolevNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblTotalDolevim
             // 
-            this.lblTotalDolevim.Location = new System.Drawing.Point(181, 23);
-            this.lblTotalDolevim.Margin = new System.Windows.Forms.Padding(2);
+            this.lblTotalDolevim.Location = new System.Drawing.Point(241, 28);
+            this.lblTotalDolevim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblTotalDolevim.Name = "lblTotalDolevim";
             this.lblTotalDolevim.Size = new System.Drawing.Size(108, 24);
             this.lblTotalDolevim.TabIndex = 0;
@@ -198,9 +211,9 @@
             // 
             // updateDolevWin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 406);
+            this.ClientSize = new System.Drawing.Size(789, 500);
             this.Controls.Add(this.dolevNum);
             this.Controls.Add(this.btnAddDolev);
             this.Controls.Add(this.dateTimeP);
@@ -216,7 +229,7 @@
             this.Controls.Add(this.lblTotalDolevim);
             this.Controls.Add(this.LabelOrderId);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "updateDolevWin";
             this.Text = "updateDolev";
             this.Load += new System.EventHandler(this.updateDolevWin_Load);

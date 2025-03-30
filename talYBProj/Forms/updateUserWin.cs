@@ -39,20 +39,27 @@ namespace talYBProj.Forms
             {
                 return;
             }
-            int idx = chooseCBX.SelectedIndex;
-            toUpdate.firstName = TBXfirstName.Text;
-            toUpdate.lastName = TBXlastName.Text;
-            toUpdate.email = TBXgmail.Text;
-            toUpdate.cellPhone = MTXphoneNumber.Text;
-            if (DBhelper.updateUser(toUpdate))
+            bool isValidFirstName = Utils.validateName(TBXfirstName.Text, TBXfirstName.TextBox, ep, "שם לא תקין");
+            bool isValidLastName = Utils.validateName(TBXlastName.Text, TBXlastName.TextBox, ep, "שם לא תקין");
+            bool isValidEmail = Utils.validateEmail(TBXgmail.Text, TBXgmail.TextBox, ep, "אימייל לא תקין");
+            bool isValidCellPhone = Utils.validatePhoneNumber(MTXphoneNumber.Text, MTXphoneNumber, ep, "מספר לא תקין");
+            if (isValidFirstName && isValidLastName && isValidEmail && isValidCellPhone)
             {
-                MessageBox.Show("add successfuly");
-                updateCBX();
-            }
-            else //error
-            {
-                MessageBox.Show("error");
+                int idx = chooseCBX.SelectedIndex;
+                toUpdate.firstName = TBXfirstName.Text;
+                toUpdate.lastName = TBXlastName.Text;
+                toUpdate.email = TBXgmail.Text;
+                toUpdate.cellPhone = MTXphoneNumber.Text;
+                if (DBhelper.updateUser(toUpdate))
+                {
+                    MessageBox.Show("add successfuly");
+                    updateCBX();
+                }
+                else //error
+                {
+                    MessageBox.Show("error");
 
+                }
             }
         }
             private void updateCBX()

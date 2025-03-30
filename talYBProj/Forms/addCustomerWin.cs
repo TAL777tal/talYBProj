@@ -76,5 +76,10 @@ namespace talYBProj.Forms
         {
 
         }
+
+        private void addPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -36,20 +36,22 @@ namespace talYBProj.Forms
             {
                 return;
             }
-            int idx = choseCBX.SelectedIndex;
+            bool isValidPackName = Utils.validateName(nameTBX.Text.Trim(), nameTBX.TextBox, ep2 , "השם לא תקין");
+            if (isValidPackName) { 
+                int idx = choseCBX.SelectedIndex;
             toUpdate.weight = (int)CBXweight.Value;
             toUpdate.price = (int)((int)CBXweight.Value * 2);
             toUpdate.packName = nameTBX.Text;
             toUpdate.notes = notesTBX.Text.Trim();
-            if (DBhelper.updatePack(toUpdate))
-            {
-                MessageBox.Show("add succefuly");
-                updateCBX();
-            }
-            else //error
-            {
-                MessageBox.Show("error");
-
+                if (DBhelper.updatePack(toUpdate))
+                {
+                    MessageBox.Show("apdate succefuly");
+                    updateCBX();
+                }
+                else //error
+                {
+                    MessageBox.Show("error");
+                }
             }
         }
 
@@ -60,6 +62,8 @@ namespace talYBProj.Forms
             {
                 return;
             }
+            int idx = choseCBX.SelectedIndex;
+
             CBXweight.Value = selected.weight;
             nameTBX.Text = selected.packName;
             if (selected.notes != null)

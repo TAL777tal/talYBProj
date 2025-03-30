@@ -23,19 +23,31 @@ namespace talYBProj.Forms
         private void addBTN_Click(object sender, EventArgs e)
         {
             userTBL u1 = new userTBL();
-            u1.firstName = TBXfirstName.Text;
-            u1.lastName = TBXlastName.Text;
-            u1.email = TBXgmail.Text;
-            u1.cellPhone = MTXphoneNumber.Text;
-            u1 = DBhelper.addUser(u1);
-            if (u1 == null)
+            bool isValidFirstName = Utils.validateName(TBXfirstName.Text, TBXfirstName.TextBox, ep, "שם לא תקין");
+            bool isValidLastName = Utils.validateName(TBXlastName.Text, TBXlastName.TextBox, ep, "שם לא תקין");
+            bool isValidEmail = Utils.validateEmail(TBXgmail.Text, TBXgmail.TextBox, ep, "אימייל לא תקין");
+            bool isValidCellPhone = Utils.validatePhoneNumber(MTXphoneNumber.Text , MTXphoneNumber , ep , "מספר לא תקין");
+            if (isValidFirstName && isValidLastName && isValidEmail && isValidCellPhone)
             {
-                MessageBox.Show("error");
+                u1.firstName = TBXfirstName.Text;
+                u1.lastName = TBXlastName.Text;
+                u1.email = TBXgmail.Text;
+                u1.cellPhone = MTXphoneNumber.Text;
+                u1 = DBhelper.addUser(u1);
+                if (u1 == null)
+                {
+                    MessageBox.Show("error");
+                }
+                else
+                {
+                    MessageBox.Show("OK");
+                }
             }
-            else
-            {
-                MessageBox.Show("OK");
-            }
+        }
+
+        private void addUserWin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

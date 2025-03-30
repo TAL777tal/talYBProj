@@ -42,14 +42,17 @@
             this.costomerTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.zanTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ep = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zanTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ep)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(628, 102);
+            this.kryptonLabel1.Location = new System.Drawing.Point(837, 126);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Size = new System.Drawing.Size(53, 24);
             this.kryptonLabel1.TabIndex = 0;
@@ -57,7 +60,8 @@
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(628, 259);
+            this.kryptonLabel3.Location = new System.Drawing.Point(837, 319);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel3.Name = "kryptonLabel3";
             this.kryptonLabel3.Size = new System.Drawing.Size(55, 24);
             this.kryptonLabel3.TabIndex = 2;
@@ -65,7 +69,8 @@
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(541, 31);
+            this.kryptonLabel4.Location = new System.Drawing.Point(721, 38);
+            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel4.Name = "kryptonLabel4";
             this.kryptonLabel4.Size = new System.Drawing.Size(104, 24);
             this.kryptonLabel4.TabIndex = 3;
@@ -73,31 +78,35 @@
             // 
             // notesTBX
             // 
-            this.notesTBX.Location = new System.Drawing.Point(439, 259);
+            this.notesTBX.Location = new System.Drawing.Point(585, 319);
+            this.notesTBX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.notesTBX.Name = "notesTBX";
-            this.notesTBX.Size = new System.Drawing.Size(161, 104);
+            this.notesTBX.Size = new System.Drawing.Size(215, 128);
             this.notesTBX.TabIndex = 5;
             this.notesTBX.Text = "";
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(439, 413);
+            this.addButton.Location = new System.Drawing.Point(585, 508);
+            this.addButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(105, 33);
+            this.addButton.Size = new System.Drawing.Size(140, 41);
             this.addButton.TabIndex = 8;
             this.addButton.Values.Text = "הוספה";
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // nameTBX
             // 
-            this.nameTBX.Location = new System.Drawing.Point(478, 200);
+            this.nameTBX.Location = new System.Drawing.Point(637, 246);
+            this.nameTBX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nameTBX.Name = "nameTBX";
-            this.nameTBX.Size = new System.Drawing.Size(121, 27);
+            this.nameTBX.Size = new System.Drawing.Size(161, 27);
             this.nameTBX.TabIndex = 34;
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(628, 200);
+            this.kryptonLabel2.Location = new System.Drawing.Point(837, 246);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel2.Name = "kryptonLabel2";
             this.kryptonLabel2.Size = new System.Drawing.Size(34, 24);
             this.kryptonLabel2.TabIndex = 33;
@@ -110,7 +119,8 @@
             0,
             0,
             0});
-            this.CBXweight.Location = new System.Drawing.Point(479, 100);
+            this.CBXweight.Location = new System.Drawing.Point(639, 123);
+            this.CBXweight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CBXweight.Maximum = new decimal(new int[] {
             100,
             0,
@@ -122,7 +132,7 @@
             0,
             0});
             this.CBXweight.Name = "CBXweight";
-            this.CBXweight.Size = new System.Drawing.Size(120, 26);
+            this.CBXweight.Size = new System.Drawing.Size(160, 26);
             this.CBXweight.TabIndex = 35;
             this.CBXweight.Value = new decimal(new int[] {
             0,
@@ -132,7 +142,8 @@
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(628, 157);
+            this.kryptonLabel5.Location = new System.Drawing.Point(837, 193);
+            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.kryptonLabel5.Name = "kryptonLabel5";
             this.kryptonLabel5.Size = new System.Drawing.Size(45, 24);
             this.kryptonLabel5.TabIndex = 36;
@@ -140,10 +151,11 @@
             // 
             // MTBprice
             // 
-            this.MTBprice.Location = new System.Drawing.Point(499, 161);
+            this.MTBprice.Location = new System.Drawing.Point(665, 198);
+            this.MTBprice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MTBprice.Mask = "00000.00";
             this.MTBprice.Name = "MTBprice";
-            this.MTBprice.Size = new System.Drawing.Size(100, 20);
+            this.MTBprice.Size = new System.Drawing.Size(132, 22);
             this.MTBprice.TabIndex = 37;
             this.MTBprice.ValidatingType = typeof(int);
             // 
@@ -159,11 +171,15 @@
             // 
             this.userTBLBindingSource.DataSource = typeof(talYBProj.userTBL);
             // 
+            // ep
+            // 
+            this.ep.ContainerControl = this;
+            // 
             // addPack
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.ClientSize = new System.Drawing.Size(1333, 692);
             this.Controls.Add(this.MTBprice);
             this.Controls.Add(this.kryptonLabel5);
             this.Controls.Add(this.CBXweight);
@@ -175,12 +191,14 @@
             this.Controls.Add(this.kryptonLabel3);
             this.Controls.Add(this.kryptonLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "addPack";
             this.Text = "addPack";
             this.Load += new System.EventHandler(this.addPack_Load);
             ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.zanTBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ep)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +219,6 @@
         private Krypton.Toolkit.KryptonNumericUpDown CBXweight;
         private Krypton.Toolkit.KryptonLabel kryptonLabel5;
         private System.Windows.Forms.MaskedTextBox MTBprice;
+        private System.Windows.Forms.ErrorProvider ep;
     }
 }

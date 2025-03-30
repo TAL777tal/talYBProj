@@ -86,11 +86,12 @@
             this.addPanel.Name = "addPanel";
             this.addPanel.Size = new System.Drawing.Size(799, 438);
             this.addPanel.TabIndex = 0;
+            this.addPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.addPanel_Paint);
             // 
             // kryptonLabel11
             // 
             this.kryptonLabel11.Location = new System.Drawing.Point(357, 18);
-            this.kryptonLabel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel11.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel11.Name = "kryptonLabel11";
             this.kryptonLabel11.Size = new System.Drawing.Size(84, 24);
             this.kryptonLabel11.TabIndex = 35;

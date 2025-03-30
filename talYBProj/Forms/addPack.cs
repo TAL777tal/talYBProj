@@ -21,18 +21,22 @@ namespace talYBProj.Forms
         private void addButton_Click(object sender, EventArgs e)
         {
             packTBL p1 = new packTBL();
-            p1.packName = nameTBX.Text.Trim();
-            p1.weight = (int)CBXweight.Value;
-            p1.price = Convert.ToDouble(MTBprice.Text.Trim());
-            p1.notes = notesTBX.Text.Trim();
-            p1 = DBhelper.addPack(p1);
-            if (p1 == null)
+            bool isValidPackName = Utils.validateName(nameTBX.Text.Trim(), nameTBX.TextBox, ep, "השם לא תקין");
+            if (isValidPackName)
             {
-                MessageBox.Show("error");
-            }
-            else
-            {
-                MessageBox.Show("OK");
+                p1.packName = nameTBX.Text.Trim();
+                p1.weight = (int)CBXweight.Value;
+                p1.price = Convert.ToDouble(MTBprice.Text.Trim());
+                p1.notes = notesTBX.Text.Trim();
+                p1 = DBhelper.addPack(p1);
+                if (p1 == null)
+                {
+                    MessageBox.Show("error");
+                }
+                else
+                {
+                    MessageBox.Show("OK");
+                }
             }
         }
 
