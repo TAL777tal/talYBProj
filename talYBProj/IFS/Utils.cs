@@ -68,7 +68,56 @@ namespace talYBProj.IFS
 
 
         /// <returns></returns>
+        public static bool validatePhoneNumber(string str, MaskedTextBox txb, ErrorProvider ep, string error)
+        {
+            bool status = true;
+            if (str.Length != 14)
+                status = false;
+            if (status)
+            {
+                ep.SetError(txb, "");
+            }
+            else
+            {
+                ep.SetError(txb, error);
+            }
+            return status;
+        }
+        public static bool validateEmail(string email, TextBox txb, ErrorProvider ep, string error)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                ep.SetError(txb, error);
+                return false;
+            }
 
+            int atIndex = email.IndexOf('@');
+            if (atIndex <= 0 || atIndex != email.LastIndexOf('@'))
+            {
+                ep.SetError(txb, error);
+                return false;
+            }
+
+            string localPart = email.Substring(0, atIndex);
+            string domainPart = email.Substring(atIndex + 1);
+
+            if (string.IsNullOrWhiteSpace(localPart) || string.IsNullOrWhiteSpace(domainPart))
+            {
+                ep.SetError(txb, error);
+                return false;
+            }
+
+            int dotIndex = domainPart.LastIndexOf('.');
+            if (dotIndex <= 0 || dotIndex == domainPart.Length - 1)
+            {
+                ep.SetError(txb, error);
+                return false;
+            }
+
+            // אם האימייל תקין, מנקים את השגיאה
+            ep.SetError(txb, "");
+            return true;
+        }
         public static bool validateName(string str, System.Windows.Forms.TextBox txb, ErrorProvider ep, string error)
 
         {
