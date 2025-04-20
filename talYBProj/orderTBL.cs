@@ -30,6 +30,7 @@ namespace talYBProj
         public bool isDone { get; set; }
         public bool isPayd { get; set; }
         public string notes { get; set; }
+        public double price { get; set; }
     
         public virtual costomerTBL costomerTBL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

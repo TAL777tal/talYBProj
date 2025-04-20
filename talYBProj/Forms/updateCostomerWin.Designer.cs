@@ -230,9 +230,9 @@
             this.kryptonLabel9.Location = new System.Drawing.Point(255, 154);
             this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel9.Name = "kryptonLabel9";
-            this.kryptonLabel9.Size = new System.Drawing.Size(90, 24);
+            this.kryptonLabel9.Size = new System.Drawing.Size(83, 24);
             this.kryptonLabel9.TabIndex = 39;
-            this.kryptonLabel9.Values.Text = "מחיר עסקה";
+            this.kryptonLabel9.Values.Text = "חוב הלקוח";
             // 
             // kryptonLabel8
             // 

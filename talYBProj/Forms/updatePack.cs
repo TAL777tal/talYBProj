@@ -40,7 +40,7 @@ namespace talYBProj.Forms
             if (isValidPackName) { 
                 int idx = choseCBX.SelectedIndex;
             toUpdate.weight = (int)CBXweight.Value;
-            toUpdate.price = (int)((int)CBXweight.Value * 2);
+            toUpdate.price = Convert.ToDouble(MTBprice.Text.Trim());
             toUpdate.packName = nameTBX.Text;
             toUpdate.notes = notesTBX.Text.Trim();
                 if (DBhelper.updatePack(toUpdate))

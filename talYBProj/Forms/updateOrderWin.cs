@@ -36,6 +36,7 @@ namespace talYBProj.Forms
             //cbxCostumerName.SelectedIndex = selected.costomerID;
             //cbxOliveKind.SelectedIndex = selected.zanID;
             numericUpDownDolevim.Value = selected.numOfDolevim;
+            MTBprice.Text = Convert.ToString(selected.price);
             if (selected.notes != null)
                 kRTBXnotes.Text = selected.notes;
 
@@ -56,6 +57,7 @@ namespace talYBProj.Forms
             toUpdate.costomerID = selectedCust.Id;
             toUpdate.zanID = selectedZan.Id;
             toUpdate.notes = kRTBXnotes.Text.Trim();
+            toUpdate.price = Convert.ToDouble(MTBprice.Text.Trim());
             toUpdate.numOfDolevim = Convert.ToInt32(numericUpDownDolevim.Value);
             if (DBhelper.updateOrder(toUpdate))
             {

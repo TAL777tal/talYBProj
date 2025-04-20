@@ -111,7 +111,7 @@
             // 
             this.kTBXPrice.Location = new System.Drawing.Point(147, 150);
             this.kTBXPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kTBXPrice.Mask = "00000.00";
+            this.kTBXPrice.Mask = "000000000.00";
             this.kTBXPrice.Name = "kTBXPrice";
             this.kTBXPrice.Size = new System.Drawing.Size(100, 22);
             this.kTBXPrice.TabIndex = 9;
@@ -208,9 +208,9 @@
             this.kryptonLabel9.Location = new System.Drawing.Point(307, 146);
             this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel9.Name = "kryptonLabel9";
-            this.kryptonLabel9.Size = new System.Drawing.Size(90, 24);
+            this.kryptonLabel9.Size = new System.Drawing.Size(83, 24);
             this.kryptonLabel9.TabIndex = 33;
-            this.kryptonLabel9.Values.Text = "מחיר עסקה";
+            this.kryptonLabel9.Values.Text = "חוב הלקוח";
             // 
             // kryptonLabel8
             // 

@@ -59,6 +59,7 @@ namespace talYBProj.Forms
             o1.orderDate = DateTime.Now;
             o1.isDone = false;
             o1.isPayd = false ;
+            o1.price = Convert.ToDouble(MTBprice.Text.Trim()); 
             o1.notes = TBXnotes.Text.Trim();
             o1 = DBhelper.addOrder(o1);
             if (o1 == null)

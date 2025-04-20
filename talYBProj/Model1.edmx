@@ -64,12 +64,13 @@
           <Property Name="isDone" Type="bit" Nullable="false" />
           <Property Name="isPayd" Type="bit" Nullable="false" />
           <Property Name="notes" Type="nvarchar" MaxLength="50" />
+          <Property Name="price" Type="float" Nullable="false" />
         </EntityType>
         <EntityType Name="packTBL">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="weight" Type="int" Nullable="false" />
           <Property Name="price" Type="float" Nullable="false" />
           <Property Name="packName" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -342,6 +343,7 @@
           <Property Name="isDone" Type="Boolean" Nullable="false" />
           <Property Name="isPayd" Type="Boolean" Nullable="false" />
           <Property Name="notes" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="price" Type="Double" Nullable="false" />
           <NavigationProperty Name="costomerTBL" Relationship="dbModel.FK_orderTBL_ToCostomerTBL" FromRole="orderTBL" ToRole="costomerTBL" />
           <NavigationProperty Name="oilTBL" Relationship="dbModel.FK_oilTBL_ToOrderTBL" FromRole="orderTBL" ToRole="oilTBL" />
           <NavigationProperty Name="oliveTBL" Relationship="dbModel.FK_oliveTBL_orderTBL" FromRole="orderTBL" ToRole="oliveTBL" />
@@ -352,7 +354,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="weight" Type="Int32" Nullable="false" />
           <Property Name="price" Type="Double" Nullable="false" />
           <Property Name="packName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -537,6 +539,7 @@
           <EntitySetMapping Name="orderTBL">
             <EntityTypeMapping TypeName="dbModel.orderTBL">
               <MappingFragment StoreEntitySet="orderTBL">
+                <ScalarProperty Name="price" ColumnName="price" />
                 <ScalarProperty Name="notes" ColumnName="notes" />
                 <ScalarProperty Name="isPayd" ColumnName="isPayd" />
                 <ScalarProperty Name="isDone" ColumnName="isDone" />

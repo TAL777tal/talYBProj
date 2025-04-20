@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainWin));
             this.kryptonRibbon1 = new Krypton.Ribbon.KryptonRibbon();
             this.customerTab = new Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup1 = new Krypton.Ribbon.KryptonRibbonGroup();
@@ -84,9 +85,10 @@
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4,
             this.kryptonRibbonTab5});
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab2;
+            this.kryptonRibbon1.SelectedContext = null;
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab5;
             this.kryptonRibbon1.ShowMinimizeButton = false;
-            this.kryptonRibbon1.Size = new System.Drawing.Size(600, 171);
+            this.kryptonRibbon1.Size = new System.Drawing.Size(800, 171);
             this.kryptonRibbon1.TabIndex = 0;
             // 
             // customerTab
@@ -110,16 +112,19 @@
             // 
             // btnOpenCustWin
             // 
+            this.btnOpenCustWin.ImageLarge = ((System.Drawing.Image)(resources.GetObject("btnOpenCustWin.ImageLarge")));
             this.btnOpenCustWin.TextLine1 = "הוסף לקוח";
             this.btnOpenCustWin.Click += new System.EventHandler(this.btnOpenCustWin_Click);
             // 
             // krRGBopenUpdateWin
             // 
+            this.krRGBopenUpdateWin.ImageLarge = ((System.Drawing.Image)(resources.GetObject("krRGBopenUpdateWin.ImageLarge")));
             this.krRGBopenUpdateWin.TextLine1 = "עדכן לקוח";
             this.krRGBopenUpdateWin.Click += new System.EventHandler(this.kryptonRibbonGroupButton2_Click);
             // 
             // BtnOpenCostomerListWin
             // 
+            this.BtnOpenCostomerListWin.ImageLarge = ((System.Drawing.Image)(resources.GetObject("BtnOpenCostomerListWin.ImageLarge")));
             this.BtnOpenCostomerListWin.TextLine1 = "רשימת לקוחות";
             this.BtnOpenCostomerListWin.Click += new System.EventHandler(this.BtnOpenCostomerListWin_Click);
             // 
@@ -144,16 +149,19 @@
             // 
             // btnOpenAddOrderWin
             // 
+            this.btnOpenAddOrderWin.ImageLarge = ((System.Drawing.Image)(resources.GetObject("btnOpenAddOrderWin.ImageLarge")));
             this.btnOpenAddOrderWin.TextLine1 = "הוספת הזמנה";
             this.btnOpenAddOrderWin.Click += new System.EventHandler(this.btnOpenAddOrderWin_Click);
             // 
             // kryptonRibbonGroupButton2
             // 
+            this.kryptonRibbonGroupButton2.ImageLarge = ((System.Drawing.Image)(resources.GetObject("kryptonRibbonGroupButton2.ImageLarge")));
             this.kryptonRibbonGroupButton2.TextLine1 = "עדכן הזמנה";
             this.kryptonRibbonGroupButton2.Click += new System.EventHandler(this.btnOpenUpdateOrderWin_Click);
             // 
             // kryptonRibbonGroupButton3
             // 
+            this.kryptonRibbonGroupButton3.ImageLarge = ((System.Drawing.Image)(resources.GetObject("kryptonRibbonGroupButton3.ImageLarge")));
             this.kryptonRibbonGroupButton3.TextLine1 = "רשימת הזמנות";
             this.kryptonRibbonGroupButton3.Click += new System.EventHandler(this.kryptonRibbonGroupButton3_Click);
             // 
@@ -177,16 +185,19 @@
             // 
             // kryptonRibbonGroupButton1
             // 
+            this.kryptonRibbonGroupButton1.ImageLarge = ((System.Drawing.Image)(resources.GetObject("kryptonRibbonGroupButton1.ImageLarge")));
             this.kryptonRibbonGroupButton1.TextLine1 = "עצב דולב";
             this.kryptonRibbonGroupButton1.Click += new System.EventHandler(this.kryptonRibbonGroupButton1_Click);
             // 
             // btnOpenEditDolevWin
             // 
+            this.btnOpenEditDolevWin.ImageLarge = ((System.Drawing.Image)(resources.GetObject("btnOpenEditDolevWin.ImageLarge")));
             this.btnOpenEditDolevWin.TextLine1 = "עדכן דולב";
             this.btnOpenEditDolevWin.Click += new System.EventHandler(this.btnOpenDolevWin_Click);
             // 
             // kryptonRibbonGroupButton5
             // 
+            this.kryptonRibbonGroupButton5.ImageLarge = ((System.Drawing.Image)(resources.GetObject("kryptonRibbonGroupButton5.ImageLarge")));
             this.kryptonRibbonGroupButton5.TextLine1 = "רשימת דולבים ";
             this.kryptonRibbonGroupButton5.Click += new System.EventHandler(this.kryptonRibbonGroupButton5_Click);
             // 
@@ -210,16 +221,19 @@
             // 
             // kryptonRibbonGroupButton6
             // 
+            this.kryptonRibbonGroupButton6.ImageLarge = ((System.Drawing.Image)(resources.GetObject("kryptonRibbonGroupButton6.ImageLarge")));
             this.kryptonRibbonGroupButton6.TextLine1 = "הוסף זן";
             this.kryptonRibbonGroupButton6.Click += new System.EventHandler(this.kryptonRibbonGroupButton6_Click);
             // 
             // kryptonRibbonGroupButton7
             // 
+            this.kryptonRibbonGroupButton7.ImageLarge = ((System.Drawing.Image)(resources.GetObject("kryptonRibbonGroupButton7.ImageLarge")));
             this.kryptonRibbonGroupButton7.TextLine1 = "עדכן זן";
             this.kryptonRibbonGroupButton7.Click += new System.EventHandler(this.kryptonRibbonGroupButton7_Click);
             // 
             // kryptonRibbonGroupButton8
             // 
+            this.kryptonRibbonGroupButton8.ImageLarge = ((System.Drawing.Image)(resources.GetObject("kryptonRibbonGroupButton8.ImageLarge")));
             this.kryptonRibbonGroupButton8.TextLine1 = "רשימת זנים";
             this.kryptonRibbonGroupButton8.Click += new System.EventHandler(this.kryptonRibbonGroupButton8_Click);
             // 
@@ -243,16 +257,19 @@
             // 
             // addClick
             // 
+            this.addClick.ImageLarge = ((System.Drawing.Image)(resources.GetObject("addClick.ImageLarge")));
             this.addClick.TextLine1 = "הוסף חבילה";
             this.addClick.Click += new System.EventHandler(this.addClick_Click);
             // 
             // updateClick
             // 
+            this.updateClick.ImageLarge = ((System.Drawing.Image)(resources.GetObject("updateClick.ImageLarge")));
             this.updateClick.TextLine1 = "ערוך חבילה";
             this.updateClick.Click += new System.EventHandler(this.updateClick_Click);
             // 
             // listClick
             // 
+            this.listClick.ImageLarge = ((System.Drawing.Image)(resources.GetObject("listClick.ImageLarge")));
             this.listClick.TextLine1 = "רשימת חבילות";
             this.listClick.Click += new System.EventHandler(this.kryptonRibbonGroupButton11_Click);
             // 
@@ -276,16 +293,19 @@
             // 
             // addUser
             // 
+            this.addUser.ImageLarge = ((System.Drawing.Image)(resources.GetObject("addUser.ImageLarge")));
             this.addUser.TextLine1 = "הוסף משתמש";
             this.addUser.Click += new System.EventHandler(this.addUser_Click);
             // 
             // updateUser
             // 
+            this.updateUser.ImageLarge = ((System.Drawing.Image)(resources.GetObject("updateUser.ImageLarge")));
             this.updateUser.TextLine1 = "עדכן משתמש";
             this.updateUser.Click += new System.EventHandler(this.updateUser_Click);
             // 
             // userList
             // 
+            this.userList.ImageLarge = ((System.Drawing.Image)(resources.GetObject("userList.ImageLarge")));
             this.userList.TextLine1 = "רשימת משתמשים";
             this.userList.Click += new System.EventHandler(this.userList_Click);
             // 
@@ -293,19 +313,19 @@
             // 
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 171);
-            this.mainPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(600, 195);
+            this.mainPanel.Size = new System.Drawing.Size(800, 279);
             this.mainPanel.TabIndex = 1;
             // 
             // mainWin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.kryptonRibbon1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "mainWin";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

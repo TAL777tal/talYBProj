@@ -19,11 +19,6 @@ namespace talYBProj.Forms
             InitializeComponent();
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            list = DBhelper.orderList;
-            dataGridView2.DataSource = list;
-        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -31,6 +26,12 @@ namespace talYBProj.Forms
         }
 
         private void orderListWin_Load(object sender, EventArgs e)
+        {
+            list = DBhelper.orderList;
+            dataGridView2.DataSource = list;
+        }
+
+        private void dataGridView2_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             list = DBhelper.orderList;
             dataGridView2.DataSource = list;

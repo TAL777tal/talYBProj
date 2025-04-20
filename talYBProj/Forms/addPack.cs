@@ -24,6 +24,7 @@ namespace talYBProj.Forms
             bool isValidPackName = Utils.validateName(nameTBX.Text.Trim(), nameTBX.TextBox, ep, "השם לא תקין");
             if (isValidPackName)
             {
+
                 p1.packName = nameTBX.Text.Trim();
                 p1.weight = (int)CBXweight.Value;
                 p1.price = Convert.ToDouble(MTBprice.Text.Trim());
