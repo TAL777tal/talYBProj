@@ -30,12 +30,9 @@
           <Property Name="orderID" Type="int" Nullable="false" />
           <Property Name="PackID" Type="int" Nullable="false" />
           <Property Name="quantity" Type="int" Nullable="false" />
-          <Property Name="weight" Type="int" Nullable="false" />
           <Property Name="currDate" Type="date" Nullable="false" />
-          <Property Name="packCharged" Type="int" Nullable="false" />
           <Property Name="notes" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="userID" Type="int" Nullable="false" />
-          <Property Name="orderDate" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="oliveTBL">
           <Key>
@@ -304,12 +301,9 @@
           <Property Name="orderID" Type="Int32" Nullable="false" />
           <Property Name="PackID" Type="Int32" Nullable="false" />
           <Property Name="quantity" Type="Int32" Nullable="false" />
-          <Property Name="weight" Type="Int32" Nullable="false" />
           <Property Name="currDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="packCharged" Type="Int32" Nullable="false" />
           <Property Name="notes" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="userID" Type="Int32" Nullable="false" />
-          <Property Name="orderDate" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="orderTBL" Relationship="dbModel.FK_oilTBL_ToOrderTBL" FromRole="oilTBL" ToRole="orderTBL" />
           <NavigationProperty Name="packTBL" Relationship="dbModel.FK_oilTBL_ToPackTBL_Id_" FromRole="oilTBL" ToRole="packTBL" />
           <NavigationProperty Name="userTBL" Relationship="dbModel.FK_oilTBL_ToUserTBL" FromRole="oilTBL" ToRole="userTBL" />
@@ -508,12 +502,9 @@
           <EntitySetMapping Name="oilTBL">
             <EntityTypeMapping TypeName="dbModel.oilTBL">
               <MappingFragment StoreEntitySet="oilTBL">
-                <ScalarProperty Name="orderDate" ColumnName="orderDate" />
                 <ScalarProperty Name="userID" ColumnName="userID" />
                 <ScalarProperty Name="notes" ColumnName="notes" />
-                <ScalarProperty Name="packCharged" ColumnName="packCharged" />
                 <ScalarProperty Name="currDate" ColumnName="currDate" />
-                <ScalarProperty Name="weight" ColumnName="weight" />
                 <ScalarProperty Name="quantity" ColumnName="quantity" />
                 <ScalarProperty Name="PackID" ColumnName="PackID" />
                 <ScalarProperty Name="orderID" ColumnName="orderID" />

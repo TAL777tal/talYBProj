@@ -18,12 +18,9 @@ namespace talYBProj
         public int orderID { get; set; }
         public int PackID { get; set; }
         public int quantity { get; set; }
-        public int weight { get; set; }
         public System.DateTime currDate { get; set; }
-        public int packCharged { get; set; }
         public string notes { get; set; }
         public int userID { get; set; }
-        public System.DateTime orderDate { get; set; }
     
         public virtual orderTBL orderTBL { get; set; }
         public virtual packTBL packTBL { get; set; }

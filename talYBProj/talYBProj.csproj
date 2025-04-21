@@ -129,6 +129,24 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=7.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Tokens.7.5.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1652.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
     </Reference>
@@ -216,6 +234,12 @@
     <Compile Include="Forms\addCustomerWin.Designer.cs">
       <DependentUpon>addCustomerWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\addOil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\addOil.Designer.cs">
+      <DependentUpon>addOil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\addOrderWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,11 +264,23 @@
     <Compile Include="Forms\addZanWin.Designer.cs">
       <DependentUpon>addZanWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\oilList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\oilList.Designer.cs">
+      <DependentUpon>oilList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\orderReport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\orderReport.Designer.cs">
       <DependentUpon>orderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\updateOil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\updateOil.Designer.cs">
+      <DependentUpon>updateOil.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\updateUserWin.cs">
       <SubType>Form</SubType>
@@ -372,6 +408,9 @@
     <EmbeddedResource Include="Forms\addCustomerWin.resx">
       <DependentUpon>addCustomerWin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\addOil.resx">
+      <DependentUpon>addOil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\addOrderWin.resx">
       <DependentUpon>addOrderWin.cs</DependentUpon>
     </EmbeddedResource>
@@ -384,8 +423,14 @@
     <EmbeddedResource Include="Forms\addZanWin.resx">
       <DependentUpon>addZanWin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\oilList.resx">
+      <DependentUpon>oilList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\orderReport.resx">
       <DependentUpon>orderReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\updateOil.resx">
+      <DependentUpon>updateOil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\updateUserWin.resx">
       <DependentUpon>updateUserWin.cs</DependentUpon>
@@ -448,6 +493,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\costomerTBL.datasource" />
+    <None Include="Properties\DataSources\oilTBL.datasource" />
     <None Include="Properties\DataSources\oliveTBL.datasource" />
     <None Include="Properties\DataSources\orderTBL.datasource" />
     <None Include="Properties\DataSources\packTBL.datasource" />

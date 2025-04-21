@@ -44,7 +44,7 @@
             this.dateTimeP = new System.Windows.Forms.DateTimePicker();
             this.btnAddDolev = new Krypton.Toolkit.KryptonButton();
             this.dolevNum = new System.Windows.Forms.NumericUpDown();
-            this.lblTotalDolevim = new Krypton.Toolkit.KryptonLabel();
+            this.lblTotalDolevim = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.orderTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBruto)).BeginInit();
@@ -183,7 +183,7 @@
             // btnAddDolev
             // 
             this.btnAddDolev.Location = new System.Drawing.Point(297, 454);
-            this.btnAddDolev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddDolev.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddDolev.Name = "btnAddDolev";
             this.btnAddDolev.Size = new System.Drawing.Size(120, 31);
             this.btnAddDolev.TabIndex = 17;
@@ -193,7 +193,7 @@
             // dolevNum
             // 
             this.dolevNum.Location = new System.Drawing.Point(440, 85);
-            this.dolevNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dolevNum.Margin = new System.Windows.Forms.Padding(4);
             this.dolevNum.Name = "dolevNum";
             this.dolevNum.ReadOnly = true;
             this.dolevNum.Size = new System.Drawing.Size(123, 22);
@@ -202,18 +202,17 @@
             // 
             // lblTotalDolevim
             // 
-            this.lblTotalDolevim.Location = new System.Drawing.Point(241, 28);
-            this.lblTotalDolevim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblTotalDolevim.Location = new System.Drawing.Point(121, 30);
             this.lblTotalDolevim.Name = "lblTotalDolevim";
-            this.lblTotalDolevim.Size = new System.Drawing.Size(108, 24);
-            this.lblTotalDolevim.TabIndex = 0;
-            this.lblTotalDolevim.Values.Text = "מספר ההזמנה";
+            this.lblTotalDolevim.Size = new System.Drawing.Size(197, 22);
+            this.lblTotalDolevim.TabIndex = 19;
             // 
             // updateDolevWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(789, 500);
+            this.Controls.Add(this.lblTotalDolevim);
             this.Controls.Add(this.dolevNum);
             this.Controls.Add(this.btnAddDolev);
             this.Controls.Add(this.dateTimeP);
@@ -226,7 +225,6 @@
             this.Controls.Add(this.LabelBruto);
             this.Controls.Add(this.LabelCurDate);
             this.Controls.Add(this.LabelDolevNum);
-            this.Controls.Add(this.lblTotalDolevim);
             this.Controls.Add(this.LabelOrderId);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -259,6 +257,6 @@
         private System.Windows.Forms.BindingSource orderTBLBindingSource;
         private System.Windows.Forms.BindingSource userTBLBindingSource;
         private System.Windows.Forms.NumericUpDown dolevNum;
-        private Krypton.Toolkit.KryptonLabel lblTotalDolevim;
+        private System.Windows.Forms.TextBox lblTotalDolevim;
     }
 }

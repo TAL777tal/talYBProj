@@ -292,12 +292,9 @@ namespace talYBProj.IFS
                 toUpdate.orderID = o1.orderID;
                 toUpdate.PackID = o1.PackID;
                 toUpdate.quantity = o1.quantity;
-                toUpdate.weight = o1.weight;
                 toUpdate.currDate = o1.currDate;
-                toUpdate.packCharged = o1.packCharged;
                 toUpdate.notes = o1.notes;
                 toUpdate.userID = o1.userID;
-                toUpdate.orderDate = o1.orderDate;
                 db.SaveChanges();
                 loadOilList();
                 return true;

@@ -97,5 +97,10 @@ namespace talYBProj.Forms
                 MessageBox.Show("Error");
             }
         }
+
+        private void dgvOlives_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
