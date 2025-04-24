@@ -48,6 +48,12 @@
             this.kryptonRibbonGroupButton1 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.btnOpenEditDolevWin = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonGroupButton5 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonTab6 = new Krypton.Ribbon.KryptonRibbonTab();
+            this.kryptonRibbonGroup7 = new Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple7 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.kryptonRibbonGroupButton4 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton9 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton10 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.kryptonRibbonTab3 = new Krypton.Ribbon.KryptonRibbonTab();
             this.kryptonRibbonGroup4 = new Krypton.Ribbon.KryptonRibbonGroup();
             this.kryptonRibbonGroupTriple4 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
@@ -67,12 +73,6 @@
             this.updateUser = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.userList = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.kryptonRibbonTab6 = new Krypton.Ribbon.KryptonRibbonTab();
-            this.kryptonRibbonGroup7 = new Krypton.Ribbon.KryptonRibbonGroup();
-            this.kryptonRibbonGroupTriple7 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
-            this.kryptonRibbonGroupButton4 = new Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.kryptonRibbonGroupButton9 = new Krypton.Ribbon.KryptonRibbonGroupButton();
-            this.kryptonRibbonGroupButton10 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,15 +88,16 @@
             this.customerTab,
             this.kryptonRibbonTab1,
             this.kryptonRibbonTab2,
+            this.kryptonRibbonTab6,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4,
-            this.kryptonRibbonTab5,
-            this.kryptonRibbonTab6});
+            this.kryptonRibbonTab5});
             this.kryptonRibbon1.SelectedContext = null;
-            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab6;
+            this.kryptonRibbon1.SelectedTab = this.customerTab;
             this.kryptonRibbon1.ShowMinimizeButton = false;
             this.kryptonRibbon1.Size = new System.Drawing.Size(800, 171);
             this.kryptonRibbon1.TabIndex = 0;
+            this.kryptonRibbon1.SelectedTabChanged += new System.EventHandler(this.kryptonRibbon1_SelectedTabChanged);
             // 
             // customerTab
             // 
@@ -208,6 +209,42 @@
             this.kryptonRibbonGroupButton5.TextLine1 = "רשימת דולבים ";
             this.kryptonRibbonGroupButton5.Click += new System.EventHandler(this.kryptonRibbonGroupButton5_Click);
             // 
+            // kryptonRibbonTab6
+            // 
+            this.kryptonRibbonTab6.Groups.AddRange(new Krypton.Ribbon.KryptonRibbonGroup[] {
+            this.kryptonRibbonGroup7});
+            this.kryptonRibbonTab6.Text = "ניהול חבילות שמן";
+            // 
+            // kryptonRibbonGroup7
+            // 
+            this.kryptonRibbonGroup7.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple7});
+            // 
+            // kryptonRibbonGroupTriple7
+            // 
+            this.kryptonRibbonGroupTriple7.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.kryptonRibbonGroupButton4,
+            this.kryptonRibbonGroupButton9,
+            this.kryptonRibbonGroupButton10});
+            // 
+            // kryptonRibbonGroupButton4
+            // 
+            this.kryptonRibbonGroupButton4.ImageLarge = ((System.Drawing.Image)(resources.GetObject("kryptonRibbonGroupButton4.ImageLarge")));
+            this.kryptonRibbonGroupButton4.TextLine1 = "הוסף חבילת שמן";
+            this.kryptonRibbonGroupButton4.Click += new System.EventHandler(this.kryptonRibbonGroupButton4_Click);
+            // 
+            // kryptonRibbonGroupButton9
+            // 
+            this.kryptonRibbonGroupButton9.ImageLarge = ((System.Drawing.Image)(resources.GetObject("kryptonRibbonGroupButton9.ImageLarge")));
+            this.kryptonRibbonGroupButton9.TextLine1 = "עדכן חבילת שמן";
+            this.kryptonRibbonGroupButton9.Click += new System.EventHandler(this.kryptonRibbonGroupButton9_Click);
+            // 
+            // kryptonRibbonGroupButton10
+            // 
+            this.kryptonRibbonGroupButton10.ImageLarge = ((System.Drawing.Image)(resources.GetObject("kryptonRibbonGroupButton10.ImageLarge")));
+            this.kryptonRibbonGroupButton10.TextLine1 = "רשימת חבילות שמן";
+            this.kryptonRibbonGroupButton10.Click += new System.EventHandler(this.kryptonRibbonGroupButton10_Click);
+            // 
             // kryptonRibbonTab3
             // 
             this.kryptonRibbonTab3.Groups.AddRange(new Krypton.Ribbon.KryptonRibbonGroup[] {
@@ -248,7 +285,7 @@
             // 
             this.kryptonRibbonTab4.Groups.AddRange(new Krypton.Ribbon.KryptonRibbonGroup[] {
             this.kryptonRibbonGroup5});
-            this.kryptonRibbonTab4.Text = "ניהול חבילות";
+            this.kryptonRibbonTab4.Text = "ניהול סוגי חבילות";
             // 
             // kryptonRibbonGroup5
             // 
@@ -324,23 +361,7 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(800, 279);
             this.mainPanel.TabIndex = 1;
-            // 
-            // kryptonRibbonTab6
-            // 
-            this.kryptonRibbonTab6.Groups.AddRange(new Krypton.Ribbon.KryptonRibbonGroup[] {
-            this.kryptonRibbonGroup7});
-            // 
-            // kryptonRibbonGroup7
-            // 
-            this.kryptonRibbonGroup7.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupContainer[] {
-            this.kryptonRibbonGroupTriple7});
-            // 
-            // kryptonRibbonGroupTriple7
-            // 
-            this.kryptonRibbonGroupTriple7.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
-            this.kryptonRibbonGroupButton4,
-            this.kryptonRibbonGroupButton9,
-            this.kryptonRibbonGroupButton10});
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // mainWin
             // 
@@ -349,11 +370,15 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.kryptonRibbon1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "mainWin";
+            this.RightToLeftLayout = true;
+            this.ShowIcon = false;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.mainWin_Load);
+            this.VisibleChanged += new System.EventHandler(this.mainWin_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

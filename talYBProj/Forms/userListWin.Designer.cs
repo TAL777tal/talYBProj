@@ -49,19 +49,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGrdView1.AutoGenerateColumns = false;
             this.dataGrdView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGrdView1.BackgroundColor = System.Drawing.Color.DarkGoldenrod;
             this.dataGrdView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrdView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fullNameDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn,
             this.cellPhoneDataGridViewTextBoxColumn});
             this.dataGrdView1.DataSource = this.userTBLBindingSource1;
-            this.dataGrdView1.Location = new System.Drawing.Point(1, 12);
+            this.dataGrdView1.Location = new System.Drawing.Point(13, 34);
+            this.dataGrdView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGrdView1.Name = "dataGrdView1";
             this.dataGrdView1.ReadOnly = true;
             this.dataGrdView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGrdView1.RowHeadersVisible = false;
             this.dataGrdView1.RowHeadersWidth = 51;
-            this.dataGrdView1.Size = new System.Drawing.Size(775, 383);
+            this.dataGrdView1.Size = new System.Drawing.Size(1033, 471);
             this.dataGrdView1.TabIndex = 0;
             this.dataGrdView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -99,11 +101,13 @@
             // 
             // userListWin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.dataGrdView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "userListWin";
             this.Text = "userListWin";
             this.Load += new System.EventHandler(this.userListWin_Load);

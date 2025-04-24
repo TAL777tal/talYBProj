@@ -110,5 +110,10 @@ namespace talYBProj.Forms
         {
 
         }
+
+        private void kryptonLabel8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

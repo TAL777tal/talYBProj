@@ -58,20 +58,22 @@
             // 
             // apdateButton
             // 
-            this.apdateButton.Location = new System.Drawing.Point(576, 609);
+            this.apdateButton.Location = new System.Drawing.Point(510, 445);
             this.apdateButton.Margin = new System.Windows.Forms.Padding(4);
             this.apdateButton.Name = "apdateButton";
-            this.apdateButton.Size = new System.Drawing.Size(140, 41);
+            this.apdateButton.Size = new System.Drawing.Size(207, 59);
+            this.apdateButton.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.apdateButton.TabIndex = 16;
             this.apdateButton.Values.Text = "עדכן";
             this.apdateButton.Click += new System.EventHandler(this.apdateButton_Click);
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(695, 75);
+            this.kryptonLabel4.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.kryptonLabel4.Location = new System.Drawing.Point(558, 33);
             this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(112, 24);
+            this.kryptonLabel4.Size = new System.Drawing.Size(119, 24);
             this.kryptonLabel4.TabIndex = 12;
             this.kryptonLabel4.Values.Text = "עדכן סוג חבילה";
             // 
@@ -80,7 +82,7 @@
             this.choseCBX.DataSource = this.packTBLBindingSource;
             this.choseCBX.DisplayMember = "packName";
             this.choseCBX.FormattingEnabled = true;
-            this.choseCBX.Location = new System.Drawing.Point(469, 79);
+            this.choseCBX.Location = new System.Drawing.Point(530, 78);
             this.choseCBX.Margin = new System.Windows.Forms.Padding(4);
             this.choseCBX.Name = "choseCBX";
             this.choseCBX.Size = new System.Drawing.Size(160, 24);
@@ -110,7 +112,7 @@
             // 
             // notesTBX
             // 
-            this.notesTBX.Location = new System.Drawing.Point(707, 295);
+            this.notesTBX.Location = new System.Drawing.Point(706, 283);
             this.notesTBX.Margin = new System.Windows.Forms.Padding(4);
             this.notesTBX.Name = "notesTBX";
             this.notesTBX.Size = new System.Drawing.Size(215, 128);
@@ -119,34 +121,37 @@
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(991, 295);
+            this.kryptonLabel3.Location = new System.Drawing.Point(987, 283);
             this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(55, 24);
+            this.kryptonLabel3.Size = new System.Drawing.Size(47, 19);
+            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.kryptonLabel3.TabIndex = 21;
             this.kryptonLabel3.Values.Text = "הערות";
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(991, 154);
+            this.kryptonLabel1.Location = new System.Drawing.Point(991, 145);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(53, 24);
+            this.kryptonLabel1.Size = new System.Drawing.Size(43, 19);
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.kryptonLabel1.TabIndex = 20;
             this.kryptonLabel1.Values.Text = "משקל";
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(991, 225);
+            this.kryptonLabel2.Location = new System.Drawing.Point(1006, 190);
             this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(34, 24);
+            this.kryptonLabel2.Size = new System.Drawing.Size(28, 19);
+            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.kryptonLabel2.TabIndex = 31;
             this.kryptonLabel2.Values.Text = "שם";
             // 
             // nameTBX
             // 
-            this.nameTBX.Location = new System.Drawing.Point(760, 222);
+            this.nameTBX.Location = new System.Drawing.Point(760, 190);
             this.nameTBX.Margin = new System.Windows.Forms.Padding(4);
             this.nameTBX.Name = "nameTBX";
             this.nameTBX.Size = new System.Drawing.Size(161, 27);
@@ -159,7 +164,7 @@
             0,
             0,
             0});
-            this.CBXweight.Location = new System.Drawing.Point(761, 154);
+            this.CBXweight.Location = new System.Drawing.Point(761, 145);
             this.CBXweight.Margin = new System.Windows.Forms.Padding(4);
             this.CBXweight.Maximum = new decimal(new int[] {
             100,
@@ -190,7 +195,7 @@
             // 
             // MTBprice
             // 
-            this.MTBprice.Location = new System.Drawing.Point(790, 265);
+            this.MTBprice.Location = new System.Drawing.Point(789, 235);
             this.MTBprice.Margin = new System.Windows.Forms.Padding(4);
             this.MTBprice.Mask = "00000.00";
             this.MTBprice.Name = "MTBprice";
@@ -200,10 +205,11 @@
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(991, 263);
+            this.kryptonLabel5.Location = new System.Drawing.Point(995, 235);
             this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(45, 24);
+            this.kryptonLabel5.Size = new System.Drawing.Size(39, 19);
+            this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.kryptonLabel5.TabIndex = 38;
             this.kryptonLabel5.Values.Text = "מחיר";
             // 
@@ -211,7 +217,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1206, 678);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(1206, 554);
             this.Controls.Add(this.MTBprice);
             this.Controls.Add(this.kryptonLabel5);
             this.Controls.Add(this.CBXweight);

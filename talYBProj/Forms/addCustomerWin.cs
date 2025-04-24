@@ -81,5 +81,10 @@ namespace talYBProj.Forms
         {
 
         }
+
+        private void kryptonLabel1_BackgroundImageChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

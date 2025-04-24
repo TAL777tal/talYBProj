@@ -63,6 +63,26 @@ namespace talYBProj.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ביתבד1 {
+            get {
+                object obj = ResourceManager.GetObject("ביתבד1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ביתבד11 {
+            get {
+                object obj = ResourceManager.GetObject("ביתבד11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap תמונה_של_זית {
             get {
                 object obj = ResourceManager.GetObject("תמונה של זית", resourceCulture);

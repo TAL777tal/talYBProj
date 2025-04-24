@@ -60,7 +60,7 @@
             this.cbxOrderId.DisplayMember = "Id";
             this.cbxOrderId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxOrderId.FormattingEnabled = true;
-            this.cbxOrderId.Location = new System.Drawing.Point(668, 39);
+            this.cbxOrderId.Location = new System.Drawing.Point(742, 39);
             this.cbxOrderId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxOrderId.Name = "cbxOrderId";
             this.cbxOrderId.Size = new System.Drawing.Size(121, 24);
@@ -73,10 +73,11 @@
             // 
             // LabelOrderId
             // 
-            this.LabelOrderId.Location = new System.Drawing.Point(839, 36);
+            this.LabelOrderId.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.LabelOrderId.Location = new System.Drawing.Point(923, 39);
             this.LabelOrderId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LabelOrderId.Name = "LabelOrderId";
-            this.LabelOrderId.Size = new System.Drawing.Size(108, 24);
+            this.LabelOrderId.Size = new System.Drawing.Size(112, 24);
             this.LabelOrderId.TabIndex = 18;
             this.LabelOrderId.Values.Text = "מספר ההזמנה";
             // 
@@ -86,6 +87,7 @@
             this.dgvOlives.AllowUserToDeleteRows = false;
             this.dgvOlives.AutoGenerateColumns = false;
             this.dgvOlives.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOlives.BackgroundColor = System.Drawing.Color.Teal;
             this.dgvOlives.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOlives.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dolevNumDataGridViewTextBoxColumn,
@@ -95,7 +97,7 @@
             this.notesDataGridViewTextBoxColumn});
             this.dgvOlives.DataSource = this.oliveTBLBindingSource;
             this.dgvOlives.Location = new System.Drawing.Point(164, 84);
-            this.dgvOlives.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvOlives.Margin = new System.Windows.Forms.Padding(4);
             this.dgvOlives.Name = "dgvOlives";
             this.dgvOlives.ReadOnly = true;
             this.dgvOlives.RowHeadersVisible = false;
@@ -152,7 +154,7 @@
             // 
             this.cbxOlives.FormattingEnabled = true;
             this.cbxOlives.Location = new System.Drawing.Point(481, 142);
-            this.cbxOlives.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxOlives.Margin = new System.Windows.Forms.Padding(4);
             this.cbxOlives.Name = "cbxOlives";
             this.cbxOlives.Size = new System.Drawing.Size(160, 24);
             this.cbxOlives.TabIndex = 27;
@@ -161,27 +163,32 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(496, 402);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.BackColor = System.Drawing.Color.Coral;
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btnUpdate.Location = new System.Drawing.Point(440, 416);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(145, 43);
+            this.btnUpdate.Size = new System.Drawing.Size(230, 71);
             this.btnUpdate.TabIndex = 29;
             this.btnUpdate.Text = "עדכן משקל";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // nupEditDolev
             // 
-            this.nupEditDolev.Location = new System.Drawing.Point(481, 331);
-            this.nupEditDolev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nupEditDolev.BackColor = System.Drawing.Color.White;
+            this.nupEditDolev.ForeColor = System.Drawing.Color.Red;
+            this.nupEditDolev.Location = new System.Drawing.Point(496, 334);
+            this.nupEditDolev.Margin = new System.Windows.Forms.Padding(4);
             this.nupEditDolev.Maximum = new decimal(new int[] {
             1000,
             0,
             0,
             0});
             this.nupEditDolev.Name = "nupEditDolev";
-            this.nupEditDolev.Size = new System.Drawing.Size(160, 22);
+            this.nupEditDolev.Size = new System.Drawing.Size(122, 22);
             this.nupEditDolev.TabIndex = 30;
+            this.nupEditDolev.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nupEditDolev.Value = new decimal(new int[] {
             40,
             0,
@@ -192,6 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Info;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.nupEditDolev);
             this.Controls.Add(this.btnUpdate);
@@ -199,8 +207,9 @@
             this.Controls.Add(this.dgvOlives);
             this.Controls.Add(this.cbxOrderId);
             this.Controls.Add(this.LabelOrderId);
+            this.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "editDolevWin";
             this.Text = "editDolev";
             this.Load += new System.EventHandler(this.editDolevWin_Load);

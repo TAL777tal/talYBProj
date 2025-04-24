@@ -92,5 +92,10 @@ namespace talYBProj.Forms
         {
 
         }
+
+        private void lblTotalDolevim_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -41,35 +41,38 @@
             // 
             // nameLabel
             // 
-            this.nameLabel.Location = new System.Drawing.Point(832, 106);
-            this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nameLabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.nameLabel.Location = new System.Drawing.Point(823, 106);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(4);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(58, 24);
+            this.nameLabel.Size = new System.Drawing.Size(60, 24);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Values.Text = "שם הזן";
             // 
             // descriptionLabel
             // 
+            this.descriptionLabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
             this.descriptionLabel.Location = new System.Drawing.Point(832, 185);
-            this.descriptionLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descriptionLabel.Margin = new System.Windows.Forms.Padding(4);
             this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(49, 24);
+            this.descriptionLabel.Size = new System.Drawing.Size(53, 24);
             this.descriptionLabel.TabIndex = 1;
             this.descriptionLabel.Values.Text = "תיאור";
             // 
             // PresentLabel
             // 
-            this.PresentLabel.Location = new System.Drawing.Point(459, 36);
-            this.PresentLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PresentLabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldPanel;
+            this.PresentLabel.Location = new System.Drawing.Point(507, 29);
+            this.PresentLabel.Margin = new System.Windows.Forms.Padding(4);
             this.PresentLabel.Name = "PresentLabel";
-            this.PresentLabel.Size = new System.Drawing.Size(60, 24);
+            this.PresentLabel.Size = new System.Drawing.Size(63, 24);
             this.PresentLabel.TabIndex = 2;
             this.PresentLabel.Values.Text = "הוסף זן";
             // 
             // tbxZan
             // 
             this.tbxZan.Location = new System.Drawing.Point(649, 106);
-            this.tbxZan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxZan.Margin = new System.Windows.Forms.Padding(4);
             this.tbxZan.Name = "tbxZan";
             this.tbxZan.Size = new System.Drawing.Size(133, 27);
             this.tbxZan.TabIndex = 3;
@@ -77,7 +80,7 @@
             // tbxDes
             // 
             this.tbxDes.Location = new System.Drawing.Point(561, 185);
-            this.tbxDes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxDes.Margin = new System.Windows.Forms.Padding(4);
             this.tbxDes.Name = "tbxDes";
             this.tbxDes.Size = new System.Drawing.Size(221, 187);
             this.tbxDes.TabIndex = 4;
@@ -86,10 +89,11 @@
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(429, 436);
-            this.addBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addBtn.Location = new System.Drawing.Point(405, 436);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(4);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(164, 37);
+            this.addBtn.Size = new System.Drawing.Size(243, 58);
+            this.addBtn.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.addBtn.TabIndex = 5;
             this.addBtn.Values.Text = "הוסף";
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
@@ -102,6 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Sienna;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.tbxDes);
@@ -110,7 +115,7 @@
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.nameLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "addZanWin";
             this.Text = "addZanWin";
             this.Load += new System.EventHandler(this.addZanWin_Load);

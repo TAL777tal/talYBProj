@@ -42,42 +42,51 @@
             // 
             // apdateBtn
             // 
-            this.apdateBtn.Location = new System.Drawing.Point(322, 378);
+            this.apdateBtn.Location = new System.Drawing.Point(436, 459);
+            this.apdateBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.apdateBtn.Name = "apdateBtn";
-            this.apdateBtn.Size = new System.Drawing.Size(123, 30);
+            this.apdateBtn.Size = new System.Drawing.Size(192, 61);
+            this.apdateBtn.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.apdateBtn.TabIndex = 11;
             this.apdateBtn.Values.Text = "עדכן";
             this.apdateBtn.Click += new System.EventHandler(this.apdateBtn_Click);
             // 
             // tbxDes
             // 
-            this.tbxDes.Location = new System.Drawing.Point(434, 188);
+            this.tbxDes.Location = new System.Drawing.Point(579, 231);
+            this.tbxDes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbxDes.Name = "tbxDes";
-            this.tbxDes.Size = new System.Drawing.Size(166, 152);
+            this.tbxDes.Size = new System.Drawing.Size(221, 187);
             this.tbxDes.TabIndex = 10;
             this.tbxDes.Text = "";
             // 
             // PresentLabel
             // 
-            this.PresentLabel.Location = new System.Drawing.Point(352, 44);
+            this.PresentLabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.PresentLabel.Location = new System.Drawing.Point(478, 41);
+            this.PresentLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PresentLabel.Name = "PresentLabel";
-            this.PresentLabel.Size = new System.Drawing.Size(54, 24);
+            this.PresentLabel.Size = new System.Drawing.Size(58, 24);
             this.PresentLabel.TabIndex = 8;
             this.PresentLabel.Values.Text = "עדכן זן";
             // 
             // descriptionLabel
             // 
-            this.descriptionLabel.Location = new System.Drawing.Point(663, 188);
+            this.descriptionLabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.descriptionLabel.Location = new System.Drawing.Point(884, 231);
+            this.descriptionLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.descriptionLabel.Name = "descriptionLabel";
-            this.descriptionLabel.Size = new System.Drawing.Size(49, 24);
+            this.descriptionLabel.Size = new System.Drawing.Size(53, 24);
             this.descriptionLabel.TabIndex = 7;
             this.descriptionLabel.Values.Text = "תיאור";
             // 
             // nameLabel
             // 
-            this.nameLabel.Location = new System.Drawing.Point(663, 134);
+            this.nameLabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.nameLabel.Location = new System.Drawing.Point(875, 165);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(58, 24);
+            this.nameLabel.Size = new System.Drawing.Size(60, 24);
             this.nameLabel.TabIndex = 6;
             this.nameLabel.Values.Text = "שם הזן";
             // 
@@ -91,19 +100,21 @@
             this.cbxZanName.DisplayMember = "name";
             this.cbxZanName.DropDownWidth = 121;
             this.cbxZanName.IntegralHeight = false;
-            this.cbxZanName.Location = new System.Drawing.Point(479, 134);
+            this.cbxZanName.Location = new System.Drawing.Point(639, 163);
+            this.cbxZanName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxZanName.Name = "cbxZanName";
-            this.cbxZanName.Size = new System.Drawing.Size(121, 26);
+            this.cbxZanName.Size = new System.Drawing.Size(161, 26);
             this.cbxZanName.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.cbxZanName.TabIndex = 13;
             this.cbxZanName.SelectedIndexChanged += new System.EventHandler(this.cbxZanName_SelectedIndexChanged_1);
             // 
             // updateZanWin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Ivory;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.cbxZanName);
             this.Controls.Add(this.apdateBtn);
             this.Controls.Add(this.tbxDes);
@@ -111,6 +122,7 @@
             this.Controls.Add(this.descriptionLabel);
             this.Controls.Add(this.nameLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "updateZanWin";
             this.Text = "updateZanWin";
             this.Load += new System.EventHandler(this.updateZanWin_Load);

@@ -49,8 +49,8 @@
             // 
             // MTXphoneNumber
             // 
-            this.MTXphoneNumber.Location = new System.Drawing.Point(724, 383);
-            this.MTXphoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MTXphoneNumber.Location = new System.Drawing.Point(725, 383);
+            this.MTXphoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.MTXphoneNumber.Mask = "(999) 000-0000";
             this.MTXphoneNumber.Name = "MTXphoneNumber";
             this.MTXphoneNumber.Size = new System.Drawing.Size(132, 22);
@@ -59,7 +59,7 @@
             // TBXgmail
             // 
             this.TBXgmail.Location = new System.Drawing.Point(724, 310);
-            this.TBXgmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBXgmail.Margin = new System.Windows.Forms.Padding(4);
             this.TBXgmail.Name = "TBXgmail";
             this.TBXgmail.Size = new System.Drawing.Size(133, 27);
             this.TBXgmail.TabIndex = 19;
@@ -67,7 +67,7 @@
             // TBXlastName
             // 
             this.TBXlastName.Location = new System.Drawing.Point(724, 236);
-            this.TBXlastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBXlastName.Margin = new System.Windows.Forms.Padding(4);
             this.TBXlastName.Name = "TBXlastName";
             this.TBXlastName.Size = new System.Drawing.Size(133, 27);
             this.TBXlastName.TabIndex = 18;
@@ -75,63 +75,69 @@
             // TBXfirstName
             // 
             this.TBXfirstName.Location = new System.Drawing.Point(724, 171);
-            this.TBXfirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBXfirstName.Margin = new System.Windows.Forms.Padding(4);
             this.TBXfirstName.Name = "TBXfirstName";
             this.TBXfirstName.Size = new System.Drawing.Size(133, 27);
             this.TBXfirstName.TabIndex = 17;
             // 
             // addBTN
             // 
-            this.addBTN.Location = new System.Drawing.Point(493, 453);
-            this.addBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addBTN.Location = new System.Drawing.Point(475, 457);
+            this.addBTN.Margin = new System.Windows.Forms.Padding(4);
             this.addBTN.Name = "addBTN";
-            this.addBTN.Size = new System.Drawing.Size(120, 31);
+            this.addBTN.Size = new System.Drawing.Size(204, 53);
+            this.addBTN.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.addBTN.TabIndex = 16;
             this.addBTN.Values.Text = "עדכן";
             this.addBTN.Click += new System.EventHandler(this.addBTN_Click);
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(901, 383);
-            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel5.Location = new System.Drawing.Point(902, 383);
+            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(92, 24);
+            this.kryptonLabel5.Size = new System.Drawing.Size(78, 19);
+            this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.kryptonLabel5.TabIndex = 15;
             this.kryptonLabel5.Values.Text = "מספר טלפון";
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(924, 314);
-            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel4.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.kryptonLabel4.Location = new System.Drawing.Point(924, 294);
+            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(53, 24);
+            this.kryptonLabel4.Size = new System.Drawing.Size(56, 24);
             this.kryptonLabel4.TabIndex = 14;
             this.kryptonLabel4.Values.Text = "אימייל";
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(636, 90);
-            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel3.Location = new System.Drawing.Point(559, 49);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(101, 24);
+            this.kryptonLabel3.Size = new System.Drawing.Size(85, 19);
+            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.kryptonLabel3.TabIndex = 13;
             this.kryptonLabel3.Values.Text = "עדכן משתמש";
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(903, 236);
-            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel2.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.kryptonLabel2.Location = new System.Drawing.Point(886, 239);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(91, 24);
+            this.kryptonLabel2.Size = new System.Drawing.Size(94, 24);
             this.kryptonLabel2.TabIndex = 12;
             this.kryptonLabel2.Values.Text = "שם משפחה";
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(901, 171);
-            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel1.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.kryptonLabel1.Location = new System.Drawing.Point(906, 171);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(71, 24);
+            this.kryptonLabel1.Size = new System.Drawing.Size(74, 24);
             this.kryptonLabel1.TabIndex = 11;
             this.kryptonLabel1.Values.Text = "שם פרטי";
             // 
@@ -141,8 +147,8 @@
             this.chooseCBX.DisplayMember = "fullName";
             this.chooseCBX.DropDownWidth = 121;
             this.chooseCBX.IntegralHeight = false;
-            this.chooseCBX.Location = new System.Drawing.Point(452, 90);
-            this.chooseCBX.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chooseCBX.Location = new System.Drawing.Point(508, 94);
+            this.chooseCBX.Margin = new System.Windows.Forms.Padding(4);
             this.chooseCBX.Name = "chooseCBX";
             this.chooseCBX.Size = new System.Drawing.Size(161, 26);
             this.chooseCBX.StateCommon.ComboBox.Content.TextH = Krypton.Toolkit.PaletteRelativeAlign.Near;
@@ -161,6 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Violet;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.chooseCBX);
             this.Controls.Add(this.MTXphoneNumber);
@@ -174,7 +181,7 @@
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.kryptonLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "updateUserWin";
             this.Text = "apdateUserWin";
             this.Load += new System.EventHandler(this.apdateUserWin_Load);

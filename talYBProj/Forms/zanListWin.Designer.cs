@@ -46,18 +46,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtGridView1.AutoGenerateColumns = false;
             this.dtGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.dtGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nameDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn});
             this.dtGridView1.DataSource = this.zanTBLBindingSource;
-            this.dtGridView1.Location = new System.Drawing.Point(22, 19);
+            this.dtGridView1.Location = new System.Drawing.Point(38, 43);
+            this.dtGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtGridView1.Name = "dtGridView1";
             this.dtGridView1.ReadOnly = true;
             this.dtGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dtGridView1.RowHeadersVisible = false;
             this.dtGridView1.RowHeadersWidth = 51;
-            this.dtGridView1.Size = new System.Drawing.Size(726, 317);
+            this.dtGridView1.Size = new System.Drawing.Size(991, 443);
             this.dtGridView1.TabIndex = 0;
             this.dtGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -83,11 +85,13 @@
             // 
             // zanListWin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Green;
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.dtGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "zanListWin";
             this.Text = "zanListWin";
             this.Load += new System.EventHandler(this.zanListWin_Load);

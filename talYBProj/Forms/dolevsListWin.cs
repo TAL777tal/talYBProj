@@ -23,6 +23,8 @@ namespace talYBProj.Forms
         {
             list = DBhelper.oliveList;
             dataGridView1.DataSource = list;
+            dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+            dataGridView1.DefaultCellStyle.BackColor = Color.White;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

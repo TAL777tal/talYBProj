@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvOil = new System.Windows.Forms.DataGridView();
-            this.oilTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.orderIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +37,7 @@
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.currDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.oilTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.apdateQuantity = new Krypton.Toolkit.KryptonButton();
             this.kNUDquantity = new Krypton.Toolkit.KryptonNumericUpDown();
             this.orderLabel = new Krypton.Toolkit.KryptonLabel();
@@ -55,6 +55,7 @@
             this.dgvOil.AllowUserToDeleteRows = false;
             this.dgvOil.AutoGenerateColumns = false;
             this.dgvOil.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvOil.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvOil.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOil.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -65,6 +66,7 @@
             this.currDateDataGridViewTextBoxColumn,
             this.notesDataGridViewTextBoxColumn});
             this.dgvOil.DataSource = this.oilTBLBindingSource;
+            this.dgvOil.GridColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvOil.Location = new System.Drawing.Point(91, 79);
             this.dgvOil.Name = "dgvOil";
             this.dgvOil.ReadOnly = true;
@@ -72,10 +74,7 @@
             this.dgvOil.RowTemplate.Height = 24;
             this.dgvOil.Size = new System.Drawing.Size(612, 238);
             this.dgvOil.TabIndex = 0;
-            // 
-            // oilTBLBindingSource
-            // 
-            this.oilTBLBindingSource.DataSource = typeof(talYBProj.oilTBL);
+            this.dgvOil.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOil_CellContentClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -133,11 +132,17 @@
             this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
             this.notesDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // oilTBLBindingSource
+            // 
+            this.oilTBLBindingSource.DataSource = typeof(talYBProj.oilTBL);
+            // 
             // apdateQuantity
             // 
-            this.apdateQuantity.Location = new System.Drawing.Point(307, 422);
+            this.apdateQuantity.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.apdateQuantity.Location = new System.Drawing.Point(289, 422);
             this.apdateQuantity.Name = "apdateQuantity";
-            this.apdateQuantity.Size = new System.Drawing.Size(190, 41);
+            this.apdateQuantity.Size = new System.Drawing.Size(244, 46);
+            this.apdateQuantity.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.apdateQuantity.TabIndex = 1;
             this.apdateQuantity.Values.Text = "עדכן כמות";
             this.apdateQuantity.Click += new System.EventHandler(this.apdateQuantity_Click);
@@ -149,7 +154,7 @@
             0,
             0,
             0});
-            this.kNUDquantity.Location = new System.Drawing.Point(336, 368);
+            this.kNUDquantity.Location = new System.Drawing.Point(359, 357);
             this.kNUDquantity.Maximum = new decimal(new int[] {
             100,
             0,
@@ -171,9 +176,10 @@
             // 
             // orderLabel
             // 
-            this.orderLabel.Location = new System.Drawing.Point(594, 30);
+            this.orderLabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.orderLabel.Location = new System.Drawing.Point(605, 30);
             this.orderLabel.Name = "orderLabel";
-            this.orderLabel.Size = new System.Drawing.Size(98, 24);
+            this.orderLabel.Size = new System.Drawing.Size(101, 24);
             this.orderLabel.TabIndex = 3;
             this.orderLabel.Values.Text = "מספר הזמנה";
             // 
@@ -182,7 +188,7 @@
             this.cbxOrder.DataSource = this.orderTBLBindingSource;
             this.cbxOrder.DisplayMember = "Id";
             this.cbxOrder.FormattingEnabled = true;
-            this.cbxOrder.Location = new System.Drawing.Point(431, 30);
+            this.cbxOrder.Location = new System.Drawing.Point(445, 30);
             this.cbxOrder.Name = "cbxOrder";
             this.cbxOrder.Size = new System.Drawing.Size(121, 24);
             this.cbxOrder.TabIndex = 4;
@@ -206,6 +212,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Red;
+            this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(800, 574);
             this.Controls.Add(this.cbxOil);
             this.Controls.Add(this.cbxOrder);
@@ -213,6 +221,7 @@
             this.Controls.Add(this.kNUDquantity);
             this.Controls.Add(this.apdateQuantity);
             this.Controls.Add(this.dgvOil);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "updateOil";
             this.Text = "updateOil";
             this.Load += new System.EventHandler(this.updateOil_Load);

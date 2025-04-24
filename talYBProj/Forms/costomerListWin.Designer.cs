@@ -32,8 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvCust = new System.Windows.Forms.DataGridView();
-            this.costomerTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.costomerTBLBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,9 +41,11 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costomerTBLBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.costomerTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCust)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvCust
@@ -57,6 +57,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCust.AutoGenerateColumns = false;
             this.dgvCust.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCust.BackgroundColor = System.Drawing.Color.Red;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
@@ -77,8 +78,8 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11});
             this.dgvCust.DataSource = this.costomerTBLBindingSource1;
-            this.dgvCust.Location = new System.Drawing.Point(11, 38);
-            this.dgvCust.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCust.Location = new System.Drawing.Point(15, 47);
+            this.dgvCust.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvCust.Name = "dgvCust";
             this.dgvCust.ReadOnly = true;
             this.dgvCust.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -93,13 +94,9 @@
             this.dgvCust.RowHeadersVisible = false;
             this.dgvCust.RowHeadersWidth = 51;
             this.dgvCust.RowTemplate.Height = 24;
-            this.dgvCust.Size = new System.Drawing.Size(903, 457);
+            this.dgvCust.Size = new System.Drawing.Size(1204, 562);
             this.dgvCust.TabIndex = 0;
             this.dgvCust.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // costomerTBLBindingSource1
-            // 
-            this.costomerTBLBindingSource1.DataSource = typeof(talYBProj.costomerTBL);
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -173,20 +170,25 @@
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
+            // costomerTBLBindingSource1
+            // 
+            this.costomerTBLBindingSource1.DataSource = typeof(talYBProj.costomerTBL);
+            // 
             // costomerListWin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 506);
+            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.ClientSize = new System.Drawing.Size(1233, 623);
             this.Controls.Add(this.dgvCust);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "costomerListWin";
             this.Text = "costomerList";
             this.Load += new System.EventHandler(this.costomerList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCust)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -28,24 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.kryptonButton1 = new Krypton.Toolkit.KryptonButton();
+            this.btnGenerate = new Krypton.Toolkit.KryptonButton();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
-            // kryptonButton1
+            // btnGenerate
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(367, 12);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(90, 25);
-            this.kryptonButton1.TabIndex = 0;
-            this.kryptonButton1.Values.Text = "ייצר דוח";
-            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
+            this.btnGenerate.Location = new System.Drawing.Point(367, 12);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(90, 25);
+            this.btnGenerate.TabIndex = 0;
+            this.btnGenerate.Values.Text = "ייצר דוח";
+            this.btnGenerate.Click += new System.EventHandler(this.kryptonButton1_Click);
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(101, 84);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(628, 309);
+            this.reportViewer1.TabIndex = 1;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // orderReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 492);
-            this.Controls.Add(this.kryptonButton1);
+            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.btnGenerate);
             this.Name = "orderReport";
             this.Text = "orderReport";
             this.Load += new System.EventHandler(this.orderReport_Load);
@@ -55,6 +66,7 @@
 
         #endregion
 
-        private Krypton.Toolkit.KryptonButton kryptonButton1;
+        private Krypton.Toolkit.KryptonButton btnGenerate;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

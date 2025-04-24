@@ -17,7 +17,7 @@ namespace talYBProj
         Form current;
         public mainWin()
         {
-            InitializeComponent();
+            InitializeComponent();           
         }
 
 
@@ -26,6 +26,12 @@ namespace talYBProj
         {
             current = null;
             DBhelper.init();
+            current = new addOil();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
         }
 
         private void btnOpenCustWin_Click(object sender, EventArgs e)
@@ -350,6 +356,75 @@ namespace talYBProj
             current.TopMost = true;
             mainPanel.Controls.Add(current);
             current.Show();
+        }
+
+        private void kryptonRibbonGroupButton4_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is addOil)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new addOil();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
+
+        private void kryptonRibbonGroupButton9_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is updateOil)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new updateOil();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
+
+        private void kryptonRibbonGroupButton10_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is oilList)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new oilList();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
+
+        private void mainWin_VisibleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void kryptonRibbon1_SelectedTabChanged(object sender, EventArgs e)
+        {
+
         }
     }
     

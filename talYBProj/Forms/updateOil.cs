@@ -16,7 +16,7 @@ namespace talYBProj.Forms
         List<packTBL> packList;
         List<userTBL> userList;
         List<orderTBL> orderList;
-        List<oilTBL> olives;
+        List<oilTBL> oils;
         public updateOil()
         {
             InitializeComponent();
@@ -24,7 +24,18 @@ namespace talYBProj.Forms
 
         private void cbxOrder_SelectedIndexChanged(object sender, EventArgs e)
         {
+            orderTBL selectedOrder = (orderTBL)cbxOrder.SelectedItem;
+            if (selectedOrder == null)
+            {
+                oils = new List<oilTBL>();
 
+            }
+            else
+            {
+                oils = DBhelper.oilList.Where(x => x.orderID == selectedOrder.Id).ToList();
+
+            }
+            updateDGV();
         }
 
         private void updateOil_Load(object sender, EventArgs e)
@@ -34,7 +45,7 @@ namespace talYBProj.Forms
         }
         private void updateDGV()
         {
-            dgvOil.DataSource = cbxOil.DataSource = olives;
+            dgvOil.DataSource = cbxOil.DataSource = oils;
         }
 
         private void cbxOil_SelectedIndexChanged(object sender, EventArgs e)
@@ -65,6 +76,11 @@ namespace talYBProj.Forms
             {
                 MessageBox.Show("Error");
             }
+        }
+
+        private void dgvOil_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

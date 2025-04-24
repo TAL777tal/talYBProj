@@ -45,55 +45,61 @@
             // 
             // kryptonLabel1
             // 
-            this.kryptonLabel1.Location = new System.Drawing.Point(876, 101);
-            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel1.Location = new System.Drawing.Point(885, 101);
+            this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(71, 24);
+            this.kryptonLabel1.Size = new System.Drawing.Size(59, 19);
+            this.kryptonLabel1.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "שם פרטי";
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(855, 165);
-            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel2.Location = new System.Drawing.Point(870, 169);
+            this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(91, 24);
+            this.kryptonLabel2.Size = new System.Drawing.Size(74, 19);
+            this.kryptonLabel2.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.kryptonLabel2.TabIndex = 1;
             this.kryptonLabel2.Values.Text = "שם משפחה";
             // 
             // kryptonLabel3
             // 
-            this.kryptonLabel3.Location = new System.Drawing.Point(499, 50);
-            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel3.Location = new System.Drawing.Point(513, 44);
+            this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel3.Name = "kryptonLabel3";
-            this.kryptonLabel3.Size = new System.Drawing.Size(106, 24);
+            this.kryptonLabel3.Size = new System.Drawing.Size(87, 19);
+            this.kryptonLabel3.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.kryptonLabel3.TabIndex = 2;
             this.kryptonLabel3.Values.Text = "הוסף משתמש";
             // 
             // kryptonLabel4
             // 
-            this.kryptonLabel4.Location = new System.Drawing.Point(896, 239);
-            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel4.Location = new System.Drawing.Point(896, 222);
+            this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel4.Name = "kryptonLabel4";
-            this.kryptonLabel4.Size = new System.Drawing.Size(53, 24);
+            this.kryptonLabel4.Size = new System.Drawing.Size(48, 19);
+            this.kryptonLabel4.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.kryptonLabel4.TabIndex = 3;
             this.kryptonLabel4.Values.Text = "אימייל";
             // 
             // kryptonLabel5
             // 
-            this.kryptonLabel5.Location = new System.Drawing.Point(853, 310);
-            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kryptonLabel5.Location = new System.Drawing.Point(866, 292);
+            this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.kryptonLabel5.Name = "kryptonLabel5";
-            this.kryptonLabel5.Size = new System.Drawing.Size(92, 24);
+            this.kryptonLabel5.Size = new System.Drawing.Size(78, 19);
+            this.kryptonLabel5.StateCommon.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.kryptonLabel5.TabIndex = 4;
             this.kryptonLabel5.Values.Text = "מספר טלפון";
             // 
             // addBTN
             // 
-            this.addBTN.Location = new System.Drawing.Point(499, 425);
-            this.addBTN.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addBTN.Location = new System.Drawing.Point(478, 420);
+            this.addBTN.Margin = new System.Windows.Forms.Padding(4);
             this.addBTN.Name = "addBTN";
-            this.addBTN.Size = new System.Drawing.Size(120, 31);
+            this.addBTN.Size = new System.Drawing.Size(159, 61);
+            this.addBTN.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.addBTN.TabIndex = 5;
             this.addBTN.Values.Text = "הוספה";
             this.addBTN.Click += new System.EventHandler(this.addBTN_Click);
@@ -101,7 +107,7 @@
             // TBXfirstName
             // 
             this.TBXfirstName.Location = new System.Drawing.Point(697, 101);
-            this.TBXfirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBXfirstName.Margin = new System.Windows.Forms.Padding(4);
             this.TBXfirstName.Name = "TBXfirstName";
             this.TBXfirstName.Size = new System.Drawing.Size(133, 27);
             this.TBXfirstName.TabIndex = 6;
@@ -109,23 +115,23 @@
             // TBXlastName
             // 
             this.TBXlastName.Location = new System.Drawing.Point(697, 161);
-            this.TBXlastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBXlastName.Margin = new System.Windows.Forms.Padding(4);
             this.TBXlastName.Name = "TBXlastName";
             this.TBXlastName.Size = new System.Drawing.Size(133, 27);
             this.TBXlastName.TabIndex = 7;
             // 
             // TBXgmail
             // 
-            this.TBXgmail.Location = new System.Drawing.Point(697, 239);
-            this.TBXgmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TBXgmail.Location = new System.Drawing.Point(697, 222);
+            this.TBXgmail.Margin = new System.Windows.Forms.Padding(4);
             this.TBXgmail.Name = "TBXgmail";
             this.TBXgmail.Size = new System.Drawing.Size(133, 27);
             this.TBXgmail.TabIndex = 8;
             // 
             // MTXphoneNumber
             // 
-            this.MTXphoneNumber.Location = new System.Drawing.Point(697, 310);
-            this.MTXphoneNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MTXphoneNumber.Location = new System.Drawing.Point(698, 289);
+            this.MTXphoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.MTXphoneNumber.Mask = "(999) 000-0000";
             this.MTXphoneNumber.Name = "MTXphoneNumber";
             this.MTXphoneNumber.Size = new System.Drawing.Size(132, 22);
@@ -139,6 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.MTXphoneNumber);
             this.Controls.Add(this.TBXgmail);
@@ -151,7 +158,7 @@
             this.Controls.Add(this.kryptonLabel2);
             this.Controls.Add(this.kryptonLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "addUserWin";
             this.Text = "addUserWin";
             this.Load += new System.EventHandler(this.addUserWin_Load);

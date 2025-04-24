@@ -53,56 +53,62 @@
             // 
             // LabelOrderId
             // 
+            this.LabelOrderId.LabelStyle = Krypton.Toolkit.LabelStyle.BoldPanel;
             this.LabelOrderId.Location = new System.Drawing.Point(624, 28);
             this.LabelOrderId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LabelOrderId.Name = "LabelOrderId";
-            this.LabelOrderId.Size = new System.Drawing.Size(108, 24);
+            this.LabelOrderId.Size = new System.Drawing.Size(112, 24);
             this.LabelOrderId.TabIndex = 0;
             this.LabelOrderId.Values.Text = "מספר ההזמנה";
             // 
             // LabelDolevNum
             // 
-            this.LabelDolevNum.Location = new System.Drawing.Point(624, 81);
+            this.LabelDolevNum.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.LabelDolevNum.Location = new System.Drawing.Point(637, 76);
             this.LabelDolevNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LabelDolevNum.Name = "LabelDolevNum";
-            this.LabelDolevNum.Size = new System.Drawing.Size(94, 24);
+            this.LabelDolevNum.Size = new System.Drawing.Size(99, 24);
             this.LabelDolevNum.TabIndex = 2;
             this.LabelDolevNum.Values.Text = "מספר הדולב";
             // 
             // LabelCurDate
             // 
-            this.LabelCurDate.Location = new System.Drawing.Point(620, 126);
+            this.LabelCurDate.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.LabelCurDate.Location = new System.Drawing.Point(618, 124);
             this.LabelCurDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LabelCurDate.Name = "LabelCurDate";
-            this.LabelCurDate.Size = new System.Drawing.Size(112, 24);
+            this.LabelCurDate.Size = new System.Drawing.Size(118, 24);
             this.LabelCurDate.TabIndex = 3;
             this.LabelCurDate.Values.Text = "התאריך הנוכחי";
             this.LabelCurDate.Click += new System.EventHandler(this.kryptonLabel4_Click);
             // 
             // LabelBruto
             // 
-            this.LabelBruto.Location = new System.Drawing.Point(624, 175);
+            this.LabelBruto.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.LabelBruto.Location = new System.Drawing.Point(641, 171);
             this.LabelBruto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LabelBruto.Name = "LabelBruto";
-            this.LabelBruto.Size = new System.Drawing.Size(95, 24);
+            this.LabelBruto.Size = new System.Drawing.Size(99, 24);
             this.LabelBruto.TabIndex = 4;
             this.LabelBruto.Values.Text = "משקל-ברוטו";
             // 
             // LabelNotes
             // 
-            this.LabelNotes.Location = new System.Drawing.Point(624, 299);
+            this.LabelNotes.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.LabelNotes.Location = new System.Drawing.Point(681, 270);
             this.LabelNotes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LabelNotes.Name = "LabelNotes";
-            this.LabelNotes.Size = new System.Drawing.Size(55, 24);
+            this.LabelNotes.Size = new System.Drawing.Size(57, 24);
             this.LabelNotes.TabIndex = 6;
             this.LabelNotes.Values.Text = "הערות";
             // 
             // LabelUserName
             // 
-            this.LabelUserName.Location = new System.Drawing.Point(624, 241);
+            this.LabelUserName.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.LabelUserName.Location = new System.Drawing.Point(629, 217);
             this.LabelUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LabelUserName.Name = "LabelUserName";
-            this.LabelUserName.Size = new System.Drawing.Size(105, 24);
+            this.LabelUserName.Size = new System.Drawing.Size(107, 24);
             this.LabelUserName.TabIndex = 7;
             this.LabelUserName.Values.Text = "שם המשתמש";
             // 
@@ -128,7 +134,7 @@
             this.cbxUserName.DataSource = this.userTBLBindingSource;
             this.cbxUserName.DisplayMember = "fullName";
             this.cbxUserName.FormattingEnabled = true;
-            this.cbxUserName.Location = new System.Drawing.Point(440, 241);
+            this.cbxUserName.Location = new System.Drawing.Point(440, 217);
             this.cbxUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxUserName.Name = "cbxUserName";
             this.cbxUserName.Size = new System.Drawing.Size(121, 24);
@@ -140,7 +146,7 @@
             // 
             // numericUpDownBruto
             // 
-            this.numericUpDownBruto.Location = new System.Drawing.Point(445, 175);
+            this.numericUpDownBruto.Location = new System.Drawing.Point(441, 173);
             this.numericUpDownBruto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDownBruto.Maximum = new decimal(new int[] {
             400,
@@ -165,7 +171,7 @@
             // 
             // txbNotes
             // 
-            this.txbNotes.Location = new System.Drawing.Point(364, 299);
+            this.txbNotes.Location = new System.Drawing.Point(357, 270);
             this.txbNotes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txbNotes.Name = "txbNotes";
             this.txbNotes.Size = new System.Drawing.Size(204, 114);
@@ -174,7 +180,7 @@
             // 
             // dateTimeP
             // 
-            this.dateTimeP.Location = new System.Drawing.Point(364, 126);
+            this.dateTimeP.Location = new System.Drawing.Point(361, 124);
             this.dateTimeP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimeP.Name = "dateTimeP";
             this.dateTimeP.Size = new System.Drawing.Size(200, 22);
@@ -182,17 +188,18 @@
             // 
             // btnAddDolev
             // 
-            this.btnAddDolev.Location = new System.Drawing.Point(297, 454);
+            this.btnAddDolev.Location = new System.Drawing.Point(325, 411);
             this.btnAddDolev.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddDolev.Name = "btnAddDolev";
-            this.btnAddDolev.Size = new System.Drawing.Size(120, 31);
+            this.btnAddDolev.Size = new System.Drawing.Size(161, 52);
+            this.btnAddDolev.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnAddDolev.TabIndex = 17;
             this.btnAddDolev.Values.Text = "עצב דולב";
             this.btnAddDolev.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // dolevNum
             // 
-            this.dolevNum.Location = new System.Drawing.Point(440, 85);
+            this.dolevNum.Location = new System.Drawing.Point(438, 76);
             this.dolevNum.Margin = new System.Windows.Forms.Padding(4);
             this.dolevNum.Name = "dolevNum";
             this.dolevNum.ReadOnly = true;
@@ -202,15 +209,17 @@
             // 
             // lblTotalDolevim
             // 
-            this.lblTotalDolevim.Location = new System.Drawing.Point(121, 30);
+            this.lblTotalDolevim.Location = new System.Drawing.Point(131, 30);
             this.lblTotalDolevim.Name = "lblTotalDolevim";
-            this.lblTotalDolevim.Size = new System.Drawing.Size(197, 22);
+            this.lblTotalDolevim.Size = new System.Drawing.Size(203, 22);
             this.lblTotalDolevim.TabIndex = 19;
+            this.lblTotalDolevim.TextChanged += new System.EventHandler(this.lblTotalDolevim_TextChanged);
             // 
             // updateDolevWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(789, 500);
             this.Controls.Add(this.lblTotalDolevim);
             this.Controls.Add(this.dolevNum);

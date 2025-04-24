@@ -37,9 +37,17 @@ namespace talYBProj.Forms
                 return;
             }
             bool isValidPackName = Utils.validateName(nameTBX.Text.Trim(), nameTBX.TextBox, ep2 , "השם לא תקין");
-            if (isValidPackName) { 
+            if (MTBprice.Text.Trim().Length != 8)
+            {
+                ep2.SetError(MTBprice, "error");
+            }
+            else
+            {
+                ep2.SetError(MTBprice, "");
+            }
+            if (isValidPackName && MTBprice.Text.Trim().Length == 8) { 
                 int idx = choseCBX.SelectedIndex;
-            toUpdate.weight = (int)CBXweight.Value;
+            toUpdate.weight = (int)CBXweight.Value;            
             toUpdate.price = Convert.ToDouble(MTBprice.Text.Trim());
             toUpdate.packName = nameTBX.Text;
             toUpdate.notes = notesTBX.Text.Trim();
@@ -63,7 +71,7 @@ namespace talYBProj.Forms
                 return;
             }
             int idx = choseCBX.SelectedIndex;
-
+            MTBprice.Text = Convert.ToString(selected.price);
             CBXweight.Value = selected.weight;
             nameTBX.Text = selected.packName;
             if (selected.notes != null)

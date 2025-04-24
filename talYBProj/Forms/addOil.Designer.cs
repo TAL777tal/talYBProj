@@ -37,15 +37,15 @@
             this.notesLabel = new Krypton.Toolkit.KryptonLabel();
             this.rTBXpackDes = new Krypton.Toolkit.KryptonRichTextBox();
             this.orderCBX = new System.Windows.Forms.ComboBox();
+            this.orderTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userCBX = new System.Windows.Forms.ComboBox();
+            this.userTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.packCBX = new System.Windows.Forms.ComboBox();
+            this.packTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.NUPquantity = new Krypton.Toolkit.KryptonNumericUpDown();
             this.DTPdate = new Krypton.Toolkit.KryptonDateTimePicker();
             this.rTBXnotes = new Krypton.Toolkit.KryptonRichTextBox();
             this.addBTN = new Krypton.Toolkit.KryptonButton();
-            this.orderTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.packTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.orderTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.packTBLBindingSource)).BeginInit();
@@ -53,55 +53,61 @@
             // 
             // orderIDlabel
             // 
-            this.orderIDlabel.Location = new System.Drawing.Point(656, 12);
+            this.orderIDlabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.orderIDlabel.Location = new System.Drawing.Point(702, 12);
             this.orderIDlabel.Name = "orderIDlabel";
-            this.orderIDlabel.Size = new System.Drawing.Size(65, 24);
+            this.orderIDlabel.Size = new System.Drawing.Size(66, 24);
             this.orderIDlabel.TabIndex = 0;
             this.orderIDlabel.Values.Text = "ההזמנה";
             // 
             // userIDlabel
             // 
-            this.userIDlabel.Location = new System.Drawing.Point(656, 59);
+            this.userIDlabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.userIDlabel.Location = new System.Drawing.Point(709, 59);
             this.userIDlabel.Name = "userIDlabel";
-            this.userIDlabel.Size = new System.Drawing.Size(52, 24);
+            this.userIDlabel.Size = new System.Drawing.Size(54, 24);
             this.userIDlabel.TabIndex = 1;
             this.userIDlabel.Values.Text = "העובד";
             // 
             // packLabel
             // 
+            this.packLabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
             this.packLabel.Location = new System.Drawing.Point(656, 102);
             this.packLabel.Name = "packLabel";
-            this.packLabel.Size = new System.Drawing.Size(109, 24);
+            this.packLabel.Size = new System.Drawing.Size(113, 24);
             this.packLabel.TabIndex = 2;
             this.packLabel.Values.Text = "משקל החבילה";
             // 
             // quantityLabel
             // 
+            this.quantityLabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
             this.quantityLabel.Location = new System.Drawing.Point(656, 222);
             this.quantityLabel.Name = "quantityLabel";
-            this.quantityLabel.Size = new System.Drawing.Size(111, 24);
+            this.quantityLabel.Size = new System.Drawing.Size(116, 24);
             this.quantityLabel.TabIndex = 3;
             this.quantityLabel.Values.Text = "כמויות החבילה";
             // 
             // currDateLabel
             // 
-            this.currDateLabel.Location = new System.Drawing.Point(656, 267);
+            this.currDateLabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.currDateLabel.Location = new System.Drawing.Point(656, 266);
             this.currDateLabel.Name = "currDateLabel";
-            this.currDateLabel.Size = new System.Drawing.Size(107, 24);
+            this.currDateLabel.Size = new System.Drawing.Size(113, 24);
             this.currDateLabel.TabIndex = 4;
             this.currDateLabel.Values.Text = "התאריך עכשיו";
             // 
             // notesLabel
             // 
-            this.notesLabel.Location = new System.Drawing.Point(656, 308);
+            this.notesLabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.notesLabel.Location = new System.Drawing.Point(708, 323);
             this.notesLabel.Name = "notesLabel";
-            this.notesLabel.Size = new System.Drawing.Size(55, 24);
+            this.notesLabel.Size = new System.Drawing.Size(57, 24);
             this.notesLabel.TabIndex = 5;
             this.notesLabel.Values.Text = "הערות";
             // 
             // rTBXpackDes
             // 
-            this.rTBXpackDes.Location = new System.Drawing.Point(126, 102);
+            this.rTBXpackDes.Location = new System.Drawing.Point(167, 102);
             this.rTBXpackDes.Name = "rTBXpackDes";
             this.rTBXpackDes.Size = new System.Drawing.Size(307, 115);
             this.rTBXpackDes.TabIndex = 6;
@@ -113,10 +119,14 @@
             this.orderCBX.DataSource = this.orderTBLBindingSource;
             this.orderCBX.DisplayMember = "Id";
             this.orderCBX.FormattingEnabled = true;
-            this.orderCBX.Location = new System.Drawing.Point(508, 12);
+            this.orderCBX.Location = new System.Drawing.Point(509, 12);
             this.orderCBX.Name = "orderCBX";
             this.orderCBX.Size = new System.Drawing.Size(121, 24);
             this.orderCBX.TabIndex = 7;
+            // 
+            // orderTBLBindingSource
+            // 
+            this.orderTBLBindingSource.DataSource = typeof(talYBProj.orderTBL);
             // 
             // userCBX
             // 
@@ -127,6 +137,10 @@
             this.userCBX.Name = "userCBX";
             this.userCBX.Size = new System.Drawing.Size(121, 24);
             this.userCBX.TabIndex = 8;
+            // 
+            // userTBLBindingSource
+            // 
+            this.userTBLBindingSource.DataSource = typeof(talYBProj.userTBL);
             // 
             // packCBX
             // 
@@ -139,6 +153,10 @@
             this.packCBX.TabIndex = 9;
             this.packCBX.SelectedIndexChanged += new System.EventHandler(this.packCBX_SelectedIndexChanged);
             // 
+            // packTBLBindingSource
+            // 
+            this.packTBLBindingSource.DataSource = typeof(talYBProj.packTBL);
+            // 
             // NUPquantity
             // 
             this.NUPquantity.Increment = new decimal(new int[] {
@@ -146,7 +164,7 @@
             0,
             0,
             0});
-            this.NUPquantity.Location = new System.Drawing.Point(509, 220);
+            this.NUPquantity.Location = new System.Drawing.Point(510, 222);
             this.NUPquantity.Maximum = new decimal(new int[] {
             200,
             0,
@@ -175,7 +193,7 @@
             // 
             // rTBXnotes
             // 
-            this.rTBXnotes.Location = new System.Drawing.Point(322, 323);
+            this.rTBXnotes.Location = new System.Drawing.Point(323, 323);
             this.rTBXnotes.Name = "rTBXnotes";
             this.rTBXnotes.Size = new System.Drawing.Size(307, 115);
             this.rTBXnotes.TabIndex = 12;
@@ -183,30 +201,20 @@
             // 
             // addBTN
             // 
-            this.addBTN.Location = new System.Drawing.Point(335, 444);
+            this.addBTN.Location = new System.Drawing.Point(310, 444);
             this.addBTN.Name = "addBTN";
-            this.addBTN.Size = new System.Drawing.Size(181, 25);
+            this.addBTN.Size = new System.Drawing.Size(235, 45);
+            this.addBTN.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.addBTN.TabIndex = 13;
             this.addBTN.Values.Text = "הוסף חבילות שמן";
             this.addBTN.Click += new System.EventHandler(this.addBTN_Click);
-            // 
-            // orderTBLBindingSource
-            // 
-            this.orderTBLBindingSource.DataSource = typeof(talYBProj.orderTBL);
-            // 
-            // userTBLBindingSource
-            // 
-            this.userTBLBindingSource.DataSource = typeof(talYBProj.userTBL);
-            // 
-            // packTBLBindingSource
-            // 
-            this.packTBLBindingSource.DataSource = typeof(talYBProj.packTBL);
             // 
             // addOil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 478);
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.ClientSize = new System.Drawing.Size(811, 501);
             this.Controls.Add(this.addBTN);
             this.Controls.Add(this.rTBXnotes);
             this.Controls.Add(this.DTPdate);
@@ -221,6 +229,7 @@
             this.Controls.Add(this.packLabel);
             this.Controls.Add(this.userIDlabel);
             this.Controls.Add(this.orderIDlabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "addOil";
             this.Text = "addOil";
             this.Load += new System.EventHandler(this.addOil_Load);

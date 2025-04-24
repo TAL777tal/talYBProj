@@ -53,37 +53,41 @@
             // 
             // oliveSpeciesLabel
             // 
-            this.oliveSpeciesLabel.Location = new System.Drawing.Point(619, 111);
+            this.oliveSpeciesLabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.oliveSpeciesLabel.Location = new System.Drawing.Point(629, 111);
             this.oliveSpeciesLabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.oliveSpeciesLabel.Name = "oliveSpeciesLabel";
-            this.oliveSpeciesLabel.Size = new System.Drawing.Size(68, 24);
+            this.oliveSpeciesLabel.Size = new System.Drawing.Size(72, 24);
             this.oliveSpeciesLabel.TabIndex = 1;
             this.oliveSpeciesLabel.Values.Text = "סוג הזית";
             // 
             // numOfDolevimLabel
             // 
-            this.numOfDolevimLabel.Location = new System.Drawing.Point(619, 149);
+            this.numOfDolevimLabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.numOfDolevimLabel.Location = new System.Drawing.Point(603, 149);
             this.numOfDolevimLabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numOfDolevimLabel.Name = "numOfDolevimLabel";
-            this.numOfDolevimLabel.Size = new System.Drawing.Size(98, 24);
+            this.numOfDolevimLabel.Size = new System.Drawing.Size(104, 24);
             this.numOfDolevimLabel.TabIndex = 2;
             this.numOfDolevimLabel.Values.Text = "מספר דולבים";
             // 
             // notesLabel
             // 
-            this.notesLabel.Location = new System.Drawing.Point(619, 219);
+            this.notesLabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.notesLabel.Location = new System.Drawing.Point(646, 228);
             this.notesLabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.notesLabel.Name = "notesLabel";
-            this.notesLabel.Size = new System.Drawing.Size(55, 24);
+            this.notesLabel.Size = new System.Drawing.Size(57, 24);
             this.notesLabel.TabIndex = 5;
             this.notesLabel.Values.Text = "הערות";
             // 
             // costomerNameLabel
             // 
+            this.costomerNameLabel.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
             this.costomerNameLabel.Location = new System.Drawing.Point(619, 81);
             this.costomerNameLabel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.costomerNameLabel.Name = "costomerNameLabel";
-            this.costomerNameLabel.Size = new System.Drawing.Size(79, 24);
+            this.costomerNameLabel.Size = new System.Drawing.Size(83, 24);
             this.costomerNameLabel.TabIndex = 11;
             this.costomerNameLabel.Values.Text = "שם הצרכן";
             // 
@@ -98,10 +102,11 @@
             // 
             // btnAddOrder
             // 
-            this.btnAddOrder.Location = new System.Drawing.Point(327, 399);
+            this.btnAddOrder.Location = new System.Drawing.Point(356, 389);
             this.btnAddOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddOrder.Name = "btnAddOrder";
-            this.btnAddOrder.Size = new System.Drawing.Size(123, 25);
+            this.btnAddOrder.Size = new System.Drawing.Size(147, 34);
+            this.btnAddOrder.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(177)));
             this.btnAddOrder.TabIndex = 25;
             this.btnAddOrder.Values.Text = "הוסף הזמנה";
             this.btnAddOrder.Click += new System.EventHandler(this.btnAddOrder_Click);
@@ -142,10 +147,11 @@
             // 
             // kryptonLabel1
             // 
+            this.kryptonLabel1.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
             this.kryptonLabel1.Location = new System.Drawing.Point(619, 50);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Size = new System.Drawing.Size(79, 24);
+            this.kryptonLabel1.Size = new System.Drawing.Size(82, 24);
             this.kryptonLabel1.TabIndex = 11;
             this.kryptonLabel1.Values.Text = "שם העובד";
             // 
@@ -164,9 +170,10 @@
             // 
             // kryptonLabel2
             // 
-            this.kryptonLabel2.Location = new System.Drawing.Point(619, 178);
+            this.kryptonLabel2.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
+            this.kryptonLabel2.Location = new System.Drawing.Point(612, 178);
             this.kryptonLabel2.Name = "kryptonLabel2";
-            this.kryptonLabel2.Size = new System.Drawing.Size(90, 24);
+            this.kryptonLabel2.Size = new System.Drawing.Size(93, 24);
             this.kryptonLabel2.TabIndex = 28;
             this.kryptonLabel2.Values.Text = "מחיר עסקה";
             // 
@@ -182,6 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.MTBprice);
             this.Controls.Add(this.kryptonLabel2);
