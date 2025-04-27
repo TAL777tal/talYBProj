@@ -28,13 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.kbtnGenerate = new Krypton.Toolkit.KryptonButton();
+            this.orderViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.orderViewBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer2
             // 
-            this.reportViewer2.Location = new System.Drawing.Point(21, 112);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.orderViewBindingSource;
+            this.reportViewer2.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "talYBProj.Forms.reportForms.orderReport.rdlc";
+            this.reportViewer2.Location = new System.Drawing.Point(22, 100);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
             this.reportViewer2.Size = new System.Drawing.Size(755, 316);
@@ -51,13 +59,20 @@
             this.kbtnGenerate.Values.Text = "צור דוח";
             this.kbtnGenerate.Click += new System.EventHandler(this.kbtnGenerate_Click);
             // 
+            // orderViewBindingSource
+            // 
+            this.orderViewBindingSource.DataSource = typeof(talYBProj.orderView);
+            // 
             // orderReport
             // 
+            this.BackColor = System.Drawing.Color.LemonChiffon;
             this.ClientSize = new System.Drawing.Size(800, 440);
             this.Controls.Add(this.kbtnGenerate);
             this.Controls.Add(this.reportViewer2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "orderReport";
             this.Load += new System.EventHandler(this.orderReport_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.orderViewBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -68,5 +83,6 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
         private Krypton.Toolkit.KryptonButton kbtnGenerate;
+        private System.Windows.Forms.BindingSource orderViewBindingSource;
     }
 }

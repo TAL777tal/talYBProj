@@ -47,12 +47,12 @@
             this.addCostumer = new Krypton.Toolkit.KryptonButton();
             this.kryptonLabel11 = new Krypton.Toolkit.KryptonLabel();
             this.addPanel = new System.Windows.Forms.Panel();
-            this.kTBXFN = new Krypton.Toolkit.KryptonTextBox();
-            this.kTBXLN = new Krypton.Toolkit.KryptonTextBox();
-            this.kTBXCN = new Krypton.Toolkit.KryptonTextBox();
-            this.kTBXADD = new Krypton.Toolkit.KryptonTextBox();
-            this.kTBXEmail = new Krypton.Toolkit.KryptonTextBox();
             this.kRTBXN = new Krypton.Toolkit.KryptonRichTextBox();
+            this.kTBXEmail = new Krypton.Toolkit.KryptonTextBox();
+            this.kTBXADD = new Krypton.Toolkit.KryptonTextBox();
+            this.kTBXCN = new Krypton.Toolkit.KryptonTextBox();
+            this.kTBXLN = new Krypton.Toolkit.KryptonTextBox();
+            this.kTBXFN = new Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ep)).BeginInit();
             this.addPanel.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +63,8 @@
             // 
             // kryptonLabel1
             // 
+            this.kryptonLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonLabel1.LabelStyle = Krypton.Toolkit.LabelStyle.BoldPanel;
             this.kryptonLabel1.Location = new System.Drawing.Point(679, 81);
             this.kryptonLabel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -74,6 +76,8 @@
             // 
             // kryptonLabel2
             // 
+            this.kryptonLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonLabel2.LabelStyle = Krypton.Toolkit.LabelStyle.BoldPanel;
             this.kryptonLabel2.Location = new System.Drawing.Point(665, 114);
             this.kryptonLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -84,6 +88,8 @@
             // 
             // kryptonLabel3
             // 
+            this.kryptonLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonLabel3.LabelStyle = Krypton.Toolkit.LabelStyle.BoldPanel;
             this.kryptonLabel3.Location = new System.Drawing.Point(673, 146);
             this.kryptonLabel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -94,6 +100,8 @@
             // 
             // kryptonLabel4
             // 
+            this.kryptonLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonLabel4.LabelStyle = Krypton.Toolkit.LabelStyle.BoldPanel;
             this.kryptonLabel4.Location = new System.Drawing.Point(689, 180);
             this.kryptonLabel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -104,6 +112,8 @@
             // 
             // kryptonLabel5
             // 
+            this.kryptonLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonLabel5.LabelStyle = Krypton.Toolkit.LabelStyle.BoldPanel;
             this.kryptonLabel5.Location = new System.Drawing.Point(696, 213);
             this.kryptonLabel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -114,6 +124,8 @@
             // 
             // kryptonLabel6
             // 
+            this.kryptonLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonLabel6.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
             this.kryptonLabel6.Location = new System.Drawing.Point(689, 246);
             this.kryptonLabel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -124,6 +136,8 @@
             // 
             // kryptonLabel7
             // 
+            this.kryptonLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonLabel7.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
             this.kryptonLabel7.Location = new System.Drawing.Point(271, 81);
             this.kryptonLabel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -134,6 +148,8 @@
             // 
             // kryptonLabel8
             // 
+            this.kryptonLabel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonLabel8.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
             this.kryptonLabel8.Location = new System.Drawing.Point(347, 117);
             this.kryptonLabel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -144,6 +160,8 @@
             // 
             // kryptonLabel9
             // 
+            this.kryptonLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonLabel9.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
             this.kryptonLabel9.Location = new System.Drawing.Point(320, 152);
             this.kryptonLabel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -154,6 +172,8 @@
             // 
             // kryptonLabel10
             // 
+            this.kryptonLabel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonLabel10.LabelStyle = Krypton.Toolkit.LabelStyle.BoldControl;
             this.kryptonLabel10.Location = new System.Drawing.Point(347, 180);
             this.kryptonLabel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -164,6 +184,8 @@
             // 
             // MTBXPFirst
             // 
+            this.MTBXPFirst.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MTBXPFirst.Location = new System.Drawing.Point(529, 215);
             this.MTBXPFirst.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MTBXPFirst.Mask = "(999) 000-0000";
@@ -173,6 +195,8 @@
             // 
             // MTBXPSecend
             // 
+            this.MTBXPSecend.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MTBXPSecend.Location = new System.Drawing.Point(529, 242);
             this.MTBXPSecend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MTBXPSecend.Mask = "(999) 000-0000";
@@ -182,6 +206,8 @@
             // 
             // MTBXPOffice
             // 
+            this.MTBXPOffice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MTBXPOffice.Location = new System.Drawing.Point(148, 86);
             this.MTBXPOffice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MTBXPOffice.Mask = "(999) 000-0000";
@@ -191,6 +217,8 @@
             // 
             // kTBXPrice
             // 
+            this.kTBXPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.kTBXPrice.Location = new System.Drawing.Point(147, 150);
             this.kTBXPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kTBXPrice.Mask = "000000000.00";
@@ -201,6 +229,8 @@
             // 
             // addCostumer
             // 
+            this.addCostumer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.addCostumer.Location = new System.Drawing.Point(344, 364);
             this.addCostumer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addCostumer.Name = "addCostumer";
@@ -212,6 +242,8 @@
             // 
             // kryptonLabel11
             // 
+            this.kryptonLabel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.kryptonLabel11.LabelStyle = Krypton.Toolkit.LabelStyle.BoldPanel;
             this.kryptonLabel11.Location = new System.Drawing.Point(377, 20);
             this.kryptonLabel11.Margin = new System.Windows.Forms.Padding(4);
@@ -253,8 +285,61 @@
             this.addPanel.TabIndex = 0;
             this.addPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.addPanel_Paint);
             // 
+            // kRTBXN
+            // 
+            this.kRTBXN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.kRTBXN.Location = new System.Drawing.Point(43, 180);
+            this.kRTBXN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kRTBXN.Name = "kRTBXN";
+            this.kRTBXN.Size = new System.Drawing.Size(205, 165);
+            this.kRTBXN.TabIndex = 10;
+            this.kRTBXN.Text = "";
+            // 
+            // kTBXEmail
+            // 
+            this.kTBXEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.kTBXEmail.Location = new System.Drawing.Point(148, 114);
+            this.kTBXEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kTBXEmail.Name = "kTBXEmail";
+            this.kTBXEmail.Size = new System.Drawing.Size(100, 27);
+            this.kTBXEmail.TabIndex = 8;
+            // 
+            // kTBXADD
+            // 
+            this.kTBXADD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.kTBXADD.Location = new System.Drawing.Point(529, 180);
+            this.kTBXADD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kTBXADD.Name = "kTBXADD";
+            this.kTBXADD.Size = new System.Drawing.Size(100, 27);
+            this.kTBXADD.TabIndex = 4;
+            // 
+            // kTBXCN
+            // 
+            this.kTBXCN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.kTBXCN.Location = new System.Drawing.Point(529, 146);
+            this.kTBXCN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kTBXCN.Name = "kTBXCN";
+            this.kTBXCN.Size = new System.Drawing.Size(100, 27);
+            this.kTBXCN.TabIndex = 3;
+            // 
+            // kTBXLN
+            // 
+            this.kTBXLN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.kTBXLN.Location = new System.Drawing.Point(529, 114);
+            this.kTBXLN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kTBXLN.Name = "kTBXLN";
+            this.kTBXLN.Size = new System.Drawing.Size(100, 27);
+            this.kTBXLN.TabIndex = 2;
+            // 
             // kTBXFN
             // 
+            this.kTBXFN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.kTBXFN.Location = new System.Drawing.Point(529, 81);
             this.kTBXFN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kTBXFN.Name = "kTBXFN";
@@ -262,47 +347,6 @@
             this.kTBXFN.Size = new System.Drawing.Size(100, 27);
             this.kTBXFN.TabIndex = 1;
             this.kTBXFN.TextChanged += new System.EventHandler(this.kTBXFN_TextChanged);
-            // 
-            // kTBXLN
-            // 
-            this.kTBXLN.Location = new System.Drawing.Point(529, 114);
-            this.kTBXLN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kTBXLN.Name = "kTBXLN";
-            this.kTBXLN.Size = new System.Drawing.Size(100, 27);
-            this.kTBXLN.TabIndex = 2;
-            // 
-            // kTBXCN
-            // 
-            this.kTBXCN.Location = new System.Drawing.Point(529, 146);
-            this.kTBXCN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kTBXCN.Name = "kTBXCN";
-            this.kTBXCN.Size = new System.Drawing.Size(100, 27);
-            this.kTBXCN.TabIndex = 3;
-            // 
-            // kTBXADD
-            // 
-            this.kTBXADD.Location = new System.Drawing.Point(529, 180);
-            this.kTBXADD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kTBXADD.Name = "kTBXADD";
-            this.kTBXADD.Size = new System.Drawing.Size(100, 27);
-            this.kTBXADD.TabIndex = 4;
-            // 
-            // kTBXEmail
-            // 
-            this.kTBXEmail.Location = new System.Drawing.Point(148, 114);
-            this.kTBXEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kTBXEmail.Name = "kTBXEmail";
-            this.kTBXEmail.Size = new System.Drawing.Size(100, 27);
-            this.kTBXEmail.TabIndex = 8;
-            // 
-            // kRTBXN
-            // 
-            this.kRTBXN.Location = new System.Drawing.Point(43, 180);
-            this.kRTBXN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.kRTBXN.Name = "kRTBXN";
-            this.kRTBXN.Size = new System.Drawing.Size(205, 165);
-            this.kRTBXN.TabIndex = 10;
-            this.kRTBXN.Text = "";
             // 
             // addCustomerWin
             // 

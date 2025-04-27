@@ -19,7 +19,7 @@ namespace talYBProj.Forms
     public partial class orderReport : Form
     {
        
-        List<orderTBL> orderlist;
+        List<orderView> orderlist;
         public orderReport()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace talYBProj.Forms
 
         private void orderReport_Load_1(object sender, EventArgs e)
         {
-            orderlist = DBhelper.orderList;
+            orderlist = DBhelper.orderViewsList;
             this.reportViewer2.RefreshReport();
             this.reportViewer2.RefreshReport();
         }
@@ -40,11 +40,11 @@ namespace talYBProj.Forms
 
         private void kbtnGenerate_Click(object sender, EventArgs e)
         {
-            ReportDataSource rdc = new ReportDataSource("dsOrders", orderlist);
+            ReportDataSource rdc = new ReportDataSource("DataSet1", orderlist);
             reportViewer2.LocalReport.DataSources.Clear();  
-            reportViewer2.LocalReport.ReportPath = "orderReport.rdlc";
+            reportViewer2.LocalReport.ReportPath = "C:\\Users\\talhe\\source\\repos\\talYBProj\\talYBProj\\Forms\\reportForms\\orderReport.rdlc";
             reportViewer2.LocalReport.DataSources.Add(rdc);
-            reportViewer2.RefreshReport();
+            this.reportViewer2.RefreshReport();
         }
     }
 }

@@ -17,6 +17,8 @@ namespace talYBProj.IFS
         public static List<zanTBL> zanList;
         public static List<oilTBL> oilList;
         public static List<oliveTBL> oliveList;
+        public static List<orderView> orderViewsList;
+        public static List<customerView> customerViewsList;
         #endregion
         public static void init()
         {
@@ -33,6 +35,16 @@ namespace talYBProj.IFS
             loadZanList();
             loadOilList();
             loadOliveList();
+            loadOrderViewList();
+            loadCustomerViewList();
+        }
+        public static void loadOrderViewList() 
+            {
+            orderViewsList = (from s in db.orderView select s).ToList();
+            }
+        public static void loadCustomerViewList()
+        {
+            customerViewsList = (from s in db.customerView select s).ToList();
         }
         public static void loadOrderList()
         {
