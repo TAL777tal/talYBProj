@@ -103,7 +103,7 @@
             // cbxOrders
             // 
             this.cbxOrders.DataSource = this.orderTBLBindingSource;
-            this.cbxOrders.DisplayMember = "costomerID";
+            this.cbxOrders.DisplayMember = "Id";
             this.cbxOrders.DropDownWidth = 121;
             this.cbxOrders.IntegralHeight = false;
             this.cbxOrders.Location = new System.Drawing.Point(400, 34);

@@ -93,6 +93,44 @@
           <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="description" Type="nvarchar" MaxLength="250" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\TALHE\SOURCE\REPOS\TALYBPROJ\TALYBPROJ\DB.MDF.dbo.customerView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="customerView">
+          <Key>
+            <PropertyRef Name="fullName" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="isDone" />
+            <PropertyRef Name="price" />
+          </Key>
+          <Property Name="fullName" Type="nvarchar" MaxLength="102" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="isDone" Type="bit" Nullable="false" />
+          <Property Name="price" Type="float" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\TALHE\SOURCE\REPOS\TALYBPROJ\TALYBPROJ\DB.MDF.dbo.orderView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="orderView">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="custName" />
+            <PropertyRef Name="custPhone" />
+            <PropertyRef Name="orderDate" />
+            <PropertyRef Name="zanName" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="isPayd" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="custName" Type="nvarchar" MaxLength="102" Nullable="false" />
+          <Property Name="custPhone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="orderDate" Type="datetime" Nullable="false" />
+          <Property Name="zanName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="totalDolavWeight" Type="int" />
+          <Property Name="totalOilWeight" Type="int" />
+          <Property Name="price" Type="float" Nullable="false" />
+          <Property Name="totalPackPrice" Type="float" />
+          <Property Name="totalDebt" Type="float" />
+          <Property Name="isPayd" Type="bit" Nullable="false" />
+        </EntityType>
         <Association Name="FK_oilTBL_ToOrderTBL">
           <End Role="orderTBL" Type="Self.orderTBL" Multiplicity="1" />
           <End Role="oilTBL" Type="Self.oilTBL" Multiplicity="*" />
@@ -197,6 +235,29 @@
           <EntitySet Name="packTBL" EntityType="Self.packTBL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="userTBL" EntityType="Self.userTBL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="zanTBL" EntityType="Self.zanTBL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="customerView" EntityType="Self.customerView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [customerView].[fullName] AS [fullName], 
+    [customerView].[email] AS [email], 
+    [customerView].[isDone] AS [isDone], 
+    [customerView].[price] AS [price]
+    FROM [dbo].[customerView] AS [customerView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="orderView" EntityType="Self.orderView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [orderView].[id] AS [id], 
+    [orderView].[custName] AS [custName], 
+    [orderView].[custPhone] AS [custPhone], 
+    [orderView].[orderDate] AS [orderDate], 
+    [orderView].[zanName] AS [zanName], 
+    [orderView].[totalDolavWeight] AS [totalDolavWeight], 
+    [orderView].[totalOilWeight] AS [totalOilWeight], 
+    [orderView].[price] AS [price], 
+    [orderView].[totalPackPrice] AS [totalPackPrice], 
+    [orderView].[totalDebt] AS [totalDebt], 
+    [orderView].[isPayd] AS [isPayd]
+    FROM [dbo].[orderView] AS [orderView]</DefiningQuery>
+          </EntitySet>
           <AssociationSet Name="FK_oilTBL_ToOrderTBL" Association="Self.FK_oilTBL_ToOrderTBL">
             <End Role="orderTBL" EntitySet="orderTBL" />
             <End Role="oilTBL" EntitySet="oilTBL" />
@@ -242,6 +303,8 @@
           <EntitySet Name="packTBL" EntityType="dbModel.packTBL" />
           <EntitySet Name="userTBL" EntityType="dbModel.userTBL" />
           <EntitySet Name="zanTBL" EntityType="dbModel.zanTBL" />
+          <EntitySet Name="customerView" EntityType="dbModel.customerView" />
+          <EntitySet Name="orderView" EntityType="dbModel.orderView" />
           <AssociationSet Name="FK_orderTBL_ToCostomerTBL" Association="dbModel.FK_orderTBL_ToCostomerTBL">
             <End Role="costomerTBL" EntitySet="costomerTBL" />
             <End Role="orderTBL" EntitySet="orderTBL" />
@@ -378,6 +441,40 @@
           <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="orderTBL" Relationship="dbModel.FK_orderTBL_ToZanTBL" FromRole="zanTBL" ToRole="orderTBL" />
+        </EntityType>
+        <EntityType Name="customerView">
+          <Key>
+            <PropertyRef Name="fullName" />
+            <PropertyRef Name="email" />
+            <PropertyRef Name="isDone" />
+            <PropertyRef Name="price" />
+          </Key>
+          <Property Name="fullName" Type="String" Nullable="false" MaxLength="102" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="isDone" Type="Boolean" Nullable="false" />
+          <Property Name="price" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="orderView">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="custName" />
+            <PropertyRef Name="custPhone" />
+            <PropertyRef Name="orderDate" />
+            <PropertyRef Name="zanName" />
+            <PropertyRef Name="price" />
+            <PropertyRef Name="isPayd" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="custName" Type="String" Nullable="false" MaxLength="102" FixedLength="false" Unicode="true" />
+          <Property Name="custPhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="orderDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="zanName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="totalDolavWeight" Type="Int32" />
+          <Property Name="totalOilWeight" Type="Int32" />
+          <Property Name="price" Type="Double" Nullable="false" />
+          <Property Name="totalPackPrice" Type="Double" />
+          <Property Name="totalDebt" Type="Double" />
+          <Property Name="isPayd" Type="Boolean" Nullable="false" />
         </EntityType>
         <Association Name="FK_orderTBL_ToCostomerTBL">
           <End Type="dbModel.costomerTBL" Role="costomerTBL" Multiplicity="1" />
@@ -573,6 +670,33 @@
                 <ScalarProperty Name="description" ColumnName="description" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="customerView">
+            <EntityTypeMapping TypeName="dbModel.customerView">
+              <MappingFragment StoreEntitySet="customerView">
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="isDone" ColumnName="isDone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="fullName" ColumnName="fullName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="orderView">
+            <EntityTypeMapping TypeName="dbModel.orderView">
+              <MappingFragment StoreEntitySet="orderView">
+                <ScalarProperty Name="isPayd" ColumnName="isPayd" />
+                <ScalarProperty Name="totalDebt" ColumnName="totalDebt" />
+                <ScalarProperty Name="totalPackPrice" ColumnName="totalPackPrice" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="totalOilWeight" ColumnName="totalOilWeight" />
+                <ScalarProperty Name="totalDolavWeight" ColumnName="totalDolavWeight" />
+                <ScalarProperty Name="zanName" ColumnName="zanName" />
+                <ScalarProperty Name="orderDate" ColumnName="orderDate" />
+                <ScalarProperty Name="custPhone" ColumnName="custPhone" />
+                <ScalarProperty Name="custName" ColumnName="custName" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

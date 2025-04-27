@@ -73,6 +73,12 @@
             this.updateUser = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.userList = new Krypton.Ribbon.KryptonRibbonGroupButton();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.kryptonRibbonTab7 = new Krypton.Ribbon.KryptonRibbonTab();
+            this.kryptonRibbonGroup8 = new Krypton.Ribbon.KryptonRibbonGroup();
+            this.kryptonRibbonGroupTriple8 = new Krypton.Ribbon.KryptonRibbonGroupTriple();
+            this.kryptonRibbonGroupButton11 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton12 = new Krypton.Ribbon.KryptonRibbonGroupButton();
+            this.kryptonRibbonGroupButton13 = new Krypton.Ribbon.KryptonRibbonGroupButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonRibbon1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,9 +97,9 @@
             this.kryptonRibbonTab6,
             this.kryptonRibbonTab3,
             this.kryptonRibbonTab4,
-            this.kryptonRibbonTab5});
-            this.kryptonRibbon1.SelectedContext = null;
-            this.kryptonRibbon1.SelectedTab = this.customerTab;
+            this.kryptonRibbonTab5,
+            this.kryptonRibbonTab7});
+            this.kryptonRibbon1.SelectedTab = this.kryptonRibbonTab7;
             this.kryptonRibbon1.ShowMinimizeButton = false;
             this.kryptonRibbon1.Size = new System.Drawing.Size(800, 171);
             this.kryptonRibbon1.TabIndex = 0;
@@ -363,6 +369,28 @@
             this.mainPanel.TabIndex = 1;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
+            // kryptonRibbonTab7
+            // 
+            this.kryptonRibbonTab7.Groups.AddRange(new Krypton.Ribbon.KryptonRibbonGroup[] {
+            this.kryptonRibbonGroup8});
+            this.kryptonRibbonTab7.Text = "דוחות";
+            // 
+            // kryptonRibbonGroup8
+            // 
+            this.kryptonRibbonGroup8.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupContainer[] {
+            this.kryptonRibbonGroupTriple8});
+            // 
+            // kryptonRibbonGroupTriple8
+            // 
+            this.kryptonRibbonGroupTriple8.Items.AddRange(new Krypton.Ribbon.KryptonRibbonGroupItem[] {
+            this.kryptonRibbonGroupButton11,
+            this.kryptonRibbonGroupButton12,
+            this.kryptonRibbonGroupButton13});
+            // 
+            // kryptonRibbonGroupButton11
+            // 
+            this.kryptonRibbonGroupButton11.Click += new System.EventHandler(this.kryptonRibbonGroupButton11_Click_1);
+            // 
             // mainWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -431,6 +459,12 @@
         private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton4;
         private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton9;
         private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton10;
+        private Krypton.Ribbon.KryptonRibbonTab kryptonRibbonTab7;
+        private Krypton.Ribbon.KryptonRibbonGroup kryptonRibbonGroup8;
+        private Krypton.Ribbon.KryptonRibbonGroupTriple kryptonRibbonGroupTriple8;
+        private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton11;
+        private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton12;
+        private Krypton.Ribbon.KryptonRibbonGroupButton kryptonRibbonGroupButton13;
     }
 }
 

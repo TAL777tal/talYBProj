@@ -223,6 +223,14 @@
     <Compile Include="costomerTBL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="customerView.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\addCustomerWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,9 +275,11 @@
     </Compile>
     <Compile Include="Forms\reportForms\orderReport.cs">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Forms\reportForms\orderReport.Designer.cs">
       <DependentUpon>orderReport.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Forms\updateOil.cs">
       <SubType>Form</SubType>
@@ -388,6 +398,9 @@
     <Compile Include="orderTBL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="orderView.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="packTBL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -421,9 +434,12 @@
     <EmbeddedResource Include="Forms\oilList.resx">
       <DependentUpon>oilList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\reportForms\orderReport.rdlc" />
+    <EmbeddedResource Include="Forms\reportForms\orderReport.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\reportForms\orderReport.resx">
       <DependentUpon>orderReport.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\updateOil.resx">
       <DependentUpon>updateOil.cs</DependentUpon>
@@ -484,6 +500,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="dbDataSet.xsc">
+      <DependentUpon>dbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbDataSet.xss">
+      <DependentUpon>dbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>

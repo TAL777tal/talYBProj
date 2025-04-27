@@ -28,38 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnGenerate = new Krypton.Toolkit.KryptonButton();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.kbtnGenerate = new Krypton.Toolkit.KryptonButton();
             this.SuspendLayout();
             // 
-            // btnGenerate
+            // reportViewer2
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(367, 12);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(90, 25);
-            this.btnGenerate.TabIndex = 0;
-            this.btnGenerate.Values.Text = "ייצר דוח";
-            this.btnGenerate.Click += new System.EventHandler(this.kryptonButton1_Click);
+            this.reportViewer2.Location = new System.Drawing.Point(21, 112);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.ServerReport.BearerToken = null;
+            this.reportViewer2.Size = new System.Drawing.Size(755, 316);
+            this.reportViewer2.TabIndex = 0;
+            this.reportViewer2.Load += new System.EventHandler(this.reportViewer2_Load);
             // 
-            // reportViewer1
+            // kbtnGenerate
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(101, 84);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(628, 309);
-            this.reportViewer1.TabIndex = 1;
-            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            this.kbtnGenerate.Location = new System.Drawing.Point(256, 31);
+            this.kbtnGenerate.Name = "kbtnGenerate";
+            this.kbtnGenerate.Size = new System.Drawing.Size(304, 46);
+            this.kbtnGenerate.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kbtnGenerate.TabIndex = 1;
+            this.kbtnGenerate.Values.Text = "צור דוח";
+            this.kbtnGenerate.Click += new System.EventHandler(this.kbtnGenerate_Click);
             // 
             // orderReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 492);
-            this.Controls.Add(this.reportViewer1);
-            this.Controls.Add(this.btnGenerate);
+            this.ClientSize = new System.Drawing.Size(800, 440);
+            this.Controls.Add(this.kbtnGenerate);
+            this.Controls.Add(this.reportViewer2);
             this.Name = "orderReport";
-            this.Text = "orderReport";
-            this.Load += new System.EventHandler(this.orderReport_Load);
+            this.Load += new System.EventHandler(this.orderReport_Load_1);
             this.ResumeLayout(false);
 
         }
@@ -68,5 +66,7 @@
 
         private Krypton.Toolkit.KryptonButton btnGenerate;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
+        private Krypton.Toolkit.KryptonButton kbtnGenerate;
     }
 }

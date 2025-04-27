@@ -11,38 +11,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using talYBProj.dbDataSetTableAdapters;
 using talYBProj.IFS;
 
 namespace talYBProj.Forms
 {
     public partial class orderReport : Form
     {
-        dbEntities db = new dbEntities();
-        List<orderView> orderlist;
+       
+        List<orderTBL> orderlist;
         public orderReport()
         {
             InitializeComponent();
         }
 
-        private void orderReport_Load(object sender, EventArgs e)
+
+        private void orderReport_Load_1(object sender, EventArgs e)
         {
-            Orderlist = DBhelper.orderList;
-            this.reportViewer1.RefreshReport();
+            orderlist = DBhelper.orderList;
+            this.reportViewer2.RefreshReport();
+            this.reportViewer2.RefreshReport();
         }
 
-        private void kryptonButton1_Click(object sender, EventArgs e)
+        private void reportViewer2_Load(object sender, EventArgs e)
         {
-            ReportDataSource rdc = new ReportDataSource( "dsOrders" , Orderlist);
-            reportViewer1.LocalReport.ReportPath = "orderReport.cs";
-            reportViewer1.LocalReport.DataSources.Add(rdc);
-            reportViewer1.Refresh();
-            reportViewer1.RefreshReport();
-
+            //orderlist = (from s in db.orderView select s).ToList();
         }
 
-        private void reportViewer1_Load(object sender, EventArgs e)
+        private void kbtnGenerate_Click(object sender, EventArgs e)
         {
-            orderlist = (from s in db.orderView select s).ToList();
+            ReportDataSource rdc = new ReportDataSource("dsOrders", orderlist);
+            reportViewer2.LocalReport.DataSources.Clear();  
+            reportViewer2.LocalReport.ReportPath = "orderReport.rdlc";
+            reportViewer2.LocalReport.DataSources.Add(rdc);
+            reportViewer2.RefreshReport();
         }
     }
 }
