@@ -421,6 +421,9 @@
     <Compile Include="zanTBL.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="zanView.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\addCustomerWin.resx">
       <DependentUpon>addCustomerWin.cs</DependentUpon>
     </EmbeddedResource>

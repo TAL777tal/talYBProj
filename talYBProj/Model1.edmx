@@ -97,15 +97,18 @@
 warning 6002: The table/view 'C:\USERS\TALHE\SOURCE\REPOS\TALYBPROJ\TALYBPROJ\DB.MDF.dbo.customerView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="customerView">
           <Key>
+            <PropertyRef Name="Id" />
             <PropertyRef Name="fullName" />
             <PropertyRef Name="email" />
             <PropertyRef Name="isDone" />
             <PropertyRef Name="price" />
           </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="fullName" Type="nvarchar" MaxLength="102" Nullable="false" />
           <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="isDone" Type="bit" Nullable="false" />
           <Property Name="price" Type="float" Nullable="false" />
+          <Property Name="totalPackPrice" Type="float" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'C:\USERS\TALHE\SOURCE\REPOS\TALYBPROJ\TALYBPROJ\DB.MDF.dbo.orderView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -130,6 +133,16 @@ warning 6002: The table/view 'C:\USERS\TALHE\SOURCE\REPOS\TALYBPROJ\TALYBPROJ\DB
           <Property Name="totalPackPrice" Type="float" />
           <Property Name="totalDebt" Type="float" />
           <Property Name="isPayd" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'C:\USERS\TALHE\SOURCE\REPOS\TALYBPROJ\TALYBPROJ\DB.MDF.dbo.zanView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="zanView">
+          <Key>
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="totalOliveWeight" Type="int" />
+          <Property Name="totalOilWeight" Type="int" />
         </EntityType>
         <Association Name="FK_oilTBL_ToOrderTBL">
           <End Role="orderTBL" Type="Self.orderTBL" Multiplicity="1" />
@@ -237,10 +250,12 @@ warning 6002: The table/view 'C:\USERS\TALHE\SOURCE\REPOS\TALYBPROJ\TALYBPROJ\DB
           <EntitySet Name="zanTBL" EntityType="Self.zanTBL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="customerView" EntityType="Self.customerView" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
+    [customerView].[Id] AS [Id], 
     [customerView].[fullName] AS [fullName], 
     [customerView].[email] AS [email], 
     [customerView].[isDone] AS [isDone], 
-    [customerView].[price] AS [price]
+    [customerView].[price] AS [price], 
+    [customerView].[totalPackPrice] AS [totalPackPrice]
     FROM [dbo].[customerView] AS [customerView]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="orderView" EntityType="Self.orderView" store:Type="Views" store:Schema="dbo">
@@ -257,6 +272,13 @@ warning 6002: The table/view 'C:\USERS\TALHE\SOURCE\REPOS\TALYBPROJ\TALYBPROJ\DB
     [orderView].[totalDebt] AS [totalDebt], 
     [orderView].[isPayd] AS [isPayd]
     FROM [dbo].[orderView] AS [orderView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="zanView" EntityType="Self.zanView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [zanView].[name] AS [name], 
+    [zanView].[totalOliveWeight] AS [totalOliveWeight], 
+    [zanView].[totalOilWeight] AS [totalOilWeight]
+    FROM [dbo].[zanView] AS [zanView]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_oilTBL_ToOrderTBL" Association="Self.FK_oilTBL_ToOrderTBL">
             <End Role="orderTBL" EntitySet="orderTBL" />
@@ -305,6 +327,7 @@ warning 6002: The table/view 'C:\USERS\TALHE\SOURCE\REPOS\TALYBPROJ\TALYBPROJ\DB
           <EntitySet Name="zanTBL" EntityType="dbModel.zanTBL" />
           <EntitySet Name="customerView" EntityType="dbModel.customerView" />
           <EntitySet Name="orderView" EntityType="dbModel.orderView" />
+          <EntitySet Name="zanView" EntityType="dbModel.zanView" />
           <AssociationSet Name="FK_orderTBL_ToCostomerTBL" Association="dbModel.FK_orderTBL_ToCostomerTBL">
             <End Role="costomerTBL" EntitySet="costomerTBL" />
             <End Role="orderTBL" EntitySet="orderTBL" />
@@ -444,15 +467,18 @@ warning 6002: The table/view 'C:\USERS\TALHE\SOURCE\REPOS\TALYBPROJ\TALYBPROJ\DB
         </EntityType>
         <EntityType Name="customerView">
           <Key>
+            <PropertyRef Name="Id" />
             <PropertyRef Name="fullName" />
             <PropertyRef Name="email" />
             <PropertyRef Name="isDone" />
             <PropertyRef Name="price" />
           </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
           <Property Name="fullName" Type="String" Nullable="false" MaxLength="102" FixedLength="false" Unicode="true" />
           <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="isDone" Type="Boolean" Nullable="false" />
           <Property Name="price" Type="Double" Nullable="false" />
+          <Property Name="totalPackPrice" Type="Double" />
         </EntityType>
         <EntityType Name="orderView">
           <Key>
@@ -475,6 +501,14 @@ warning 6002: The table/view 'C:\USERS\TALHE\SOURCE\REPOS\TALYBPROJ\TALYBPROJ\DB
           <Property Name="totalPackPrice" Type="Double" />
           <Property Name="totalDebt" Type="Double" />
           <Property Name="isPayd" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="zanView">
+          <Key>
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="totalOliveWeight" Type="Int32" />
+          <Property Name="totalOilWeight" Type="Int32" />
         </EntityType>
         <Association Name="FK_orderTBL_ToCostomerTBL">
           <End Type="dbModel.costomerTBL" Role="costomerTBL" Multiplicity="1" />
@@ -676,10 +710,12 @@ warning 6002: The table/view 'C:\USERS\TALHE\SOURCE\REPOS\TALYBPROJ\TALYBPROJ\DB
           <EntitySetMapping Name="customerView">
             <EntityTypeMapping TypeName="dbModel.customerView">
               <MappingFragment StoreEntitySet="customerView">
+                <ScalarProperty Name="totalPackPrice" ColumnName="totalPackPrice" />
                 <ScalarProperty Name="price" ColumnName="price" />
                 <ScalarProperty Name="isDone" ColumnName="isDone" />
                 <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="fullName" ColumnName="fullName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -697,6 +733,15 @@ warning 6002: The table/view 'C:\USERS\TALHE\SOURCE\REPOS\TALYBPROJ\TALYBPROJ\DB
                 <ScalarProperty Name="custPhone" ColumnName="custPhone" />
                 <ScalarProperty Name="custName" ColumnName="custName" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zanView">
+            <EntityTypeMapping TypeName="dbModel.zanView">
+              <MappingFragment StoreEntitySet="zanView">
+                <ScalarProperty Name="totalOilWeight" ColumnName="totalOilWeight" />
+                <ScalarProperty Name="totalOliveWeight" ColumnName="totalOliveWeight" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

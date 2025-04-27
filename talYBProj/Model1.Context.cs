@@ -34,5 +34,6 @@ namespace talYBProj
         public virtual DbSet<zanTBL> zanTBL { get; set; }
         public virtual DbSet<customerView> customerView { get; set; }
         public virtual DbSet<orderView> orderView { get; set; }
+        public virtual DbSet<zanView> zanView { get; set; }
     }
 }

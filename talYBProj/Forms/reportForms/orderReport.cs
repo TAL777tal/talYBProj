@@ -18,7 +18,7 @@ namespace talYBProj.Forms
 {
     public partial class orderReport : Form
     {
-       
+       List<customerView> customerViews;
         List<orderView> orderlist;
         public orderReport()
         {
@@ -28,6 +28,10 @@ namespace talYBProj.Forms
 
         private void orderReport_Load_1(object sender, EventArgs e)
         {
+            customerViews = DBhelper.customerViewsList;
+            double totalPrice = customerViews.Where(x => x.Id == 1 && !x.isDone).Select(x => x.price).Sum();
+            double totalPacks = customerViews.Where(x => x.Id == 1 && !x.isDone).Select(x => (double)x.totalPackPrice).Sum();
+            MessageBox.Show("total = " + (totalPacks + totalPrice));
             orderlist = DBhelper.orderViewsList;
             this.reportViewer2.RefreshReport();
             this.reportViewer2.RefreshReport();

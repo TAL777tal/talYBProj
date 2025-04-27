@@ -12,13 +12,10 @@ namespace talYBProj
     using System;
     using System.Collections.Generic;
     
-    public partial class customerView
+    public partial class zanView
     {
-        public int Id { get; set; }
-        public string fullName { get; set; }
-        public string email { get; set; }
-        public bool isDone { get; set; }
-        public double price { get; set; }
-        public Nullable<double> totalPackPrice { get; set; }
+        public string name { get; set; }
+        public Nullable<int> totalOliveWeight { get; set; }
+        public Nullable<int> totalOilWeight { get; set; }
     }
 }
