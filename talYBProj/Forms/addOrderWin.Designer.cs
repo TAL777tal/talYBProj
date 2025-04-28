@@ -45,10 +45,12 @@
             this.userTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
             this.MTBprice = new System.Windows.Forms.MaskedTextBox();
+            this.orderTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zanTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDnumOfDolevim)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderTBLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // oliveSpeciesLabel
@@ -114,7 +116,6 @@
             // cbxCust
             // 
             this.cbxCust.DataSource = this.costomerTBLBindingSource;
-            this.cbxCust.DisplayMember = "fullName";
             this.cbxCust.FormattingEnabled = true;
             this.cbxCust.Location = new System.Drawing.Point(393, 81);
             this.cbxCust.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -185,6 +186,10 @@
             this.MTBprice.Size = new System.Drawing.Size(77, 22);
             this.MTBprice.TabIndex = 29;
             // 
+            // orderTBLBindingSource
+            // 
+            this.orderTBLBindingSource.DataSource = typeof(talYBProj.orderTBL);
+            // 
             // addOrderWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -213,6 +218,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.zanTBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDnumOfDolevim)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderTBLBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +241,6 @@
         private System.Windows.Forms.BindingSource userTBLBindingSource;
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
         private System.Windows.Forms.MaskedTextBox MTBprice;
+        private System.Windows.Forms.BindingSource orderTBLBindingSource;
     }
 }

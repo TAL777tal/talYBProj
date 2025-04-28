@@ -240,6 +240,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\addCustomerWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +287,14 @@
     <Compile Include="Forms\oilList.Designer.cs">
       <DependentUpon>oilList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\reportForms\costomerReport.cs">
+      <SubType>Form</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Forms\reportForms\costomerReport.Designer.cs">
+      <DependentUpon>costomerReport.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Forms\reportForms\orderReport.cs">
       <SubType>Form</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -289,6 +302,12 @@
     <Compile Include="Forms\reportForms\orderReport.Designer.cs">
       <DependentUpon>orderReport.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Forms\reportForms\zanReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\reportForms\zanReport.Designer.cs">
+      <DependentUpon>zanReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\updateOil.cs">
       <SubType>Form</SubType>
@@ -445,6 +464,11 @@
     <EmbeddedResource Include="Forms\oilList.resx">
       <DependentUpon>oilList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\reportForms\costomerReport.rdlc" />
+    <EmbeddedResource Include="Forms\reportForms\costomerReport.resx">
+      <DependentUpon>costomerReport.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\reportForms\orderReport.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -452,6 +476,7 @@
       <DependentUpon>orderReport.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\reportForms\zanReport.rdlc" />
     <EmbeddedResource Include="Forms\updateOil.resx">
       <DependentUpon>updateOil.cs</DependentUpon>
     </EmbeddedResource>
@@ -533,11 +558,23 @@
     <None Include="dbDataSet1.xss">
       <DependentUpon>dbDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="dbDataSet2.xsc">
+      <DependentUpon>dbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbDataSet2.xss">
+      <DependentUpon>dbDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\costomerTBL.datasource" />
+    <None Include="Properties\DataSources\customerView.datasource" />
     <None Include="Properties\DataSources\oilTBL.datasource" />
     <None Include="Properties\DataSources\oliveTBL.datasource" />
     <None Include="Properties\DataSources\orderTBL.datasource" />

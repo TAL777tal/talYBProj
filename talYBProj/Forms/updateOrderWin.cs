@@ -61,7 +61,7 @@ namespace talYBProj.Forms
             toUpdate.numOfDolevim = Convert.ToInt32(numericUpDownDolevim.Value);
             if (DBhelper.updateOrder(toUpdate))
             {
-                MessageBox.Show("add succefuly");
+                MessageBox.Show("apdate succefuly");
                 updateCBX();
             }
             else //error

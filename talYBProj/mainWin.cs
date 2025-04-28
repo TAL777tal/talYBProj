@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using talYBProj.Forms;
+using talYBProj.Forms.reportForms;
 using talYBProj.IFS;
 
 namespace talYBProj
@@ -438,6 +439,24 @@ namespace talYBProj
                 current.Close();
             }
             current = new orderReport();
+            current.Dock = DockStyle.Fill;
+            current.TopLevel = false;
+            current.TopMost = true;
+            mainPanel.Controls.Add(current);
+            current.Show();
+        }
+
+        private void kryptonRibbonGroupButton12_Click(object sender, EventArgs e)
+        {
+            if (current != null)
+            {
+                if (current is costomerReport)
+                {
+                    return;
+                }
+                current.Close();
+            }
+            current = new costomerReport();
             current.Dock = DockStyle.Fill;
             current.TopLevel = false;
             current.TopMost = true;

@@ -30,15 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.orderViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.kbtnGenerate = new Krypton.Toolkit.KryptonButton();
+            this.orderViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.orderViewBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // orderViewBindingSource
-            // 
-            this.orderViewBindingSource.DataSource = typeof(talYBProj.orderView);
             // 
             // reportViewer2
             // 
@@ -49,7 +45,7 @@
             this.reportViewer2.Location = new System.Drawing.Point(22, 100);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(243, 316);
+            this.reportViewer2.Size = new System.Drawing.Size(766, 316);
             this.reportViewer2.TabIndex = 0;
             this.reportViewer2.Load += new System.EventHandler(this.reportViewer2_Load);
             // 
@@ -62,6 +58,10 @@
             this.kbtnGenerate.TabIndex = 1;
             this.kbtnGenerate.Values.Text = "צור דוח";
             this.kbtnGenerate.Click += new System.EventHandler(this.kbtnGenerate_Click);
+            // 
+            // orderViewBindingSource
+            // 
+            this.orderViewBindingSource.DataSource = typeof(talYBProj.orderView);
             // 
             // orderReport
             // 

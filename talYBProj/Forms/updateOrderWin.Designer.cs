@@ -45,9 +45,15 @@
             this.kryptonLabel1 = new Krypton.Toolkit.KryptonLabel();
             this.MTBprice = new System.Windows.Forms.MaskedTextBox();
             this.kryptonLabel2 = new Krypton.Toolkit.KryptonLabel();
+            this.userTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.costomerTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.zanTBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.cbxOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDolevim)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zanTBLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // orderLabel
@@ -120,6 +126,8 @@
             // 
             // cbxCostumerName
             // 
+            this.cbxCostumerName.DataSource = this.costomerTBLBindingSource;
+            this.cbxCostumerName.DisplayMember = "fullName";
             this.cbxCostumerName.FormattingEnabled = true;
             this.cbxCostumerName.Location = new System.Drawing.Point(400, 124);
             this.cbxCostumerName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -130,6 +138,8 @@
             // 
             // cbxOliveKind
             // 
+            this.cbxOliveKind.DataSource = this.zanTBLBindingSource;
+            this.cbxOliveKind.DisplayMember = "name";
             this.cbxOliveKind.FormattingEnabled = true;
             this.cbxOliveKind.Location = new System.Drawing.Point(401, 164);
             this.cbxOliveKind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -167,6 +177,7 @@
             // 
             // cbxUsers
             // 
+            this.cbxUsers.DataSource = this.userTBLBindingSource;
             this.cbxUsers.DisplayMember = "fullName";
             this.cbxUsers.FormattingEnabled = true;
             this.cbxUsers.Location = new System.Drawing.Point(400, 82);
@@ -203,6 +214,18 @@
             this.kryptonLabel2.TabIndex = 30;
             this.kryptonLabel2.Values.Text = "מחיר עסקה";
             // 
+            // userTBLBindingSource
+            // 
+            this.userTBLBindingSource.DataSource = typeof(talYBProj.userTBL);
+            // 
+            // costomerTBLBindingSource
+            // 
+            this.costomerTBLBindingSource.DataSource = typeof(talYBProj.costomerTBL);
+            // 
+            // zanTBLBindingSource
+            // 
+            this.zanTBLBindingSource.DataSource = typeof(talYBProj.zanTBL);
+            // 
             // updateOrderWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -232,6 +255,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbxOrders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderTBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDolevim)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userTBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.costomerTBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.zanTBLBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +281,8 @@
         private Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private System.Windows.Forms.MaskedTextBox MTBprice;
         private Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private System.Windows.Forms.BindingSource costomerTBLBindingSource;
+        private System.Windows.Forms.BindingSource zanTBLBindingSource;
+        private System.Windows.Forms.BindingSource userTBLBindingSource;
     }
 }
