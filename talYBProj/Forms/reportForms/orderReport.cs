@@ -27,7 +27,7 @@ namespace talYBProj.Forms
 
         private void orderReport_Load_1(object sender, EventArgs e)
         {
-            orderlist = DBhelper.orderViewsList;
+            orderlist = DBhelper.orderViewsList;       
             this.reportViewer2.RefreshReport();
             this.reportViewer2.RefreshReport();
         }

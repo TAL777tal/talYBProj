@@ -15,6 +15,8 @@ namespace talYBProj.Forms.reportForms
     public partial class costomerReport : Form
     {
         List<customerView> costomerlist;
+        List<costomerNameView> lst;
+
         public costomerReport()
         {
             InitializeComponent();
@@ -23,9 +25,18 @@ namespace talYBProj.Forms.reportForms
         private void costomerReport_Load(object sender, EventArgs e)
         {
             costomerlist = DBhelper.customerViewsList;
-            double totalPrice = costomerlist.Where(x => x.Id == 1 && !x.isDone).Select(x => x.price).Sum();
-            double totalPacks = costomerlist.Where(x => x.Id == 1 && !x.isDone).Select(x => (double)x.totalPackPrice).Sum();
-            MessageBox.Show("total = " + (totalPacks + totalPrice));
+            lst = new List<costomerNameView>();
+            var tmp = costomerlist.GroupBy(x => x.fullName).ToList();
+            foreach (var ord in tmp)
+            {
+                costomerNameView toAdd = new costomerNameView();
+                toAdd.fallName = ord.FirstOrDefault().fullName;
+                toAdd.email = ord.FirstOrDefault().email;
+                toAdd.price = (int) ord.Select(x => x.price).Sum();
+                toAdd.totalPackPrice = (int)ord.Select(x => x.totalPackPrice).Sum();
+                lst.Add(toAdd);
+            }
+            dgvCust.DataSource = lst;
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
@@ -42,6 +53,13 @@ namespace talYBProj.Forms.reportForms
             reportViewer1.LocalReport.ReportPath = "C:\\Users\\talhe\\source\\repos\\talYBProj\\talYBProj\\Forms\\reportForms\\costomerReport.rdlc";
             reportViewer1.LocalReport.DataSources.Add(rdc);
             this.reportViewer1.RefreshReport();
+        }
+        private class costomerNameView
+        {
+            public string fallName { get; set; }
+            public string email { get; set; }
+            public float price { get; set; }
+            public float totalPackPrice { get; set; }
         }
     }
 }

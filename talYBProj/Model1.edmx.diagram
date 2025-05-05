@@ -13,7 +13,6 @@
         <EntityTypeShape EntityType="dbModel.userTBL" Width="1.5" PointX="0.75" PointY="5.625" />
         <EntityTypeShape EntityType="dbModel.zanTBL" Width="1.5" PointX="0.75" PointY="3.125" />
         <EntityTypeShape EntityType="dbModel.customerView" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="dbModel.orderView" Width="1.5" PointX="8.75" PointY="0.75" />
         <EntityTypeShape EntityType="dbModel.zanView" Width="1.5" PointX="5.75" PointY="9.75" />
         <AssociationConnector Association="dbModel.FK_orderTBL_ToCostomerTBL" />
         <AssociationConnector Association="dbModel.FK_oilTBL_ToOrderTBL" />
@@ -23,6 +22,7 @@
         <AssociationConnector Association="dbModel.FK_oliveTBL_userTBL" />
         <AssociationConnector Association="dbModel.FK_orderTBL_ToUserTBL" />
         <AssociationConnector Association="dbModel.FK_orderTBL_ToZanTBL" />
+        <EntityTypeShape EntityType="dbModel.orderView" Width="1.5" PointX="8.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

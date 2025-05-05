@@ -18,6 +18,7 @@ namespace talYBProj
         public string custName { get; set; }
         public string custPhone { get; set; }
         public System.DateTime orderDate { get; set; }
+        public int customerID { get; set; }
         public string zanName { get; set; }
         public Nullable<int> totalDolavWeight { get; set; }
         public Nullable<int> totalOilWeight { get; set; }

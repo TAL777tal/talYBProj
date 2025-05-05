@@ -17,5 +17,6 @@ namespace talYBProj
         public string name { get; set; }
         public Nullable<int> totalOliveWeight { get; set; }
         public Nullable<int> totalOilWeight { get; set; }
+        public int zanID { get; set; }
     }
 }
